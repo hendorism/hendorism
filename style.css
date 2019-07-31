@@ -1,0 +1,18 @@
+* {
+  margin:0px;
+  padding:0px;
+}
+body {
+background-color:#038;
+color:#860;
+}
+div {
+margin:4px;
+padding:3px;
+background-color:#14c;
+}
+p {
+margin:4px;
+padding:3px;
+background-color:#25f;
+}
