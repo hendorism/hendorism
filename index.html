@@ -1,17 +1,61 @@
 <html>
 <head>
 <title>My Blog</title>
-<link rel="stylesheet" href="style.css"></link>
+<!--
+    <link rel="stylesheet" href="style.css">
+-->
 <script src="script.js"></script>
+    <style>
+        button {
+    background-color:#55a;
+    border:none;
+    color:white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor:pointer;
+        }
+    </style>
 </head>
 
 
 <body>
-
-<div>
+    <button onclick="document.getElementById('demo').innerHTML=Date()" id="goodnessGracious">
+        The time is?
+    </button>
+    <p id="demo">his name is poopy doopy</p>
+    <p>do you also see this also?
+    </p>
+    <p>do you see this?</p>
+    <div id="wed7-31-2019">
+        <script>    document.getElementById("wed7-31-2019").addEventListener("click", goofyFunction() {
+                var jiffy = document.getElementById("wed7-31-2019");
+                jiffy.style.color = ("#def")
+            });
+        </script>                                              
 <h2>7/31/2019 - Wednesday - second post</h2>
+    <div id="jsEventsTutorial">
+        <h4>add numbers program</h4>
+        <p>
+            <input id="num-one"> + <input id="num-two">
+        </p>
+        <p id="add-sum"></p>
+        
+            <script>
+                var numOne = document.getElementById("num-one");
+                var numTwo = document.getElementById("num-two");
+                var addSum = document.getElementById("add-sum");
 
-  <div style="background-color:#def;color:#2f9;">
+                numOne.addEventListener("click", function() {
+                    alert("hi")
+                });
+            </script>
+    
+    </div><!-- end js events tutorial -->
+    <div style="background-color:#def;color:#2f9;">
     <h2>7/31/2019 part A - Wednesday - part A</h2>
     <p>This is the real Wednesday post. The rest of the post was created the day before so is not actually the actual wednesday post but in fact the tuesday post. We are gonna continue to shake things up here as we continue here today.
       <br><br>
@@ -37,7 +81,7 @@
     </script>
    <p id="carpRatGutCat"></p>
     <h4 style="color:#36f;" id="carpRatGutFish">innovations studio</h4>
-    <a href="https://innovationsstudio.wordpress.com/" target="_blank">go here</a>
+    <a href="https://innovationsstudio.wordpress.com/">go here</a>
     <p></p>
     <p>end of 7/31/2019 part A - Wednesday - part A</p>
   </div>
