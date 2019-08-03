@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Bio</title>
+        <style>
+            #goodnessGracious {
+                background-color:#ddd;
+                color:#276;
+                height:50px;
+                width:50px;
+                margin-top:50px;
+                margin-left:50px;
+            }
+            button {
+                background-color:#55a;
+                border:none;
+                color:white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor:pointer;
+            }
+            p {
+                color:#62a;
+            }
+            .sidenav {
+                height:100%;
+                background-color:#033;
+                color:#00f;
+                position:absolute;
+                width:160px;
+                padding:6px;
+            }
+        </style>
+        <link rel="stylesheet" type="tex/css" href="style.css">
+    </head>
+    <body>
+        <div class="sidenav">
+            <a href="index.html">Home</a><br>
+            <a class="active" href="bio.html">Bio</a><br>
+            <a href="#Contact">Contact</a><br>
+            <a href="#Other Resources">Other resources</a><br>
+            <a href="#Other Stuff">Other stuff</a><br>
+        </div><!--end of sidenav-->
+        
+        
+        
+        <div class="main">
+            <div id="goodnessGracious">hello</div>
+            <button id="changer">change color</button>
+        </div><!--end of div class main-->
+            <script>
+            document.getElementById("goodnessGracious").addEventListener("click", changeColor);
+            function changeColor() {
+                document.getElementById("goodnessGracious").style.backgroundColor = "#d4f;"
+            }
+            
+        </script>
+        
+    </body>
+
+</html>
