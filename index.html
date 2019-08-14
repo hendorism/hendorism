@@ -59,6 +59,39 @@ and stuff and knows how to play guitar
 good.</p>
 <script>
 
+var x = [0,1,2,3,4,5,6,7,8,9,10,11]; //00oo00oo00OO00OO00oo00oo00OO00OO00oo00oo00OO00OO00oo00oo00OO00OO00oo00oo
+
+    var canvas = document.createElement("canvas");
+    var ctx = canvas.getContext("2d");
+    canvas.width = 850;
+    canvas.height = 1100;
+    document.body.appendChild(canvas);
+
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.lineTo(3000, 4500);
+    ctx.stroke();
+
+    ctx.fillstyle = "#ff0";
+    ctx.fillRect(0,0,50,50);
+
+    ctx.beginPath();
+    ctx.rect(130, 70, 100, 100);
+    ctx.fillStyle = "#66f";
+    ctx.fill();
+
+for (i=0;i<5;i++){
+    ctx.beginPath();
+    ctx.moveTo(0, 100+10*i);
+    ctx.lineTo(1000, 100+10*i);
+    ctx.stroke();
+}
+//draw a circle
+ctx.beginPath();
+ctx.arc(75, 75, 10, 0, Math.PI*2, true); 
+ctx.closePath();
+ctx.fill();
+
 </script>
 </div><!-- end div 08132019 -->
 
