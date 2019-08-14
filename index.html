@@ -17,6 +17,27 @@
     </div><!--end of sidenav-->
     <div class="main">
 
+<div id="08142019">
+<canvas id="myCanvas" width="850" height="1100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+for (n=0;n<12;n++) {
+    for (i=0; i<5; i++) {
+        ctx.moveTo(25, 50+10*i+100*n);
+        ctx.lineTo(825, 50+10*i+100*n);
+        ctx.stroke();
+    }
+}
+</script>
+
+<p><strong>Note:</strong> The canvas tag is not supported in Internet 
+Explorer 8 and earlier versions.</p>
+
+</div><!-- 08142019 -->
       
 <div id="08132019">
   <p>This I want to say: that it is
