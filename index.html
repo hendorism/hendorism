@@ -8,7 +8,6 @@
 
 <body>
     <div class="sidenav">
-        
         <a class="active" href="index.html">Home</a><br>
         <a href="bio.html">Bio</a><br>
         <a href="#Contact">Contact</a><br>
@@ -16,11 +15,53 @@
         <a href="#Other Stuff">Other stuff</a><br>
     </div><!--end of sidenav-->
     <div class="main">
+<div id="081420192">
+      <script>
+    var x = [0,1,2,3,4,5,6,7,8,9,10,11];
+    var canvas = document.createElement("canvas");
+    var ctx = canvas.getContext("2d");
+    canvas.width = 850;
+    canvas.height = 1100;
+    canvas.border = 
+    document.body.appendChild(canvas);
+    //ctx.font = "30px Arial";
+    //ctx.fillText("Welcome to my Notation 
 
+Program",50,50);
+  var monkeys = ["chimpanzee", "orangutan", 
+
+"spider", "camaroon", "howler", "baboon", 
+
+"gorilla"];
+  ctx.font = "14px Arial";
+  for (e=0;e<12;e++){
+    ctx.fillText(e,50,95+50*e);
+    ctx.fillText(monkeys[e],65,95+50*e);
+    for (i=0;i<5;i++){
+      ctx.beginPath();
+      ctx.moveTo(0, 100+8*i+50*e);
+      ctx.lineTo(800, 100+8*i+50*e);
+      ctx.stroke();
+    }
+  }
+  
+  for (e=0;e<12;e++){
+    for (i=0;i<5;i++){
+        drawNote(100+20*i,100+50*e+4*i,4);
+    }
+  }
+function drawNote(x,y,d) {
+  ctx.beginPath();    //--draws a note head  ___@
+  ctx.arc(x,y,d, 0, Math.PI*2, true);
+  ctx.closePath();
+  ctx.fill();
+}
+  </script>
+
+</div><!-- end of div id 081420191 -->
 <div id="08142019">
 <canvas id="myCanvas" width="850" height="1100" style="border:1px solid #d3d3d3;">
 Your browser does not support the HTML5 canvas tag.</canvas>
-
 <script>
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
@@ -32,12 +73,7 @@ for (n=0;n<12;n++) {
         ctx.stroke();
     }
 }
-</script>
-
-<p><strong>Note:</strong> The canvas tag is not supported in Internet 
-Explorer 8 and earlier versions.</p>
-
-</div><!-- 08142019 -->
+</script></div><!-- 08142019 -->
       
 <div id="08132019">
   <p>This I want to say: that it is
