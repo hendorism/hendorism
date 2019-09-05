@@ -1,97 +1,413 @@
 <html>
+
 <head>
-<title>My Blog</title>
-    <link rel="stylesheet" href="style.css">
-<script src="script.js">
+
+  <title>My Blog</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js"></script>
+  
+<style>
+div {background-color:#def;color:#f38;}
+</style>
+
 </head>
 
 
+
 <body>
-    <div class="sidenav">
-        <a class="active" href="index.html">Home</a><br>
-        <a href="bio.html">Bio</a><br>
-        <a href="#Contact">Contact</a><br>
-        <a href="#Other Resources">Other resources</a><br>
-        <a href="#Other Stuff">Other stuff</a><br>
-    </div><!--end of sidenav-->
-    <div class="main">
+
+  <div class="sidenav">
+
+    <a class="active" href="index.html">Home</a><br>
+
+    <a href="bio.html">Bio</a><br>
+
+    <a href="#Contact">Contact</a><br>
+
+    <a href="#Other Resources">Other resources</a><br>
+
+    <a href="#Other Stuff">Other stuff</a><br>
+
+  </div><!--end of sidenav-->
+
+
+
+
+
+  <div class="main">
+
+
+
+
 <!-- lllll -->
+
 <!-- lllll -->
+
 <!-- lllll -->
+
 <div id="">
 <p></p>
 </div><!-- end div -->
+
 <!-- lllll -->
+
 <!-- lllll -->
+
 <!-- lllll -->
 
 
 
-<div id="">
+
+
+<style>.example{width:100%;}</style>
+<div id="09012019" style="background-color:#cde;margin:20px;">
+
+<h3>09-01-2019</h3>
+<h4>Today I am going to experiment with making shapes and pictures in svg</h4>
+<p>My first experiment will be to reproduce the smiley found in <a href="https://www.youtube.com/watch?v=ZJSCl6XEdP8">THIS</a> youtube video.</p>
+<svg id="example" class="example">
+<circle class="face" cx="100" cy="80" r="100" fill="#ff0"></svg>
+<p>
+</p>
+
+</div>
+<!-- end div 09 01 2019 -->
+
+
+
+
+
+
+
+
+
+<div id="08312019">
+
+<p>Today is Saturday 08 31 2019 and I am doing laundry in south everett across the street from Value Village and Kush Mart. I was thinking about going to the Ebey Island Freedom Fest last night, but decided to stay home and relax instead. I could go today though. Tomorrow I have to work at 4pm and I may go to church in the morning.</p>
 <p></p>
-</div><!-- end div -->
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</div><!-- end div 08312019 -->
+
+
+
+
+<div id="08302019">
+<p>make a canvas element and create a drawNote function that takes x and y arguments.
+</p>
+
+
+
+<script>
+
+var f = document.createElement("canvas");
+
+document.body.appendChild(f);
+
+var ctx = f.getContext("2d");
+
+</script>
+
+</div><!-- end div 08 30 2019 -->
+
+
+
+
+
+
+
 <div id="08222019">
-<p>This afternoon I went out and looked at some guitars. I went down Everett Avenue to see a guy about an aria dreadnaught guitar for 80 dollars. I told him I would have to pass and instead spend a higher amount on a guitar. He told me about another one that he will have tonight or tomorrow and shows me a somewhat promising picture on his phone. After that I went to Kenelly Keys and was accosted by an employee as soon as I walked in. I went with him to the guitar section as he proceeded to demonstrate one of the guitars. He eventually left the room for me to "jam out"> I played some of the guitars he had shown me in the under $300 range, and then I grabbed the Taylor acoustic-electric for $599 and decided that was the guitar I really wanted in my heart. I did not buy it. I did not buy a guitar. I thanked the skinny slacks wearin' haircut-every-week sales kid for taking the time, and I left. Traffic was lame, but when I got home and</p>
-</div><!-- 08222019 end -->
+
+<h3>08.22.2019</h3>
+
+<p>
+
+This afternoon I went out and looked at some guitars.
+I went down Everett Avenue to see a guy about an aria dreadnaught guitar for 80 dollars.
+I told him I would have to pass and instead spend a higher amount on a guitar.
+He told me about another one that he will have tonight or tomorrow and shows me a somewhat promising picture on his phone.
+After that I went to Kenelly Keys and was accosted by an employee as soon as I walked in.
+I went with him to the guitar section as he proceeded to demonstrate one of the guitars.
+He eventually left the room for me to "jam out".
+I played some of the guitars he had shown me in the under $300 range, and then I grabbed the Taylor acoustic-electric for $599 and decided that was the guitar I really wanted in my heart.
+I did not buy it.
+I did not buy a guitar.
+I thanked the skinny slacks wearin' haircut-every-week sales kid for taking the time, and I left. Traffic was lame, but when I got home and...
+
+</p>
+
+</div>
+<!-- 08222019 end -->
+
+
+
+
+
+
+
 <div id="081420192">
+
+
+<h3>
+08 14 2019 2
+</h3>
+
+<p>08 12 2019 2</p>
+
       <script>
+
     var x = [0,1,2,3,4,5,6,7,8,9,10,11];
+
     var canvas = document.createElement("canvas");
+
     var ctx = canvas.getContext("2d");
+
     canvas.width = 850;
+
     canvas.height = 1100;
-    canvas.border = 
+
+    //canvas.border = 
+
     document.body.appendChild(canvas);
+
     //ctx.font = "30px Arial";
-    //ctx.fillText("Welcome to my Notation 
 
-Program",50,50);
-  var monkeys = ["chimpanzee", "orangutan", 
+    //ctx.fillText("Welcome to my Notation Program",50,50);
 
-"spider", "camaroon", "howler", "baboon", 
 
-"gorilla"];
+    var monkeys = ["chimpanzee", "orangutan", "spider", "camaroon", "howler", "baboon", "gorilla"];
+
+
   ctx.font = "14px Arial";
-  for (e=0;e<12;e++){
-    ctx.fillText(e,50,95+50*e);
-    ctx.fillText(monkeys[e],65,95+50*e);
-    for (i=0;i<5;i++){
-      ctx.beginPath();
-      ctx.moveTo(0, 100+8*i+50*e);
-      ctx.lineTo(800, 100+8*i+50*e);
-      ctx.stroke();
-    }
-  }
+
+
+//  for (e=0;e<12;e++){
+
+//    ctx.fillText(e,50,95+50*e);
+
+//    ctx.fillText(monkeys[e],65,95+50*e);
+
+//    for (i=0;i<5;i++){
+
+//      ctx.beginPath();
+
+//      ctx.moveTo(0, 100+8*i+50*e);
+
+//      ctx.lineTo(800, 100+8*i+50*e);
+
+//      ctx.stroke();
+
+//    }
+
+//  }
+
   
   for (e=0;e<12;e++){
+
     for (i=0;i<5;i++){
+
         drawNote(100+20*i,100+50*e+4*i,4);
+
     }
+
   }
+
 function drawNote(x,y,d) {
-  ctx.beginPath();    //--draws a note head  ___@
+
+  ctx.beginPath();
+
+  //--draws a note head  ___@
+
   ctx.arc(x,y,d, 0, Math.PI*2, true);
+
   ctx.closePath();
+
   ctx.fill();
+
 }
+
+
   </script>
 
-</div><!-- end of div id 081420191 -->
+
+</div><!-- end of div id 08142019 2 -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- active -->
+
 <div id="08142019">
+
+<h3>08 14 2019</h3>
+
 <canvas id="myCanvas" width="850" height="1100" style="border:1px solid #d3d3d3;">
-Your browser does not support the HTML5 canvas tag.</canvas>
+
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+
 <script>
+
 var c = document.getElementById("myCanvas");
+
 var ctx = c.getContext("2d");
+
 ctx.beginPath();
-for (n=0;n<12;n++) {
-    for (i=0; i<5; i++) {
-        ctx.moveTo(25, 50+10*i+100*n);
-        ctx.lineTo(825, 50+10*i+100*n);
-        ctx.stroke();
-    }
+
+for (n=0;n<10;n++) {
+
+ for (i=0; i<5; i++) {
+
+  ctx.moveTo(25, 50+10*i+100*n);
+
+  ctx.lineTo(825, 50+10*i+100*n);
+
+  ctx.stroke();
+
+ }
+
 }
-</script></div><!-- 08142019 -->
+
+
+
+//draw key signature
+
+function drawSharp(x,y){
+
+
+ ctx.beginPath();
+ ctx.moveTo(100+40*i-10, 90-5*ll+100*e);
+
+ ctx.lineTo(100+40*i+10, 90-5*ll+100*e);
+
+ ctx.stroke();
+
+
+}
+
+function drawFlat(x,y){
+
+
+  
+}
+
+
+
+
+
+
+//loop thru array to draw notes
+
+var notesy = [0,-1,-2,-3,-4,-7,17,3,4,3,3,5,6,2,3,4,5,6,7,7,8,4,7,12,11,10,9,8,7,6,5,4,3,2,1,-1,1,-1,1,-2,1,0,9,10,4,10];
+
+
+var n = 0;
+
+
+for(e=0;e<12;e++){        //e is the staff number. e goes to 12 for 12 lines
+
+ for (i=0;i<16;i++){      //i is the note number. i goes to 16 for 16 notes per line
+
+  ctx.beginPath();
+
+  ctx.arc(100+40*i, 90-5*notesy[n]+100*e, 5, 0, Math.PI*2, true);
+ 
+ ctx.closePath();
+
+  ctx.fill();
+
+
+
+
+
+
+  //draw ledger lines
+
+  var ll = notesy[n];
+
+  if (ll%2>0){
+
+   ll-=1
+
+  }
+
+  while (ll>9){
+
+   ctx.moveTo(100+40*i-10, 90-5*ll+100*e);
+
+   ctx.lineTo(100+40*i+10, 90-5*ll+100*e);
+
+   ctx.stroke();
+
+   ll-=2;
+
+  }
+
+  if (ll%2<0){
+
+   ll+=1;
+
+  }
+
+  while (ll<-1){
+
+   ctx.moveTo(100+40*i-10, 90-5*ll+100*e);
+
+   ctx.lineTo(100+40*i+10, 90-5*ll+100*e);
+
+   ctx.stroke();
+
+   ll+=2;
+
+  }
+
+  if (n<notesy.length){
+
+   n+=1;
+
+  }
+
+ }
+
+}
+
+
+
+//ctx.beginPath();
+
+//ctx.arc(75, 840, 5, 0, Math.PI*2, true);
+
+//ctx.closePath();
+
+//ctx.fill();
+
+
+</script>
+</div><!-- 08142019 -->
+
+
+
+
+
+
+
+
+
+
+
       
 <div id="08132019">
   <p>This I want to say: that it is
