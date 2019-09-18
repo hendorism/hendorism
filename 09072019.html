@@ -1,0 +1,147 @@
+<html>
+
+<head>
+    <title>09 07 2019</title>
+
+</head>
+
+<body>
+<div>
+    <a href="index.html">home</a>
+        <h3>09 07 2019</h3>
+<p>
+today i want to describe to you how i am just sitting here in my couch and i have to go to bed soon so i can get up early and do some chruch music with my two friends over there at the lutheran church. we are going to play how can i keep from singing in 3/4 starting in f ang going to the key of g. its gonna be great. the harmonies are eally cool and the piano part transfers over to guitar really well. i am mostly relying on the left hand of the piano line, but paying attention to the right hand too to get the chords right.
+</p>
+<p>
+We ae gong to plat it so well. Our music director is probably going to play the piano with us, but she might now since at the end last night we were so jazzed just playing the three of us we were saying we could just do it without the piano. This was only because the htree of us had continued rehearsing after the formal end of out rehearsa period. We are going to really knock this one out of the park. We are going to nail it I know for sure. I am hing som much fun learning the guitar part hat it is really inspiring me to get my choops back up to top notch uality. I need o be be to perform any instrument t any time so I can always be known as a master musician. I am going to take over the orld i music. I am going to conqer all nations and bring about orld peace, I am going to satisy the minds of  all the peoples with my luxurious musical strains. I am going to hypnotize the masses with my melodies that twist and wind dow corridors of thought.
+</p>
+</div>
+
+
+
+<div>
+input a melody:<br>
+<input id="melody" value="melody goes here:"></input><br>
+<button>button</button>
+</div>
+
+
+
+
+<script>
+function submit(n,a) {
+var v = document.getElementById("melody").value;
+console.log(v);
+}
+
+document.body.addEventListener("click", function(){
+  document.getElementById("demo").innerHTML = "Hello World!";
+});
+
+
+</script>
+
+
+
+
+
+<div>
+
+        <canvas id="myCanvas" width="850" height="1100" style="border:1px solid #d3d3d3;">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+</div>
+
+
+
+
+
+
+
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+
+for (n=0;n<10;n++) {
+ for (i=0; i<5; i++) {
+  ctx.moveTo(25, 50+10*i+100*n);
+  ctx.lineTo(825, 50+10*i+100*n);
+  ctx.stroke();
+ }
+}
+
+
+
+//draw key signature
+function drawSharp(x,y){
+ ctx.beginPath();
+ ctx.moveTo(100+40*i-10, 90-5*ll+100*e);
+ ctx.lineTo(100+40*i+10, 90-5*ll+100*e);
+ ctx.stroke();
+}
+
+function drawFlat(x,y){
+}
+
+
+
+
+
+
+//loop thru array to draw notes
+var notesy = [0,-1,-2,-3,-4,-7,17,3,4,3,3,5,6,2,3,4,5,6,7,7,8,4,7,12,11,10,9,8,7,6,5,4,3,2,1,-1,1,-1,1,-2,1,0,9,10,4,10];
+var n = 0;
+for(e=0;e<12;e++){        //e is the staff number. e goes to 12 for 12 lines
+ for (i=0;i<16;i++){      //i is the note number. i goes to 16 for 16 notes per line
+  ctx.beginPath();
+  ctx.arc(100+40*i, 90-5*notesy[n]+100*e, 5, 0, Math.PI*2, true);
+  ctx.closePath();
+  ctx.fill();
+
+
+
+
+  //draw ledger lines
+  var ll = notesy[n];
+  if (ll%2>0){
+   ll-=1
+  }
+  while (ll>9){
+   ctx.moveTo(100+40*i-10, 90-5*ll+100*e);
+   ctx.lineTo(100+40*i+10, 90-5*ll+100*e);
+   ctx.stroke();
+   ll-=2;
+  }
+  if (ll%2<0){
+   ll+=1;
+  }
+  while (ll<-1){
+   ctx.moveTo(100+40*i-10, 90-5*ll+100*e);
+   ctx.lineTo(100+40*i+10, 90-5*ll+100*e);
+   ctx.stroke();
+   ll+=2;
+  }
+  if (n<notesy.length){
+   n+=1;
+  }
+ }
+}
+
+
+
+//ctx.beginPath();
+//ctx.arc(75, 840, 5, 0, Math.PI*2, true);
+//ctx.closePath();
+//ctx.fill();
+
+
+        </script>
+
+
+
+
+
+</body>
+</html>

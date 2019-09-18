@@ -18,14 +18,14 @@ p {
     color:#b7f;
 }
 div {
-    background-color:#000;
+    background-color:#ff0;
 }
 .sidenav {
     height:100%;
     background-color:#033;
     color:#00f;
     position:absolute;
-    width:160px;
+    width:20%;
     padding:6px;
 }
 .sidenav a {
@@ -33,11 +33,8 @@ div {
 }
 .main {
     position:relative;
-    margin-left: 172px;
+    margin-left: 20%;
     padding:2px;
 }
 #08132019 {background-color:#ddd;color:#00a;}
 #081420192 {background-color:#ddd;color:#04a;}
-
-
-
