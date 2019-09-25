@@ -20,6 +20,9 @@ p {
 div {
     background-color:#ff0;
 }
+div.sheetMusicCanvas{
+    background-color:#fff;
+}
 .sidenav {
     height:100%;
     background-color:#033;
