@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>6-8-2019 compound interest calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <p style="background-color:#ddd;">This is the compound interest calculator by Aaron Dull.<br> 6/8/2019</p>
+    <a href="../index.html">back to main blog page</a>
+
+<div>
+         Duration of simulation? (3-100yrs)
+         <input class="lvl4" id="durationT" value="40" oninput="textToRange()">
+         <input class="lvl4" id="durationR" type="range" min="3" max="100" value="40" onclick="rangeToText()" ontap="rangeToText()">
+</div>
+<div>
+         What is your monthly income? ($10-10,000)
+         <input class="lvl4" id="incomeT" value="2500" oninput="textToRange()">
+         <input class="lvl4" id="incomeR" type="range" min="10" max="10000" value="2500" onclick="rangeToText()" ontap="rangeToText()">
+</div>
+            
+<div>
+         What percentage of your income will you commit to setting aside? (0-99%)
+         <input class="lvl4" id="percentT" value="20" oninput="textToRange()">
+         <input class="lvl4" id="percentR" type="range" min="0" max="99" value="20" onclick="rangeToText()" ontap="rangeToText()">
+</div>
+
+<div>
+         What percentage real return do you expect to see after inflation? (0-1,000%)
+         <input class="lvl4" id="returnT" value="8" oninput="textToRange()">
+         <input class="lvl4" id="returnR" type="range" min="0" max="1000" value="8" onclick="rangeToText()" ontap="rangeToText()">
+</div>
+
+<div><button id="submit">submit</button></div>
+
+
+
+</body></html>
