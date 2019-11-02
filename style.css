@@ -19,6 +19,12 @@ p {
 }
 div {
     background-color:#ff0;
+    padding:10px;
+}
+div.main {
+    position:relative;
+    margin-left: 20%;
+    padding:10px;
 }
 div.sheetMusicCanvas{
     background-color:#fff;
@@ -33,11 +39,6 @@ div.sheetMusicCanvas{
 }
 .sidenav a {
     color:#ccf;
-}
-.main {
-    position:relative;
-    margin-left: 20%;
-    padding:2px;
 }
 #08132019 {background-color:#ddd;color:#00a;}
 #081420192 {background-color:#ddd;color:#04a;}
