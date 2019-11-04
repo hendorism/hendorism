@@ -2,20 +2,9 @@
     padding:0;
     margin:0px;
 }
-button {
-    background-color:#55a;
-    border:none;
-    color:white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor:pointer;
-}
 p {
     color:#b7f;
+    background-color:#444444;
 }
 div {
     background-color:#ff0;
@@ -34,10 +23,21 @@ div.sheetMusicCanvas{
 .sidenav a {
     color:#ccf;
 }
-.main {
+div.main {
     position:relative;
     margin-left: 20%;
     padding:2px;
+    height: 100%;
 }
-#08132019 {background-color:#ddd;color:#00a;}
-#081420192 {background-color:#ddd;color:#04a;}
+button {
+    background-color:#55a;
+    border:none;
+    color:white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor:pointer;
+}
