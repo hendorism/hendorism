@@ -2,21 +2,170 @@
 <head>
 <title>scale selector 2.0</title>
 <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
-<div id=wrapper>
 
-<div id="sidenav">
-<a href="../index.html">home</a></div>
-<div id="main"></div>
+<a href="../index.html">home</a>
+
+<!-- WRAPPER DIV BEGIN  -->
+<div id="wrapper">
+    <!--  	PITCHES DIV  -->
+    <div id="pitchesDiv">
+      <div id="pitchesHeader" class="pitches">PITCHES</div>
+      <div class="pitches">
+        <div class="pitchNameDiv">
+          <div class="pitchesFretNumber">--0--</div>
+          <div class="pitchesFretNumber">(tonic)</div>
+        </div>
+        <div class="pitchDisplayDiv">
+          <p class="pitchDisplayOutput" id="pitchDisplayOutput0"></p>
+        </div>
+      </div>
+      <div class="pitches">
+        <div class="pitchNameDiv">
+          <div class="pitchesFretNumber">--1--</div>
+          <div class="pitchesScaleDegreeName">(flat 2)</div>
+        </div>
+        <div class="pitchDisplayDiv">
+          <p class="pitchDisplayOutput" id="pitchDisplayOutput1"></p>
+        </div>
+      </div>
+      <div class="pitches">
+        <div class="pitchNameDiv">
+          <div class="pitchesFretNumber">--2--</div>
+          <div class="pitchesScaleDegreeName">(supertonic)</div>
+        </div>
+        <div class="pitchDisplayDiv">
+          <p class="pitchDisplayOutput" id="pitchDisplayOutput2"></p>
+        </div>
+      </div>
+      <div class="pitches">
+        <div class="pitchNameDiv">
+          <div class="pitchesFretNumber">--3--</div>
+          <div class="pitchesScaleDegreeName">(flat 3)</div>
+        </div>
+        <div class="pitchDisplayDiv">
+          <p class="pitchDisplayOutput" id="pitchDisplayOutput3"></p>
+        </div>
+      </div>
+      <div class="pitches">
+        <div class="pitchNameDiv">
+          <div class="pitchesFretNumber">--4--</div>
+          <div class="pitchesScaleDegreeName">(mediant)</div>
+        </div>
+        <div class="pitchDisplayDiv">
+          <p class="pitchDisplayOutput" id="pitchDisplayOutput4"></p>
+        </div>
+      </div>
+      <div class="pitches">
+        <div class="pitchNameDiv">
+          <div class="pitchesFretNumber">--5--</div>
+          <div class="pitchesScaleDegreeName">(subdominant)</div>
+        </div>
+        <div class="pitchDisplayDiv">
+          <p class="pitchDisplayOutput" id="pitchDisplayOutput5"></p>
+        </div>
+      </div>
+      <div class="pitches">
+        <div class="pitchNameDiv">
+          <div class="pitchesFretNumber">--6--</div>
+          <div class="pitchesScaleDegreeName">(flat 5)</div>
+        </div>
+        <div class="pitchDisplayDiv">
+          <p class="pitchDisplayOutput" id="pitchDisplayOutput6"></p>
+        </div>
+      </div>
+      <div class="pitches">
+        <div class="pitchNameDiv">
+          <div class="pitchesFretNumber">--7--</div>
+          <div class="pitchesScaleDegreeName">(dominant)</div>
+        </div>
+        <div class="pitchDisplayDiv">
+          <p class="pitchDisplayOutput" id="pitchDisplayOutput7"></p>
+        </div>
+      </div>
+      <div class="pitches">
+        <div class="pitchNameDiv">
+          <div class="pitchesFretNumber">--8--</div>
+          <div class="pitchesScaleDegreeName">(minor 6)</div>
+        </div>
+        <div class="pitchDisplayDiv">
+          <p class="pitchDisplayOutput" id="pitchDisplayOutput8"></p>
+        </div>
+      </div>
+      <div class="pitches">
+        <div class="pitchNameDiv">
+          <div class="pitchesFretNumber">--9--</div>
+          <div class="pitchesScaleDegreeName">(major 6)</div>
+        </div>
+        <div class="pitchDisplayDiv">
+          <p class="pitchDisplayOutput" id="pitchDisplayOutput9"></p>
+        </div>
+      </div>
+      <div class="pitches">
+        <div class="pitchNameDiv">
+          <div class="pitchesFretNumber">--10--</div>
+          <div  class="pitchesScaleDegreeName">(flat 7)</div>
+        </div>
+        <div class="pitchDisplayDiv">
+          <p class="pitchDisplayOutput"  id="pitchDisplayOutput10"></p>
+        </div>
+      </div>
+      <div class="pitches">
+        <div class="pitchNameDiv">
+          <div class="pitchesFretNumber">--11--</div>
+          <div             class="pitchesScaleDegreeName">(leading tone)</div>
+        </div>
+        <div class="pitchDisplayDiv">
+          <p class="pitchDisplayOutput" id="pitchDisplayOutput11"></p>
+        </div>
+      </div>
+    </div><!-- end pitches div -->
+          <!-- begin title div -->
+    <div id="titleDiv">
+      <p>Welcome to the scale selector 
+        app! This thing will tell you all the names of the notes in a given scale.
+      </p>
+      <p>Here is how it works: On the right side of the screen you will see the scale selector. 
+        Click the button that corresponds to the name of the scale you are trying to learn, and 
+        the notes of that scale will be displayed in the pitches area on the left. </p>
+        <p>Pardon our dust: scale selector v002 is under construction... It don't work yet.</p>
+    </div>
+    <!-- end titleDiv            -->
+    <!-- being SCALE SELECTOR div -->
+    <div id="scaleSelector">
+      <p>This is the scale selector</p>
+      <div id="scaleSelectorButtonsDiv">
+        <button id="c">C</button>
+        <button id="cs">Db/C#</button>
+        <button id="d">D</button>
+        <button id="ds">Eb/D#</button>
+        <button id="e">Fb/E</button>
+        <button id="f">F/E#</button>
+        <button id="fs">Gb/F#</button>
+        <button id="g">G</button>
+        <button id="gs">Ab/G#</button>
+        <button id="a">A</button>
+        <button id="as">Bb/A#</button>
+        <button id="b">Cb/B</button>
+        <!-- end of scaleSelectorButtonsDiv -->
+      </div>
+      <!--  end selector div  -->
+    </div>
+    <!--      WRAPPER DIV END -->
+  </div>
 
 
+  <!--
+<div id="youtube">
+    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=Xq8c45SvTJc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+-->
 
 
+<script src="script.js"></script>
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mandelbrot_sequence_new.gif" width="100%">
 
-</div><!-- wrapper -->
-<script>
-console.log("working");
-</script>
 </body>
 </html>

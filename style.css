@@ -12,6 +12,9 @@ div {
 div.sheetMusicCanvas{
     background-color:#fff;
 }
+div.sidenav a {
+    background-color:#b030f0;
+}
 .sidenav {
     height:100%;
     background-color:#033;
