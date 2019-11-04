@@ -6,6 +6,14 @@ p {
     color:#b7f;
     background-color:#444444;
 }
+p#welcome{
+    color:#ffffff;
+    background-color:#000000;
+    padding:8px;
+    width:80%;
+    margin:auto;
+    margin-top:20px;
+}
 div {
     background-color:#ff0;
 }
@@ -13,9 +21,12 @@ div.sheetMusicCanvas{
     background-color:#fff;
 }
 div.sidenav a {
-    background-color:#b030f0;
+    background-color:#9922ff;
+    padding:2px 8px 3px 5px;
+    margin:0px;
+    border-radius:20%;
 }
-.sidenav {
+div.sidenav {
     height:100%;
     background-color:#033;
     color:#00f;
@@ -43,4 +54,9 @@ button {
     font-size: 16px;
     margin: 4px 2px;
     cursor:pointer;
+}
+#todayIsDay{
+    color:#ffffff;
+    background-color:#000000;
+    padding:10px;
 }
