@@ -2,20 +2,17 @@
     padding:0;
     margin:0px;
 }
-button {
-    background-color:#55a;
-    border:none;
-    color:white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor:pointer;
-}
 p {
     color:#b7f;
+    background-color:#444444;
+}
+p#welcome{
+    color:#ffffff;
+    background-color:#000000;
+    padding:8px;
+    width:80%;
+    margin:auto;
+    margin-top:20px;
 }
 div {
     background-color:#ff0;
@@ -29,7 +26,13 @@ div.main {
 div.sheetMusicCanvas{
     background-color:#fff;
 }
-.sidenav {
+div.sidenav a {
+    background-color:#9922ff;
+    padding:2px 8px 3px 5px;
+    margin:0px;
+    border-radius:20%;
+}
+div.sidenav {
     height:100%;
     background-color:#033;
     color:#00f;
@@ -40,5 +43,31 @@ div.sheetMusicCanvas{
 .sidenav a {
     color:#ccf;
 }
+<<<<<<< HEAD
 #08132019 {background-color:#ddd;color:#00a;}
 #081420192 {background-color:#ddd;color:#04a;}
+=======
+div.main {
+    position:relative;
+    margin-left: 20%;
+    padding:2px;
+    height: 100%;
+}
+button {
+    background-color:#55a;
+    border:none;
+    color:white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor:pointer;
+}
+#todayIsDay{
+    color:#ffffff;
+    background-color:#000000;
+    padding:10px;
+}
+>>>>>>> 0f85eabb15c9add9ae58bb324b26cc3e7bb40e2c

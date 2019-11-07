@@ -1,0 +1,86 @@
+.pitches {
+      background-color:#393;
+      font-size:1em;
+      color:#def;
+      text-align:center;
+      font-family:sans-serif;
+      border:2px;
+      padding-top:4px;
+      padding-bottom:30px;
+      margin:5px;
+      width:90%;
+      align-self:center;
+ }
+  #scaleSelector {
+      background-color:#ccc;
+      color:#339;
+      font-size:2em;
+      text-align:center;
+      float:right;
+      width:44%;
+      padding: 0px;
+ }
+  #pitchesHeader{
+      color:#fff;
+      font-weight:900;
+      padding-bottom:4px;
+      padding-top:5px;
+      background-color:#336;
+ }
+  body{
+      background-color: #f59;
+      padding: 40px;
+ }
+  .scaleSelectorButtonsDiv{
+      height: 50px;
+      width: 150px;
+      font-size: 0.7em;
+      margin: 5px;
+      padding: 5px;
+ }
+  #pitchesDiv {
+      float: left;
+      width: 50%;
+      background-color: #444;
+      align-content: center;
+ }
+  .pitchNameDiv {
+      background-color: #222;
+      float: left;
+      width: 47%;
+      height: 40px;
+      border-width: 30px;
+      border-color: #eee;
+      margin: 2px;
+ }
+  .pitchDisplayDiv {
+      background-color: #7b4;
+      float: right;
+      width: 47%;
+      height: 40px;
+      margin: 2px;
+ }
+  .pitchesFretNumber {
+      float: left;
+      text-align: center;
+      background-color: #444;
+      width: 50%;
+      vertical-align: center;
+      height:70%;
+ }
+  .pitchesScaleDegreeName {
+      float: right;
+      text-align: center;
+      background-color: #444;
+      width: 50%;
+      vertical-align: center;
+      height:70%;
+ }
+  #titleDiv {
+      width: 100%;
+      background-color: #003;
+      margin-bottom: 5px;
+      padding: 5px;
+      color: #b54;
+ }
+ 
