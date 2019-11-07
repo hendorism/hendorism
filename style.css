@@ -43,31 +43,7 @@ div.sidenav {
 .sidenav a {
     color:#ccf;
 }
-<<<<<<< HEAD
 #08132019 {background-color:#ddd;color:#00a;}
 #081420192 {background-color:#ddd;color:#04a;}
-=======
-div.main {
-    position:relative;
-    margin-left: 20%;
-    padding:2px;
-    height: 100%;
-}
-button {
-    background-color:#55a;
-    border:none;
-    color:white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor:pointer;
-}
-#todayIsDay{
-    color:#ffffff;
-    background-color:#000000;
-    padding:10px;
-}
->>>>>>> 0f85eabb15c9add9ae58bb324b26cc3e7bb40e2c
+#datetime{font-family:monospace;
+font-size:24px;}
