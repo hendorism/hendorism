@@ -43,7 +43,9 @@ div.sidenav {
 .sidenav a {
     color:#ccf;
 }
-#08132019 {background-color:#ddd;color:#00a;}
-#081420192 {background-color:#ddd;color:#04a;}
-#datetime{font-family:monospace;
-font-size:24px;}
+#datetime{
+    font-family:monospace;
+    font-size:24px;}
+#canvasGameDiv{
+    background-color:#fff;
+}
