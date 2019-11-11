@@ -1,0 +1,27 @@
+* {
+    padding:0;
+    margin:0px;
+}
+div.sidenav a {
+    background-color:#9922ff;
+    padding:2px 8px 3px 5px;
+    margin:0px;
+    border-radius:20%;
+    color:#ccf;
+}
+div.sidenav {
+    height:100%;
+    background-color:#033;
+    color:#00f;
+    position:absolute;
+    width:20%;
+    padding:6px;
+}
+#blogPosts{
+    text-align:center;
+    color:fff;}
+div.main {
+    position:relative;
+    margin-left: 20%;
+    padding:10px;
+}
