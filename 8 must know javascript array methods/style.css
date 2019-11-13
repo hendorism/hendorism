@@ -1,6 +1,7 @@
 * {
     padding:0;
     margin:0px;
+    font-family:monospace;
 }
 div.sidenav a {
     background-color:#9922ff;
@@ -22,6 +23,16 @@ div.sidenav {
     color:fff;}
 div.main {
     position:relative;
-    margin-left: 20%;
+    margin-left: 22%;
     padding:10px;
+}
+#youtubeLink{
+    margin-left:33px;
+    padding:6px;
+    color:#bb4;
+    background-color:#308;
+}
+#youtubeLink a{
+    color:#f35;
+    text-transform:uppercase;
 }
