@@ -29,8 +29,7 @@
  }
   body {
       background-color: #f59;
-      /*background-image: Mandelbrot_sequence_new.gif;*/
-      /*background-image:  url("https://images.pexels.com/photos/2649841/pexels-photo-2649841.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";*/
+
       padding: 40px;
 
  }
@@ -92,23 +91,11 @@
       font-size:24px;
       width:40%;
 }
-.loader {
-     border: 16px solid #f3f3f3;
-     border-radius: 50%;
-     border-top: 16px solid #3498db;
-     width: 400px;
-     height: 400px;
-     -webkit-animation: spin 2s linear infinite; /* Safari */
-     animation: spin 240s linear infinite;
-   }
-   
-   /* Safari */
-   @-webkit-keyframes spin {
-     0% { -webkit-transform: rotate(0deg); }
-     100% { -webkit-transform: rotate(360deg); }
-   }
-   
-   @keyframes spin {
-     0% { transform: rotate(0deg); }
-     100% { transform: rotate(360deg); }
-   }
+.mandelbrot {
+     width:100%;
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     z-index: 999;
+     opacity: 0.08;
+}
