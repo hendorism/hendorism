@@ -32,6 +32,7 @@ div.sidenav a {
     padding:2px 8px 3px 5px;
     margin:0px;
     border-radius:20%;
+    color:#ccf;
 }
 div.sidenav {
     height:100%;
@@ -41,9 +42,6 @@ div.sidenav {
     width:20%;
     padding:6px;
     line-height: 1.7;
-}
-.sidenav a {
-    color:#ccf;
 }
 #datetime{
     font-family:monospace;
