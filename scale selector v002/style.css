@@ -20,18 +20,20 @@
       width:44%;
       padding: 0px;
  }
-  #pitchesHeader{
+  #pitchesHeader {
       color:#fff;
       font-weight:900;
       padding-bottom:4px;
       padding-top:5px;
       background-color:#336;
  }
-  body{
+  body {
       background-color: #f59;
+
       padding: 40px;
+
  }
-  .scaleSelectorButtonsDiv{
+  .scaleSelectorButtonsDiv {
       height: 50px;
       width: 150px;
       font-size: 0.7em;
@@ -83,4 +85,17 @@
       padding: 5px;
       color: #b54;
  }
- 
+ #warning {
+      font-family:monospace;
+      color:#ff0;
+      font-size:24px;
+      width:40%;
+}
+.mandelbrot {
+     width:100%;
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     z-index: 999;
+     opacity: 0.08;
+}

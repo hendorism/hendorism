@@ -55,3 +55,8 @@ div.sidenav {
     left: 200px;
     top: 150px;
   }
+  .topnav {
+    background-color: #ddd;
+    position: relative;
+    margin-left: 30%;
+}
