@@ -1,3 +1,20 @@
+* {
+    padding:0;
+    margin:0px;
+    font-family:monospace;
+}
+p {
+    color:#b7f;
+    background-color:#444444;
+}
+p#welcome{
+    color:#ffffff;
+    background-color:#000000;
+    padding:8px;
+    width:80%;
+    margin:auto;
+    margin-top:20px;
+}
 div {
     background-color:#ff0;
     padding:10px;
@@ -7,6 +24,9 @@ div.main {
     margin-left: 20%;
     padding:10px;
 }
+div.sheetMusicCanvas{
+    background-color:#fff;
+}
 div.sidenav a {
     background-color:#9922ff;
     padding:2px 8px 3px 5px;
@@ -14,3 +34,33 @@ div.sidenav a {
     border-radius:20%;
     color:#ccf;
 }
+div.sidenav {
+    height:100%;
+    background-color:#033;
+    color:#00f;
+    position:absolute;
+    width:20%;
+    padding:6px;
+    line-height: 1.7;
+}
+#datetime{
+    font-family:monospace;
+    font-size:24px;}
+#canvasGameDiv{
+    background-color:#fff;
+}
+#animateMain{
+    background: #fa3;
+    -webkit-animation: mymove 1s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 30s infinite;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    from {background-color: #fa3;}
+    to {background-color: #f3a;}
+  } 
+  /* Standard syntax */
+  @keyframes mymove {
+    from {background-color: #fa3;}
+    to {background-color: #f3a;}
+  }
