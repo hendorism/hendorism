@@ -34,6 +34,25 @@ div.sidenav a {
     border-radius:20%;
     color:#ccf;
 }
+div.sidenav a:link {
+    COLOR:black;
+    TEXT-DECORATION:none;
+    font-weight:normal
+}
+div.sidenav a:visited {
+    COLOR:black;
+    TEXT-DECORATION:none;
+    font-weight:normal
+}
+div.sidenav a:active {
+    COLOR:rgb(57, 160, 117);
+    TEXT-DECORATION:none
+}
+div.sidenav a:hover {
+    COLOR:#fff;
+    TEXT-DECORATION:none;
+    font-weight:none
+}
 div.sidenav {
     height:100%;
     background-color:#033;

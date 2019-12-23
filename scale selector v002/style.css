@@ -91,11 +91,36 @@
       font-size:24px;
       width:40%;
 }
+#subWarning {
+     font-family:monospace;
+     color:#5fb;
+     font-size:18px;
+     width:40%;
+}
 .mandelbrot {
-     width:100%;
+     width:470px;
      position: absolute;
-     left: 0px;
-     top: 0px;
+     left: 40px;
+     top: 250px;
      z-index: 999;
-     opacity: 0.08;
+     opacity: 0.4;
+}
+a:link {
+     COLOR:black;
+     TEXT-DECORATION:none;
+     font-weight:normal
+}
+a:visited {
+     COLOR:black;
+     TEXT-DECORATION:none;
+     font-weight:normal
+}
+a:active {
+     COLOR:rgb(57, 160, 117);
+     TEXT-DECORATION:none
+}
+a:hover {
+     COLOR:#fff;;
+     TEXT-DECORATION:none;
+     font-weight:none
 }
