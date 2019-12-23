@@ -1,4 +1,4 @@
-console.log("script.js is working");
+console.log("hello");
 var day;
 switch (new Date().getDay()) {
   case 0:
@@ -23,3 +23,5 @@ switch (new Date().getDay()) {
     day = "Saturday";
 }
 document.getElementById("todayIsDay").innerHTML = "Today is " + day;
+
+console.log("goodbye");

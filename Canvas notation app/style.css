@@ -1,0 +1,46 @@
+/* styles for canvas music notation app v01 */
+table.versionsTable {
+    background-color:#def;
+    border:1px solid black;
+}
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+    padding:15px;
+}
+#goBackHomeDiv {
+    position: absolute;
+    left: 100px;
+    top: 75px;
+    width:600px;
+    height:100px;
+    font-family: monospace;
+    font-size: 30px;
+}
+#welcomeToHeading {
+    background-color:#def;
+    padding:15px;
+}
+div.welcomeDiv {
+    background-color:#aaf;
+    padding:15px;
+}
+div.appContainerDiv {
+    background-color:#666;
+    padding:15px;
+}  
+a:link {
+    color: blue;
+}
+a:visited {
+    color: purple;
+}
+.inputButton{
+    width:350px;
+}
+.whiteCanvasDiv {
+    background-color:#fff;
+    padding:5px;
+}
