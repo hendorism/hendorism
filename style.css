@@ -21,18 +21,28 @@ div {
 }
 div.main {
     position:relative;
-    margin-left: 20%;
+    margin-left: 13%;
     padding:10px;
 }
 div.sheetMusicCanvas{
     background-color:#fff;
 }
+div.sidenav {
+    height:100%;
+    background-color:#077;
+    color:#00f;
+    position:absolute;
+    width:13%;
+    padding:3px;
+    line-height: 1.7;
+}
 div.sidenav a {
-    background-color:#9922ff;
+    background-color:#dd77ff;
     padding:2px 8px 3px 5px;
     margin:0px;
     border-radius:20%;
     color:#ccf;
+    width:100%;
 }
 div.sidenav a:link {
     COLOR:black;
@@ -52,15 +62,6 @@ div.sidenav a:hover {
     COLOR:#fff;
     TEXT-DECORATION:none;
     font-weight:none
-}
-div.sidenav {
-    height:100%;
-    background-color:#033;
-    color:#00f;
-    position:absolute;
-    width:20%;
-    padding:6px;
-    line-height: 1.7;
 }
 #datetime{
     font-family:monospace;
