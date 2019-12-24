@@ -1,3 +1,8 @@
 # my-blog
+This is my general website repository for web design experiments as I learn the craft.
 
-this is just my general website for the porpuse of aadding all kinda silly stuff to make you think I'm good at prog ramming
+Please explore the page and check out my projects.
+
+If you see things broken or you have things you want me to add, email me at...
+
+hendorism@gmail.com
