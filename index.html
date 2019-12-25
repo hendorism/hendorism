@@ -39,7 +39,7 @@
 
 
   <div class="main" id="animateMain">
-      <center><span id="datetime"></span></center>
+      <center>Page loaded at.............<span id="datetime"></span></center>
 
       <script>
       var dt = new Date();
@@ -50,70 +50,125 @@ $("span#datetime").style.color = (red);
           <center>
             <iframe src="http://free.timeanddate.com/clock/i72xynz2/n234/szw110/szh110/hoc009/hbw4/hfcdef/cf100/hgr0/hcw2/hcd50/fav0/fiv0/mqc0f7/mqs4/mql30/mqw8/mqd96/mhc0f7/mhs4/mhl30/mhw6/mhd96/mmc0f7/mms4/mml20/mmw2/mmd90/hhs2/hhw11/hms2/hmw6/hmr4/hsc037/hss3/hsl90" frameborder="0" width="110" height="110"></iframe>
         
-        </center> 
+       
 <h1>Aaron's Blog</h1>
-<p id="welcome">
-  Welcome to my blog.<br> 
+<p id="welcome"> 
   You have come to the<br> 
   right place to learn<br> 
   about my music and<br> 
   computer science projects.</p>
-    <br>
-
+ <br>
+  </center> 
 
 <style>
-    .more-content{
-        background-color:#000;
-        color:#0f0;
+    p#welcome {
+      width:300px;
     }
-    .more-content p{
+    .more-content {
         background-color:#000;
-        color:#0f0;
+        color:#3c7;
     }
-    #music-notation-v0018{
+    .more-content p {
+        background-color:#000;
+        color:#3c7;
+        padding:2px;
+    }
+    div#music-notation-v0018 {
         background-color:#333;
         color:#4c7;
     }
-    #mnCanvasDiv{
-        background-color:#fff;
+    div#music-notation-v0018 h1 {
+      margin-left: 80px;
+      color:#fff;
     }
+    div#music-notation-v0018 div#mnCanvasDiv {
+        background-color:#6ef;
+        height:700px;
+        width:550px;
+    }
+    #mnCanvasDiv {
+        background-color:#fff;
+    }                                        /*
     #mnCanvas {
         width:600px;
         height:800px;
     }
+    the above code stretches the canvas horizontally and so it is bad...    */
+    div.main img {
+      width: 100%;
+      height: auto;
+    }
 </style>
 
-<div class="more-content">
+<div class="more-content"><center>
   <p>Here is my experiment to see if I can design a music notation app that uses HTML5 canvas.</p>
-<p>test</p>
+</center>
+<br>
 <div id="music-notation-v0018">
   <h1>Music Notation 1.8</h1>
-  
-    <div id="nmCanvasDiv">
-      <canvas id="mnCanvas">
+    <div id="mnCanvasDiv">
+      <canvas id="mnCanvas" width="20" height="500">
       <script src="music_notation_v0018.js"></script>
     </div>
-</div><!-- end of div#music-notation-v0018 -->
+</div><!-- /div #music-notation-v0018 -->
+
 <div id="marsFactDiv" class="contentDiv">
 <p>Because of the low gravity on Mars, sports like soccer and football will be very interesting.</p>
-    <img src="Screenshot_20191223-122330_Chrome - mars fact.jpg">
+    <img alt="What is the gravity on Mars?" id="marsFactImg" src="Screenshot_20191223-122330_Chrome - mars fact.jpg" href="https://www.google.com/search?q=mars+gravity&oq=mars+gravity&aqs=chrome..69i57j35i39l2j0l5.2046j1j7&sourceid=chrome&ie=UTF-8">
 
 <style>
 .contentDivP{
 width:80%;
 }
+.contentDivMoreP {
+  width:30%;
+  margin:1px;
+}
 </style>
 
-  </div><!-- div #marsFactDiv -->
+  </div><!-- /div #marsFactDiv -->
 
   <div id="compositionDiv">
     <center>
     <p class="contentDivP">Here is a composition of mine:</p>
-    <img src="20191212_172019 - claaronette - 25percent.jpg">
+    <p class="contentDivMoreP">This one I composed in December 2019
+       I think. It is in the key of Db major because 
+      I wanted to get better at playing in that key.
+      I have always had a hard time with the Db major scale. It is quite tricky on the clarinet.
+      It is one half step above the C scale which is the easiest scale because it uses 
+      all the easy fingerings. All the Db major fingerings are 
+      between all the C fingerings with the exception of two of 
+      the seven notes. Those are the two common tones between C 
+      and Db. They are C and F. Besides C and F, just about 
+      every note in the Db major scale uses one 
+      or more of the pinky levers and trill keys.
+    </p>
+<p class="contentDivMoreP">Of course I don't like to confine myself to the realm of the major scale.
+  I like to involve chromatic notes, and with a scale that employs five of the seven available flats one could throw in a key signature, we are bound to encounter some DOUBLE-FLATS!. Now these are not
+  a big scary thing. The double-flat notes I use in this are best thought of in terms of their
+  Nashville Number System number. For example, in measure number 3 we encounter the first one, Bbb. B is the 6 of D. so Bb is the 6 of Db, so Bbb is the flat 6 of Db. the 6 of a major scale is a major 6th above the root, and Bbb is a minor 6th above Db.
+</p>
+<p class="contentDivMoreP">Later I see Abb, the flat 5 of Db since A is the five of D, Ab is the five of Db, so Abb is the flat five of Db.</p>
+
+    <img src="20191212_172019 - claaronette.jpg">
   </center>
+  </div><!-- /div #compositionDiv -->
+
+  <div id="compositionDiv">
+    <center>
+      <p class="contentDivP">Here is another composition, this one composed using MuseScore on 12/24/2019</p>
+      <img src="octaves-scales clarinet.png">
+    </center>
   </div>
-</div><!-- end of div.main -->
+
+</div><!-- /div .main -->
 
   <script src="script.js"></script>
 </body>
 </html>
+
+
+<!--
+octaves-scales clarinet
+-->
+
