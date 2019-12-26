@@ -7,10 +7,7 @@ var c = document.getElementById("mnCanvas");
 var ctx = c.getContext("2d");
 c.width = 400;
 c.height = 1200;
-ctx.font = "20px Arial";
-ctx.fillText("Funny Bunny 12/24/2019",10,40);
-ctx.font = "16px monospace";
-ctx.fillText("Bb clarinet",0,80);
+
 const noteHeadRadius = 4;
 const lineWidth = 1;
 const thickLineWidth = 2.5;
