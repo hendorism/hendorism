@@ -63,6 +63,9 @@ div.sidenav a:hover {
     TEXT-DECORATION:none;
     font-weight:none
 }
+div.bottomnav{
+    
+}
 #datetime{
     font-family:monospace;
     font-size:24px;}
