@@ -1,0 +1,10 @@
+body {
+    /*background-image: url('20180114_122925.jpg');
+*/
+
+border: 2px solid black;
+background: url('20180114_122925.jpg');
+background-repeat: no-repeat;
+background-size: 100% 900px;
+background-blend-mode: lighten;
+}
