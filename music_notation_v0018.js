@@ -4,36 +4,39 @@ console.log("music_notation_v0018.js is working.");
 
 var c = document.getElementById("mnCanvas");
 var ctx = c.getContext("2d");
-c.width = 400;
+c.width = 420;
 c.height = 1200;
-ctx.font = "20px Arial";
-ctx.fillText("Drawing Notes on Canvas 1.8",10,40);
-ctx.font = "16px monospace";
-ctx.fillText("Bb clarinet",0,80);
+ctx.strokeRect(0, 0, c.width, c.height);
+
 const noteHeadRadius = 4;
 const lineWidth = 1;
 const thickLineWidth = 2.5;
 function drawStaves(stavesQuantity,stavesSpacing,topMargin){
     for(e=0;e<stavesQuantity;e++){
         for(i=0;i<5;i++){
-            drawLine(10,topMargin+10*i+stavesSpacing*e, 390,topMargin+10*i+stavesSpacing*e);
+            drawLine(20,topMargin+10*i+stavesSpacing*e, 390,topMargin+10*i+stavesSpacing*e);
         }
     }
 }
 function drawTrebleCleff(x,y){
-    //drawReticle(x,y);
-    drawLine( x-5,   y+15,  x-7,   y+18 );
-    drawLine( x-7,   y+18,  x-5,   y+20 );
-    drawLine( x-5,   y+20,  x+5,   y+20 );
-    drawLine( x+5,   y+20,  x-8,   y-35 );
-    drawLine( x-8,   y-35,  x-5.5, y-40 );
-    drawLine( x-5.5, y-40,  x-2,   y-34 );
-    drawLine( x-2,   y-34,  x+2,   y-24 );
-    drawLine( x+2,   y-24,  x-7,   y    );
-    drawLine( x-7,   y,     x,     y+10 );
-    drawLine( x,     y+10,  x+5,   y-2  );
-    drawLine( x+5,   y-2,   x,     y-9  );
-    drawLine( x,     y-9,   x-3,   y-3  );
+    drawReticle(x,y);
+    ctx.beginPath ();
+    ctx.moveTo (x,y);
+    ctx.bezierCurveTo (
+    x+3,y+3,
+    x+3,y-10,
+    x-4,y-65);
+    
+    ctx.bezierCurveTo (
+    x+16,y-60,
+    x-5,y-50,
+    x-8,y-16);
+    
+    ctx.bezierCurveTo (
+    x+16,y+10,
+    x+10,y-70,
+    x-4,y-20);
+    ctx.stroke ();
 }
 function drawTimeSignature(x,y,n,d){
     //drawReticle();
@@ -42,8 +45,9 @@ function drawTimeSignature(x,y,n,d){
     ctx.fillText(d,x-7,y+20);
 }
 function drawReticle(y,x){
+    ctx.fillStyle = 'green';
     ctx.beginPath();
-    ctx.arc(x,y,2,0,Math.PI*2,true);
+    ctx.arc(x,y,9,0,Math.PI*2,true);
     ctx.closePath();
     ctx.fill();
 }
@@ -136,11 +140,7 @@ function drawKeySignature(x,y,a){
         }
     }
 }
-//Start drawing music.
-drawStaves(6,80,100);
-drawTrebleCleff(10,130);
-drawTimeSignature(20,120,4,4);
-drawKeySignature(30,120,-4);
+
 
 
 

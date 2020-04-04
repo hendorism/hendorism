@@ -8,3 +8,11 @@ background-repeat: no-repeat;
 background-size: 100% 900px;
 background-blend-mode: lighten;
 }
+#banana {
+    background-color:#0ef;
+    opacity: 0.9;
+    padding:20px;
+    margin-top:4%;
+    margin-left:5%;
+    margin-right:15%;
+}
