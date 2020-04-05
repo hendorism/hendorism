@@ -27,7 +27,7 @@ function drawTrebleCleff(x,y){
     x+3,y-10,
     x-4,y-65);
     
-    ctx.bezierCurveTo (
+    ctx.bezierCurveTo ( 
     x+16,y-60,
     x-5,y-50,
     x-8,y-16);
