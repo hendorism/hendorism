@@ -45,7 +45,7 @@ function drawTimeSignature(x,y,n,d){
     ctx.fillText(d,x-7,y+20);
 }
 function drawReticle(y,x){
-    ctx.fillStyle = 'green';
+    ctx.fillStyle = '#39a';
     ctx.beginPath();
     ctx.arc(x,y,9,0,Math.PI*2,true);
     ctx.closePath();
@@ -58,12 +58,25 @@ function drawLine(x1,y1,x2,y2){
     ctx.lineTo( x2, y2 );
     ctx.stroke();
 }
+function drawBezier(x1,x2,x3,x4,y1,y2,y3,y4) {
+    ctx.beginPath ();
+    ctx.moveTo (x1,y1);
+    ctx.bezierCurveTo (x2,y2,x3,y3,x4,y4);
+    ctx.stroke ();
+}
 function drawThickLine(x1,y1, x2, y2){
     ctx.lineWidth = thickLineWidth;
     ctx.beginPath();
     ctx.moveTo   ( x1, y1 );
     ctx.lineTo   ( x2, y2 );
     ctx.stroke   ();
+}
+function drawThickBezier(x1,x2,x3,x4,y1,y2,y3,y4) {
+    ctx.lineWidth = thickLineWidth;
+    ctx.beginPath ();
+    ctx.moveTo (x1,y1);
+    ctx.bezierCurveTo (x2,y2,x3,y3,x4,y4);
+    ctx.stroke ();
 }
 function drawFlat(x,y){
     //drawReticle (x,y);
@@ -147,3 +160,18 @@ function drawKeySignature(x,y,a){
 
 
 console.log("music_notation_v0018.js is finished working.");
+
+
+// I am CatMan
+// I am da Bataman
+// I am the PookeyMan
+// Yoo Arr De Pohkey Poughkaii!
+// You are the Silly Billy Willy
+// Roo Rahr Rhe Rhoughkiey Rhuggierrei
+// Tu es Loco para con Poopy
+// Tus ojos son en la madrugada pequenos 
+// con la salsa roja por mi culo
+// CheeChing ling ding dong pung pong we wong salad
+// Bong Dang Dock Gook Geek Chin 
+// Youb eez kaooot
+
