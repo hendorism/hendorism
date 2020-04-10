@@ -35,37 +35,26 @@ div.sidenav {
     line-height: 1.7;
 }
 div.sidenav a {
-    background-color:#dd77ff;
-    padding:2px 8px 3px 5px;
-    margin:0px;
-    border-radius:20%;
     color:#ccf;
-    width:100%;
 }
 div.sidenav a:link {
     COLOR:black;
-    TEXT-DECORATION:none;
-    font-weight:normal
 }
 div.sidenav a:visited {
     COLOR:black;
-    TEXT-DECORATION:none;
-    font-weight:normal
 }
 div.sidenav a:active {
     COLOR:rgb(57, 160, 117);
-    TEXT-DECORATION:none
 }
 div.sidenav a:hover {
     COLOR:#fff;
-    TEXT-DECORATION:none;
-    font-weight:none
 }
-
-
- 
 div.bottomnav{
-    
+  background-color: #333;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 #datetime{
     font-family:monospace;
