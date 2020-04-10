@@ -2,123 +2,8 @@
   <head>
     <title>!! - - SCALE_SELECTOR - - !!</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
+    </head>
   <body>
-
-    <!-- WRAPPER DIV BEGIN  -->
-    <div id="wrapper">
-      <!--  	PITCHES DIV  -->
-      <div id="pitches_div">
-        <div id="pitches_header" class="pitches">PITCHES</div>
-        <div class="pitches">
-          <div class="pitch_name_div">
-            <div class="pitches_fret_number">--0--</div>
-            <div class="pitches_fret_number">(tonic)</div>
-          </div>
-          <div class="pitch_display_div">
-            <p class="pitch_display_output" id="pitch_display_output0"></p><div class="notationCanvasDiv"><canvas class="outputCanvas" id="outputCanvas0"></canvas></div>
-          </div>
-        </div>
-        <div class="pitches">
-          <div class="pitch_name_div">
-            <div class="pitches_fret_number">--1--</div>
-            <div class="pitches_scaleDegree_name">(flat 2)</div>
-          </div>
-          <div class="pitch_display_div">
-            <p class="pitch_display_output" id="pitch_display_output1"></p><div class="notationCanvasDiv"></div><canvas class="outputCanvas" id="outputCanvas1"></canvas></div>
-          </div>
-        </div>
-        <div class="pitches">
-          <div class="pitch_name_div">
-            <div class="pitches_fret_number">--2--</div>
-            <div class="pitches_scaleDegree_name">(supertonic)</div>
-          </div>
-          <div class="pitch_display_div">
-            <p class="pitch_display_output" id="pitch_display_output2"></p><div class="notationCanvasDiv"></div><canvas class="outputCanvas" id="outputCanvas2"></canvas></div>
-          </div>
-        </div>
-        <div class="pitches">
-          <div class="pitch_name_div">
-            <div class="pitches_fret_number">--3--</div>
-            <div class="pitches_scaleDegree_name">(flat 3)</div>
-          </div>
-          <div class="pitch_display_div">
-            <p class="pitch_display_output" id="pitch_display_output3"></p><div class="notationCanvasDiv"></div><canvas class="outputCanvas" id="outputCanvas3"></canvas></div>
-          </div>
-        </div>
-        <div class="pitches">
-          <div class="pitch_name_div">
-            <div class="pitches_fret_number">--4--</div>
-            <div class="pitches_scaleDegree_name">(mediant)</div>
-          </div>
-          <div class="pitch_display_div">
-            <p class="pitch_display_output" id="pitch_display_output4"></p><div class="notationCanvasDiv"></div><canvas class="outputCanvas" id="outputCanvas4"></canvas></div>
-          </div>
-        </div>
-        <div class="pitches">
-          <div class="pitch_name_div">
-            <div class="pitches_fret_number">--5--</div>
-            <div class="pitches_scaleDegree_name">(subdominant)</div>
-          </div>
-          <div class="pitch_display_div">
-            <p class="pitch_display_output" id="pitch_display_output5"></p><div class="notationCanvasDiv"></div><canvas class="outputCanvas" id="outputCanvas5"></canvas></div>
-          </div>
-        </div>
-        <div class="pitches">
-          <div class="pitch_name_div">
-            <div class="pitches_fret_number">--6--</div>
-            <div class="pitches_scaleDegree_name">(flat 5)</div>
-          </div>
-          <div class="pitch_display_div">
-            <p class="pitch_display_output" id="pitch_display_output6"></p><div class="notationCanvasDiv"></div><canvas class="outputCanvas" id="outputCanvas6"></canvas></div>
-          </div>
-        </div>
-        <div class="pitches">
-          <div class="pitch_name_div">
-            <div class="pitches_fret_number">--7--</div>
-            <div class="pitches_scaleDegree_name">(dominant)</div>
-          </div>
-          <div class="pitch_display_div">
-            <p class="pitch_display_output" id="pitch_display_output7"></p><div class="notationCanvasDiv"></div><canvas class="outputCanvas" id="outputCanvas7"></canvas></div>
-          </div>
-        </div>
-        <div class="pitches">
-          <div class="pitch_name_div">
-            <div class="pitches_fret_number">--8--</div>
-            <div class="pitches_scaleDegree_name">(minor 6)</div>
-          </div>
-          <div class="pitch_display_div">
-            <p class="pitch_display_output" id="pitch_display_output8"></p><div class="notationCanvasDiv"></div><canvas class="outputCanvas" id="outputCanvas8"></canvas></div>
-          </div>
-        </div>
-        <div class="pitches">
-          <div class="pitch_name_div">
-            <div class="pitches_fret_number">--9--</div>
-            <div class="pitches_scaleDegree_name">(major 6)</div>
-          </div>
-          <div class="pitch_display_div">
-            <p class="pitch_display_output" id="pitch_display_output9"></p><div class="notationCanvasDiv"></div><canvas class="outputCanvas" id="outputCanvas9"></canvas></div>
-          </div>
-        </div>
-        <div class="pitches">
-          <div class="pitch_name_div">
-            <div class="pitches_fret_number">--10--</div>
-            <div class="pitches_scaleDegree_name">(flat 7)</div>
-          </div>
-          <div class="pitch_display_div">
-            <p class="pitch_display_output" id="pitch_display_output10"></p><div class="notationCanvasDiv"></div><canvas class="outputCanvas" id="outputCanvas10"></canvas></div>
-          </div>
-        </div>
-        <div class="pitches">
-          <div class="pitch_name_div">
-            <div class="pitches_fret_number">--11--</div>
-            <div class="pitches_scaleDegree_name">(leading tone)</div>
-          </div>
-          <div class="pitch_display_div">
-            <p class="pitch_display_output" id="pitch_display_output11"></p><div class="notationCanvasDiv"></div><canvas class="outputCanvas" id="outputCanvas11"></canvas></div>
-          </div>
-        </div>
-      </div>
       <!--  div just for TITLE and explanation -->
       <div id="title_div">
         <p>Welcome to the scale selector 
@@ -128,6 +13,129 @@
           Click the button that corresponds to the name of the scale you are trying to learn, and 
           the notes of that scale will be displayed in the pitches area on the left. 
       </div>
+    <!-- WRAPPER DIV BEGIN  -->
+    <div id="wrapper">
+      <!--  	PITCHES DIV  -->
+      <div id="pitches_div">
+        <div id="pitches_header">PITCHES</div>
+
+        <div class="pitches">
+          <div class="pitch_name_div">
+            0 - (tonic)
+          </div>
+          <div class="output">
+            <p class="pitch_display_output" id="pitch_display_output0"></p>
+          </div>
+        </div>
+
+        <div class="pitches">
+          <div class="pitch_name_div">
+            1 - (flat 2)
+          </div>
+          <div class="output">
+            <p class="pitch_display_output" id="pitch_display_output1"></p>
+          </div>
+        </div>
+
+        <div class="pitches">
+          <div class="pitch_name_div">
+            2 - (supertonic)
+          </div>
+          <div class="output">
+            <p class="pitch_display_output" id="pitch_display_output2"></p>
+          </div>
+        </div>
+
+        <div class="pitches">
+          <div class="pitch_name_div">
+            3 - (flat 3)
+          </div>
+          <div class="output">
+            <p class="pitch_display_output" id="pitch_display_output3"></p>
+          </div>
+        </div>
+
+        <div class="pitches">
+          <div class="pitch_name_div">
+            4 - (mediant)
+          </div>
+          <div class="output">
+            <p class="pitch_display_output" id="pitch_display_output4"></p>
+          </div>
+        </div>
+
+        <div class="pitches">
+          <div class="pitch_name_div">
+            5 - (subdominant)
+          </div>
+          <div class="output">
+            <p class="pitch_display_output" id="pitch_display_output5"></p>
+          </div>
+        </div>
+
+        <div class="pitches">
+          <div class="pitch_name_div">
+            6 - (flat 5)
+          </div>
+          <div class="output">
+            <p class="pitch_display_output" id="pitch_display_output6"></p>
+          </div>
+        </div>
+
+        <div class="pitches">
+          <div class="pitch_name_div">
+            7 - (dominant)
+          </div>
+          <div class="output">
+            <p class="pitch_display_output" id="pitch_display_output7"></p>
+          </div>
+        </div>
+
+        <div class="pitches">
+          <div class="pitch_name_div">
+            8 - (minor 6)
+          </div>
+          <div class="output">
+            <p class="pitch_display_output" id="pitch_display_output8"></p>
+          </div>
+        </div>
+
+        <div class="pitches">
+          <div class="pitch_name_div">
+            9 - (major 6)
+          </div>
+          <div class="output">
+            <p class="pitch_display_output" id="pitch_display_output9"></p>
+          </div>
+        </div>
+
+        <div class="pitches">
+          <div class="pitch_name_div">
+            10 - (flat 7)
+          </div>
+          <div class="output">
+            <p class="pitch_display_output" id="pitch_display_output10"></p>
+          </div>
+        </div>
+
+        <div class="pitches">
+          <div class="pitch_name_div">
+            11 - (leading tone)
+          </div>
+          <div class="output">
+            <p class="pitch_display_output" id="pitch_display_output11"></p>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
       <!--      SCALE SELECTOR------/\---- ------>
       <div id="scale_selector">
         <p>This is the scale selector</p>
@@ -172,10 +180,10 @@
       </div>
       <!--      WRAPPER DIV END -->
     </div>
-<p id="goBackHome">Go back <a href="../index.html">home.</a></p>
+<p id="goBackHome"><a id="homeLink" href="../index.html">home</a></p>
 
 
 <script src="scale_selector001.js"></script>  
-<script src="scale_selector001_outputCanvas.js"></script>
+
   </body>
 </html>

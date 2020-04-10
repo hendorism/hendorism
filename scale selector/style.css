@@ -1,105 +1,105 @@
+body{
+background-color: #f59;
+padding: 4px;
+padding-top:20px;
+}
+#title_div {
+  background-color:#103;
+  color:#ff0;
+  padding:2%;
+  position:relative;
+  top:10px;
+  left:10%;
+  right:10%;
+  width:80%;
+}
+#wrapper {
 
-  .pitches {
-  background-color:#393;
-  font-size:1em;
-  color:#def;
-  text-
-  align:center;
-  font-family:sans-serif;
-  border:2px;
-  padding-
-  top:4px;
-  padding-bottom:30px;
-  margin:5px;
-  width:90%;
-  align-self:center;
-  }
-  #scale_selector {
-  background-
-  color:#ccc;
-  color:#339;
-  font-size:2em;
-  text-align:center;
-  float:right;
-  width:44%;
-  padding: 0px;
-  }
-  #pitches_header{
-  color:#fff;
-  font-weight:900;
-  padding-bottom:4px;padding-top:5px;
-  background-color:#336;
-  }
-  body{
-  background-color: #f59;
-  padding: 40px;
-  }
-  .scale_selector_buttons{
-  height: 50px;
-  width: 150px;
-  font-size: 0.7em;
-  margin: 
-  5px;
-  padding: 5px;
-  }
-  #pitches_div {
-  float: left;
-  width: 50%;
-  background-color: #444;
-  align-content: center;
-  }
-  .pitch_name_div {
-  background-color: #222;
-  float: left;
-  width: 47%;
-  height: 40px;
-  border-width: 30px;
-  border-
-  color: #eee;
-  margin: 2px;
-  }
-  .pitch_display_div {
-  background-color: #7b4;
-  float: right;
-  width: 47%;
-  height: 
-  40px;
-  margin: 2px;
-  }
-  .pitches_fret_number {
-  float: left;
-  text-align: center;
-  background-color: #444;
-  width: 50%;
-  vertical-align: center;
-  height:70%;
-  }
-  .pitches_scaleDegree_name {
-  float: right;
-  text-align: center;
-  background-color: #444;
-  width: 50%;
-  vertical-align: center;
-  height:70%;
-  }
-  #title_div {
-  width: 100%;
-  background-color: #003;
-  margin-bottom: 
-  5px;
-  padding: 5px;
-  color: #b54;
-  }
-  #goBackHome{
-  float:bottom;
-  color:#fff;
-  background-color:#2ad;
-  width:230px;
-  position: absolute;
-  top: 0px;
-  left:500px;
-  padding:7px;
-  font-family: monospace;
-  font-size:16px;
-  text-transform: uppercase;
-  }
+}
+#scale_selector {
+background-color:#ccc;
+color:#339;
+font-size:2em;
+text-align:center;
+float:right;
+width:40%;
+padding: 5px;
+margin:10px;
+}
+#pitches_header{
+color:#93f;
+background-color:#000;
+text-align:center;
+font-weight:300;
+padding-top: 10px;
+padding-bottom: 10px;
+background-color:#000;
+}
+#pitches_header:hover {
+  background-color:#539;
+}
+
+.scale_selector_buttons{
+height: 50px;
+width: 150px;
+font-size: 0.7em;
+margin: 
+5px;
+padding: 5px;
+}
+#pitches_div {
+float: left;
+width: 50%;
+background-color: #444;
+align-content: center;
+}
+.pitches {
+background-color:#393;
+font-size:1em;
+color:#def;
+text-align:center;
+font-family:sans-serif;
+border:2px;
+padding-
+top:4px;
+padding-bottom:30px;
+margin:5px;
+width:80%;
+align-self:center;
+}
+.pitch_name_div {
+background-color: #222;
+float: left;
+width: 47%;
+height: 40px;
+border-width: 30px;
+border-color: #eee;
+margin: 2px;
+}
+.output {
+background-color: #7b4;
+float: right;
+width: 47%;
+height: 
+40px;
+margin: 2px;
+}
+#goBackHome{
+color:#fff;
+background-color:#2ad;
+width:180px;
+position: absolute;
+text-align:center;
+top: 0px;
+left:40px;
+padding:7px;
+font-family: monospace;
+font-size:16px;
+text-transform: uppercase;
+}
+#goBackHome:hover{
+  background-color:#000;
+}
+#homeLink:hover {
+  color:#f00;
+}
