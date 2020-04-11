@@ -13,6 +13,11 @@ ctx.font = "16px monospace";
 ctx.fillStyle = "#ff6699";
 ctx.fillText("A Silly Song",130,55);
 ctx.fillStyle = "#000000";
+drawStaves(12,80,100);
+drawTrebleCleff(20,155);
+drawKeySignature(35,120,-4);
+
+//beat 1
 drawNoteHead(70,110);
 drawLine(74,110,74,85);
 drawNoteHead(80,115);
@@ -23,6 +28,8 @@ drawNoteHead(100,140);
 drawLine(104,140,104,85);
 drawThickLine(74,85,104,85);
 drawThickLine(74,89,104,89);
+
+//beat 2
 drawNoteHead(110,140-35);
 drawLine(113,140-35,113,83);
 drawNoteNatural(130,140-30);
@@ -33,6 +40,8 @@ drawNoteHead(150,130);
 drawLine(153,130,153,91);
 drawThickLine(113,83,153,91);
 drawThickLine(113,87,153,95);
+
+//beat 3
 drawNoteHead(160,140);
 drawLine (163,140,163,95);
 drawNoteHead(170,125);
@@ -43,11 +52,13 @@ drawNoteHead(200,105);
 drawLine (203,105,203,85);
 drawThickLine (163,95,203,85);
 drawThickLine (163,99,203,89);
+
+//beat 4
 drawNoteHead(210,120);
 drawLine(207,120,207,150);
 drawNoteHead(220,115);
 drawLine(217,115,217,148);
-drawNoteFlat(240,100);
+drawNoteHead(240,100);
 drawLine(237,100,237,144);
 drawNoteSharp(260,110);
 drawLine(257,110,257,140);
@@ -56,15 +67,11 @@ drawLine(277,105,277,136);
 drawThickLine(207,150,277,136);
 drawThickLine(207,146,217,144);
 drawThickLine(237,140,277,132);
-drawLine(240,90,240,79);
-drawLine(240,79,250,81);
-drawLine(270,85,280,87);
-drawLine(280,87,280,95);
-ctx.font = "18px monospace";
-ctx.fillText("3",255,87);
-drawLine(390,140,390,100);
+drawTuplet(3,240,90,240,79,250,81,255,87,270,85,280,87,280,95);
+drawLine(390,140,390,100);//barline
+
 //Start line two.
-drawTrebleCleff(10,130+80);
+drawTrebleCleff(10,230);
 drawKeySignature(20,120+80,-4);
 drawNoteHead(45,180);
 drawNoteHead(55,185);
