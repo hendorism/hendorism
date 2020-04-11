@@ -1,4 +1,4 @@
-console.log("hello");
+console.log("Script.js has started.");
 var day;
 switch (new Date().getDay()) {
   case 0:
@@ -24,4 +24,4 @@ switch (new Date().getDay()) {
 }
 document.getElementById("todayIsDay").innerHTML = "Today is " + day;
 
-console.log("goodbye");
+console.log("Script.js has finished.");
