@@ -3,16 +3,20 @@
 * {
     font-family:monospace;
 }
-h1.mainh1 {
-    color:#26a;
-    background-color:#ccd;
+body {
+    background-color:#ddb;
 }
 div.header {
-    
+    color:#26a;
+    background-color:#cef;
+    border-radius:50%;
+    padding:13px;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
 }
-div.wrapper {
 
-}
-div.main {
-
+div.canvas {
+    background-color:#fff;
 }

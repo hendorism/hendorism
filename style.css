@@ -31,27 +31,35 @@ div.sidenav {
     color:#00f;
     position:absolute;
     width:13%;
-    padding:3px;
-    line-height: 1.7;
+    padding:4px;
+    line-height: 1.0;
 }
 div.sidenav a {
     color:#ccf;
 }
 div.sidenav a:link {
-    COLOR:black;
+    COLOR:#037;
 }
 div.sidenav a:visited {
-    COLOR:#069;
+    COLOR:#000;
 }
 div.sidenav a:active {
     COLOR:rgb(57, 160, 117);
 }
 div.sidenav a:hover {
-    COLOR:#fff;
+    COLOR:#0f0;
 }
 div.subnav {
+    background-color:#914;
+    margin:1px;
+    padding-left:0px;
+}
+div.sidenavItem {
+    margin-top:3px;
+    margin-bottom:3px;
+    margin-left:0px;
+    margin-right:0px;
     background-color:#c37;
-    margin:5px;
 }
 div.bottomnav{
   background-color: #333;
