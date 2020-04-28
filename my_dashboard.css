@@ -1,0 +1,47 @@
+body {
+    background-color:#153;
+    color:#cca;
+    font-family:monospace;
+    font-size:2em;
+    padding-left: 20px;
+}
+
+a {
+    color:#86b;
+}
+a:hover {
+    color:#97c;
+}
+
+div#time2 {
+    background-color:#334;
+    padding:30px;
+    padding-top:0px;
+    width:280px;
+}
+div#testdiv {
+    background-color:#497;
+    width:200px;
+    height:200px;
+    left:0%;
+    top:500px;
+    position: relative;
+
+}
+div.russiandoll {
+    border-style: solid;
+    border-color:#def;
+    width:90%;
+    height:90%;
+}
+a.mylinks {
+    background-color:#000;
+    padding-top: 5px;
+    padding-right: 40px;
+    padding-bottom: 5px;
+    padding-left: 40px;
+    border-style: solid;
+    border-color:#def;
+    border-radius:5px;
+    
+}

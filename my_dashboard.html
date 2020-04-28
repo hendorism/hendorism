@@ -4,57 +4,76 @@
   <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" type="text/css" href="style2.css">
+<link rel="stylesheet" type="text/css" href="my_dashboard.css">
 
 </head>
 <body>
-  <h2>Aaron Dull</h2>
-  <p>Composer-arranger</p>
-<div class="slideshow-container">
-
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="mainslideshow1.jpg.jpg" style="width:100%">
-  <div class="text">2016</div>
+  <a href="index.html"><h2>Aaron Dull</h2></a>
+  <p>Aaron Dull's dashboard</p>
+<div id="time2">
+    
+    <div id="time"></div>
 </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="mainslideshow2.jpg.jpg" style="width:100%">
-  <div class="text">2016</div>
+<div id="mylinks">
+    <a target="_blank" class="mylinks" href="https://docs.google.com/spreadsheets/d/1ze65odjZNslygXlMqp_DKwvjNx878GNr4q_E8EfGSBg/edit#gid=0">2020 receipts</a>
+    <a target="_blank" class="mylinks" href="https://docs.google.com/spreadsheets/d/1f8tpUfBzdIEaVOcOqKtC25QRB9yv7wujq2RipP5pQkc/edit#gid=0">corolla2</a>
+    <a target="_blank" class="mylinks" href="https://docs.google.com/spreadsheets/d/13uLU9jb5vr3lriu8GiXmKDqVmyP1y8Q1NGLFhT1atQE/edit#gid=0">income/net worth</a>
+    
 </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="mainslideshow3.jpg.jpg" style="width:100%">
-  <div class="text">2016</div>
-</div>
 
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
-
-<script src="script2.js"></script>
-<table><tr>
-  <td>Find me on social media</td></tr>
-<tr><td>Facebook</td></tr></table>
-
-Find me on social media:
-
-<a href="https://www.facebook.com/Hendorism">Facebook</a>
-<a href="https://www.youtube.com/watch?v=Pz3nADyVUGc">youtube</a>
-<a href="https://soundcloud.com/aaron-dull/another-jam">Soundcloud</a>
-<a href="https://innovationsstudio.wordpress.com/about/">wordpress</a>
-google site 
-
+  <script>
+    function checkTime(i) {
+        if (i < 10) {
+          i = "0" + i;
+        }
+        return i;
+      }
+      
+      function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        // add a zero in front of numbers<10
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+        t = setTimeout(function() {
+          startTime()
+        }, 500);
+      }
+      startTime();
+      </script> 
 
 </body>
 </html> 
+
+
+
+
+<!-- 
+function checkTime(i) {
+    if (i < 10) {
+      i = "0" + i;
+    }
+    return i;
+  }
+  
+  function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    // add a zero in front of numbers<10
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+    t = setTimeout(function() {
+      startTime()
+    }, 500);
+  }
+  startTime();
+  <div id="time"></div> -->
