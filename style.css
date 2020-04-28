@@ -1,3 +1,26 @@
+/* my css for index.html */
+/* my css for index.html */
+body {
+  background-color:#a1b2b9;
+  font-family:monospace;
+  font-size: 20px;
+}
+
+.biodiv {
+  width:100%;
+  max-width: 1000px;
+  font-size:15px;
+  background-color:#ddd;
+  text-align:justify;
+  padding:15px;
+  margin-top:22px;
+}
+
+
+
+/* css for main slideshow */
+/* css for main slideshow */
+
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
@@ -8,6 +31,9 @@ img {vertical-align: middle;}
   max-width: 1000px;
   position: relative;
   margin: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 /* Next & previous buttons */
@@ -95,3 +121,4 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
+
