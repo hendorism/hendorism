@@ -13,7 +13,7 @@ ctx.fillRect(0,0,c.width, c.height);
 const noteHeadRadius = 4;
 const lineWidth = 1;
 const thickLineWidth = 2.5;
-function drawReticle(y,x){
+function drawReticle(x,y){
     ctx.fillStyle = '#77f';
     ctx.beginPath();
     ctx.arc(x,y,4,0,Math.PI*2,true);
@@ -28,7 +28,7 @@ function drawStaves(stavesQuantity,stavesSpacing,topMargin){
     }
 }
 function drawTrebleCleff(x,y){
-    drawReticle(x,y);
+    //drawReticle(x,y);
     ctx.fillStyle = '#000';
     ctx.strokeStyle = '#000';
     ctx.beginPath ();
