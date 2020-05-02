@@ -13,7 +13,7 @@ ctx.fillRect(0,0,c.width, c.height);
 const noteHeadRadius = 4;
 const lineWidth = 1;
 const thickLineWidth = 2.5;
-function drawReticle(y,x){
+function drawReticle(x,y){
     ctx.fillStyle = '#77f';
     ctx.beginPath();
     ctx.arc(x,y,4,0,Math.PI*2,true);
@@ -28,25 +28,25 @@ function drawStaves(stavesQuantity,stavesSpacing,topMargin){
     }
 }
 function drawTrebleCleff(x,y){
-    drawReticle(x,y);
+    //drawReticle(x,y);
     ctx.fillStyle = '#000';
     ctx.strokeStyle = '#000';
     ctx.beginPath ();
-    ctx.moveTo (x,y);
+    ctx.moveTo (x-5,y+20);
     ctx.bezierCurveTo (
-    x+3,y+3,
-    x+3,y-10,
-    x-4,y-65);
+    x+3,y+40,
+    x+4,y+15,
+    x-4,y-40);
     
     ctx.bezierCurveTo ( 
-    x+16,y-60,
-    x-5,y-50,
-    x-8,y-16);
+    x+16,y-35,
+    x-20,y-4,
+    x-4,y+14);
     
     ctx.bezierCurveTo (
-    x+16,y+10,
-    x+10,y-70,
-    x-4,y-20);
+    x+16,y+35,
+    x+10,y-45,
+    x-4,y+5);
     ctx.stroke ();
 }
 function drawTimeSignature(x,y,n,d){
@@ -168,7 +168,7 @@ function drawTuplet(t,x1,y1,x2,y2,x3,y3,xt,yt,x4,y4,x5,y5,x6,y6) {
     drawLine(x1,y1,x2,y2);
     drawLine(x2,y2,x3,y3);
     ctx.font = "18px monospace";
-    ctx.fillText("3",xt,yt);
+    ctx.fillText(t,xt,yt);
     drawLine(x4,y4,x5,y5);
     drawLine(x5,y5,x6,y6);
     //ctx.beginPath();
