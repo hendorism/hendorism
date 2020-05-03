@@ -15,38 +15,18 @@
     <div id="time"></div>
 </div>
 
-<div id="mylinks">
-    <a target="_blank" class="mylinks" href="https://docs.google.com/spreadsheets/d/1ze65odjZNslygXlMqp_DKwvjNx878GNr4q_E8EfGSBg/edit#gid=0">2020 receipts</a>
-    <a target="_blank" class="mylinks" href="https://docs.google.com/spreadsheets/d/1f8tpUfBzdIEaVOcOqKtC25QRB9yv7wujq2RipP5pQkc/edit#gid=0">corolla2</a>
-    <a target="_blank" class="mylinks" href="https://docs.google.com/spreadsheets/d/13uLU9jb5vr3lriu8GiXmKDqVmyP1y8Q1NGLFhT1atQE/edit#gid=0">income/net worth</a>
+<div class="mylinks">
+    <a target="_blank" class="mylinks" href="https://docs.google.com/spreadsheets/d/1ze65odjZNslygXlMqp_DKwvjNx878GNr4q_E8EfGSBg/edit#gid=0">2020 receipts</a><br>
+    <a target="_blank" class="mylinks" href="https://docs.google.com/spreadsheets/d/1f8tpUfBzdIEaVOcOqKtC25QRB9yv7wujq2RipP5pQkc/edit#gid=0">corolla2</a><br>
+    <a target="_blank" class="mylinks" href="https://docs.google.com/spreadsheets/d/13uLU9jb5vr3lriu8GiXmKDqVmyP1y8Q1NGLFhT1atQE/edit#gid=0">income/net worth</a><br>
+    <a target="_blank" class="mylinks" href="https://www.amazon.com/">amazon</a><br>
     
 </div>
 
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR01NJ8KrAoaOeD2ouOy8I-8qGYYxLd-JxqXHWa8nwzGzoS8FZ5-ojnmf4E9m4I9jC4SRrJkQSM0CdL/pubhtml?widget=true&amp;headers=false" height="500px" width="100%"></iframe>
+  <script src="javascript_clock.js">
 
-
-  <script>
-    function checkTime(i) {
-        if (i < 10) {
-          i = "0" + i;
-        }
-        return i;
-      }
-      
-      function startTime() {
-        var today = new Date();
-        var h = today.getHours();
-        var m = today.getMinutes();
-        var s = today.getSeconds();
-        // add a zero in front of numbers<10
-        m = checkTime(m);
-        s = checkTime(s);
-        document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
-        t = setTimeout(function() {
-          startTime()
-        }, 500);
-      }
-      startTime();
-      </script> 
+  </script> 
 
 </body>
 </html> 
