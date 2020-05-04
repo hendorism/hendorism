@@ -9,9 +9,12 @@
 .grid div {
     width: 20px;
     height: 20px;
-    border-style: ;
 }
 
 .snake {
-    background-color:#f00;
+    background-color: blue;
+}
+
+.apple {
+    background-color:green;
 }
