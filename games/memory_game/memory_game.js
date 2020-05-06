@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-
+console.log("line 2 hello this is aaron on line 2");
     //card options
     const cardArray = [
         {
@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cardArray.sort(() => 0.5 - Math.random())
 
+    console.log(cardArray)
     const grid = document.querySelector('.grid')
     const resultDisplay = document.querySelector('#result')
     var cardsChosen = []

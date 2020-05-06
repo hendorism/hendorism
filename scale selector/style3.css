@@ -1,0 +1,292 @@
+body{
+background-color: #f59;
+padding: 4px;
+padding-top:20px;
+}
+#title_div {
+  background-color:#103;
+  font-family:helvetica;
+  color:#bb0;
+  padding:2%;
+  position:relative;
+  top:10px;
+  left:10%;
+  right:10%;
+  width:80%;
+}
+#wrapper {
+
+}
+.aLittleSmaller {
+  font-size:22px;
+  font-family:monospace;
+}
+#improve {
+    background-color:#b17;
+    color:bf9;
+    font-family:helvetica;
+    position:absolute;
+    top:003;
+    left:200;
+    padding:4px 20px;
+    width:300px;
+
+}
+#improve a {
+    color:#fff;
+}
+#improve a:hover {
+    color:#aae;
+}
+#scale_selector {
+background-color:#ccc;
+color:#339;
+font-size:2em;
+text-align:center;
+float:right;
+width:40%;
+padding: 5px;
+margin:10px;
+}
+#pitches_header{
+    /* Brush Script MT, Brush Script Std, cursive	 */
+    font-family:cursive;
+color:#93f;
+background-color:#ee9;
+text-align:center;
+font-weight:200;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+#pitches_header:hover {
+  background-color:#539;
+}
+
+.scale_selector_buttons{
+height: 50px;
+width: 150px;
+font-size: 0.7em;
+margin: 
+5px;
+padding: 5px;
+}
+#pitches_div {
+float: left;
+width: 50%;
+background-color: #444;
+align-content: center;
+}
+.pitches {
+background-color:#393;
+font-size:1em;
+color:#def;
+text-align:center;
+font-family:sans-serif;
+border:2px;
+padding-top:4px;
+padding-bottom:30px;
+margin:5px;
+width:80%;
+align-self:center;
+}
+.pitch_name_div {
+background-color: #222;
+float: left;
+width: 47%;
+height: 40px;
+border-width: 30px;
+border-color: #eee;
+margin: 2px;
+}
+.output {
+background-color: #7b4;
+float: right;
+width: 47%;
+height: 
+40px;
+margin: 2px;
+}
+#goBackHome{
+color:#fff;
+background-color:#2ad;
+width:180px;
+position: absolute;
+text-align:center;
+top: 0px;
+left:40px;
+padding:7px;
+font-family: monospace;
+font-size:16px;
+text-transform: uppercase;
+}
+#goBackHome:hover{
+  background-color:#000;
+}
+#homeLink:hover {
+  color:#f00;
+}
+.keyboard_div {
+    background-color:#fff;
+    height:288;
+    width:720;
+}
+.piano_keyboard_img {
+    /* visibility:hidden; */
+}
+.piano_keys{
+    /* background-color:transparent;
+    border: transparent;  */
+    
+    position:absolute;
+}
+.black_key {}
+.white_key_upper {}
+.white_key_lower {}
+#key_button_00 {
+    /* C# */
+    height:129;
+    width:62;
+    left:85;
+    top:241;
+    background-color:black;
+    color:greenyellow;
+    border:none;
+}
+#key_button_01 {
+    /* D# */
+    height:129;
+    width:62;
+    left:172;
+    top:241;
+    background-color:black;
+    color:greenyellow;
+    border:none;
+}
+#key_button_02 {
+    /* F# */
+    height:129;
+    width:62;
+    left:344;
+    top:241;
+    background-color:black;
+    color:greenyellow;
+    border:none;
+}
+#key_button_03 {
+    /* G# */
+    height:129;
+    width:62;
+    left:430;
+    top:241;
+    background-color:black;
+    color:greenyellow;
+    border:none;
+}
+#key_button_04 {
+    /* A# */
+    height:129;
+    width:62;
+    left:517;
+    top:241;
+    background-color:black;
+    color:greenyellow;
+    border:none;
+}
+#key_button_05 {
+    /* C# */
+    height:129;
+    width:30;
+    left:692;
+    top:241;
+    background-color:black;
+    color:greenyellow;
+    border:none;
+}
+#key_button_06 {
+    /* C upper */
+    height:129;
+    width:57;
+    left:28;
+    top:241;
+    background-color:#666;
+    border:none;
+}
+#key_button_07 {
+    /* D upper */
+    height:129;
+    width:25;
+    left:147;
+    top:241;
+    background-color:white;
+    border:none;
+}
+#key_button_08 {
+    /* E upper */
+    height:129;
+    width:55;
+    left:234;
+    top:241;
+    background-color:red;
+    border:none;
+}
+#key_button_09 {
+    /* F upper */
+    height:129;
+    width:54;
+    left:290;
+    top:241;
+    background-color:blue;
+    border:none;
+    color:white;
+
+}
+#key_button_10 {
+    /* G upper */
+    height:129;
+    width:24;
+    left:406;
+    top:241;
+    background-color:#449;
+    border:none;
+    color:blue;
+}
+#key_button_11 {
+    /* A upper */
+    height:129;
+    width:25;
+    left:492;
+    top:241;
+    background-color:#48b;
+    border:none
+}
+#key_button_12 {
+    /* B upper */
+    height:129;
+    width:55;
+    left:579;
+    top:241;
+    background-color:#93f;
+    border:none;
+}
+#key_button_13 {
+    /* high C upper */
+    height:129;
+    width:56;
+    left:635;
+    top:241;
+    background-color:#39b;
+    border:none;
+}
+#key_button_14 {
+    /* C lower */
+    height:74;
+    width:88;
+    left:27;
+    top:370;
+    background-color:#3f3;
+    border:none;
+}
+#key_button_15 {
+    /* D lower */
+    height:
+}

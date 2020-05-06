@@ -5,7 +5,8 @@ padding-top:20px;
 }
 #title_div {
   background-color:#103;
-  color:#ff0;
+  font-family:helvetica;
+  color:#bb0;
   padding:2%;
   position:relative;
   top:10px;
@@ -20,6 +21,23 @@ padding-top:20px;
   font-size:22px;
   font-family:monospace;
 }
+#improve {
+    background-color:#b17;
+    color:bf9;
+    font-family:helvetica;
+    position:absolute;
+    top:003;
+    left:200;
+    padding:4px 20px;
+    width:300px;
+
+}
+#improve a {
+    color:#fff;
+}
+#improve a:hover {
+    color:#aae;
+}
 #scale_selector {
 background-color:#ccc;
 color:#339;
@@ -31,13 +49,14 @@ padding: 5px;
 margin:10px;
 }
 #pitches_header{
+    /* Brush Script MT, Brush Script Std, cursive	 */
+    font-family:cursive;
 color:#93f;
-background-color:#000;
+background-color:#ee9;
 text-align:center;
-font-weight:300;
+font-weight:200;
 padding-top: 10px;
 padding-bottom: 10px;
-background-color:#000;
 }
 #pitches_header:hover {
   background-color:#539;

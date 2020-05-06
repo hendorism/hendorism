@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>!! - - SCALE_SELECTOR - - !!</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style3.css">
     </head>
   <body>
       <!--  div just for TITLE and explanation -->
@@ -13,11 +13,37 @@
           Click the button that corresponds to the name of the scale you are trying to learn, and 
           the notes of that scale will be displayed in the pitches area on the left. 
       </div>
-    <!-- WRAPPER DIV BEGIN  -->
-    <div id="wrapper">
-      <!--  	PITCHES DIV  -->
-      <div id="pitches_div">
-        <div id="pitches_header">PITCHES</div>
+    <div class="keyboard_div">
+      <button class="piano_keys" id="key_button_00">00</button>
+      <button class="piano_keys" id="key_button_01">01</button>
+      <button class="piano_keys" id="key_button_02">02</button>
+      <button class="piano_keys" id="key_button_03">03</button>
+      <button class="piano_keys" id="key_button_04">04</button>
+      <button class="piano_keys" id="key_button_05">05</button>
+      <button class="piano_keys" id="key_button_06">06</button>
+      <button class="piano_keys" id="key_button_07">07</button>
+      <button class="piano_keys" id="key_button_08">08</button>
+      <button class="piano_keys" id="key_button_09">09</button>
+      <button class="piano_keys" id="key_button_10">10</button>
+      <button class="piano_keys" id="key_button_11">11</button>
+      <button class="piano_keys" id="key_button_12">12</button>
+      <button class="piano_keys" id="key_button_13">13</button>
+      <button class="piano_keys" id="key_button_14">14</button>
+      <button class="piano_keys" id="key_button_15">15</button>
+      <button class="piano_keys" id="key_button_16">16</button>
+      <button class="piano_keys" id="key_button_17">17</button>
+      <button class="piano_keys" id="key_button_18">18</button>
+      <button class="piano_keys" id="key_button_19">19</button>
+      <button class="piano_keys" id="key_button_20">20</button>
+      <button class="piano_keys" id="key_button_21">21</button>
+      <button class="piano_keys" id="key_button_22">22</button>
+      <button class="piano_keys" id="key_button_23">23</button>
+      <img src="piano_keyboard_1octave.jpg" class="piano_keyboard_img">
+    </div>    <!-- end div.keyboard_div -->
+<!-- WRAPPER DIV BEGIN  --><div id="wrapper">
+         <!--  	PITCHES DIV  --><div id="pitches_div">
+        
+    <div id="pitches_header">PITCHES</div>
 
         <div class="pitches">
           <div class="pitch_name_div">
@@ -140,47 +166,24 @@
       <div id="scale_selector">
         <p class="aLittleSmaller">Click on one of these buttons to see all the notes of that scale displayed by the names of their scale degrees.</p>
         <div id="scale_selector_divJustForButtons">
-          <button class="scale_selector_buttons" id="c" onclick="scale_key_0()">
-          C</button>
-          <button class="scale_selector_buttons" id="cs" onclick="scale_key_1()">
-          Db/C#</button>
-          <button class="scale_selector_buttons" id="d" 
-            onclick="scale_key_2()">
-          D</button>
-          <button 
-            class="scale_selector_buttons" id="ds" onclick="scale_key_3()">
-          Eb/D#</button>
-          <button class="scale_selector_buttons" id="e" onclick="scale_key_4
-            ()">
-          Fb/E</button>
-          <button class="scale_selector_buttons" id="f" 
-            onclick="scale_key_5()">
-          F/E#</button>
-          <button 
-            class="scale_selector_buttons" id="fs" onclick="scale_key_6()">
-          Gb/F#</button>
-          <button class="scale_selector_buttons" id="g" onclick="scale_key_7
-            ()">
-          G</button>
-          <button class="scale_selector_buttons" id="gs" 
-            onclick="scale_key_8()">
-          Ab/G#</button>
-          <button 
-            class="scale_selector_buttons" id="a" onclick="scale_key_9()">
-          A</button>
-          <button class="scale_selector_buttons" id="as" onclick="scale_key_10()">
-          Bb/A#</button>
-          <button class="scale_selector_buttons" id="b" onclick="scale_key_11
-            ()">
-          Cb/B</button>
-          <!-- end of div: 
-            "scale_selector_divJustForButtons" -->
-        </div>
-        <!--  end selector div  -->
-      </div>
-      <!--      WRAPPER DIV END -->
-    </div>
+          <button class="scale_selector_buttons" id="c" onclick="scale_key_0()">C</button>
+          <button class="scale_selector_buttons" id="cs" onclick="scale_key_1()">Db/C#</button>
+          <button class="scale_selector_buttons" id="d" onclick="scale_key_2()">D</button>
+          <button class="scale_selector_buttons" id="ds" onclick="scale_key_3()">Eb/D#</button>
+          <button class="scale_selector_buttons" id="e" onclick="scale_key_4()">Fb/E</button>
+          <button class="scale_selector_buttons" id="f" onclick="scale_key_5()">F/E#</button>
+          <button class="scale_selector_buttons" id="fs" onclick="scale_key_6()">Gb/F#</button>
+          <button class="scale_selector_buttons" id="g" onclick="scale_key_7()">G</button>
+          <button class="scale_selector_buttons" id="gs" onclick="scale_key_8()">Ab/G#</button>
+          <button class="scale_selector_buttons" id="a" onclick="scale_key_9()">A</button>
+          <button class="scale_selector_buttons" id="as" onclick="scale_key_10()">Bb/A#</button>
+          <button class="scale_selector_buttons" id="b" onclick="scale_key_11()">Cb/B</button>
+          <!-- end of div: "scale_selector_divJustForButtons" --></div>
+        <!--  end selector div  --></div>
+        
+      <!--      WRAPPER DIV END --></div>
 <p id="goBackHome"><a id="homeLink" href="../index.html">home</a></p>
+<p id="improve">If you have an idea of how I can improve the scale selector please <a id="contactMe" href="../contact.html">contact me</a>.</p>
 
 
 <script src="scale_selector001.js"></script>  
