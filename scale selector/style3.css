@@ -14,9 +14,6 @@ padding-top:20px;
   right:10%;
   width:80%;
 }
-#wrapper {
-
-}
 .aLittleSmaller {
   font-size:22px;
   font-family:monospace;
@@ -134,9 +131,8 @@ text-transform: uppercase;
     /* visibility:hidden; */
 }
 .piano_keys{
-    /* background-color:transparent;
-    border: transparent;  */
-    
+    background-color:transparent;
+    border: transparent; 
     position:absolute;
 }
 .black_key {}
@@ -148,8 +144,7 @@ text-transform: uppercase;
     width:62;
     left:85;
     top:241;
-    background-color:black;
-    color:greenyellow;
+     color:greenyellow;
     border:none;
 }
 #key_button_01 {
@@ -158,7 +153,6 @@ text-transform: uppercase;
     width:62;
     left:172;
     top:241;
-    background-color:black;
     color:greenyellow;
     border:none;
 }
@@ -168,7 +162,6 @@ text-transform: uppercase;
     width:62;
     left:344;
     top:241;
-    background-color:black;
     color:greenyellow;
     border:none;
 }
@@ -178,7 +171,6 @@ text-transform: uppercase;
     width:62;
     left:430;
     top:241;
-    background-color:black;
     color:greenyellow;
     border:none;
 }
@@ -188,7 +180,6 @@ text-transform: uppercase;
     width:62;
     left:517;
     top:241;
-    background-color:black;
     color:greenyellow;
     border:none;
 }
@@ -198,17 +189,15 @@ text-transform: uppercase;
     width:30;
     left:692;
     top:241;
-    background-color:black;
-    color:greenyellow;
+    COLOR:#FFF;
     border:none;
 }
 #key_button_06 {
     /* C upper */
     height:129;
-    width:57;
-    left:28;
+    width:58;
+    left:27;
     top:241;
-    background-color:#666;
     border:none;
 }
 #key_button_07 {
@@ -217,16 +206,14 @@ text-transform: uppercase;
     width:25;
     left:147;
     top:241;
-    background-color:white;
     border:none;
 }
 #key_button_08 {
     /* E upper */
     height:129;
-    width:55;
+    width:56;
     left:234;
     top:241;
-    background-color:red;
     border:none;
 }
 #key_button_09 {
@@ -235,10 +222,7 @@ text-transform: uppercase;
     width:54;
     left:290;
     top:241;
-    background-color:blue;
     border:none;
-    color:white;
-
 }
 #key_button_10 {
     /* G upper */
@@ -246,9 +230,7 @@ text-transform: uppercase;
     width:24;
     left:406;
     top:241;
-    background-color:#449;
     border:none;
-    color:blue;
 }
 #key_button_11 {
     /* A upper */
@@ -256,16 +238,14 @@ text-transform: uppercase;
     width:25;
     left:492;
     top:241;
-    background-color:#48b;
     border:none
 }
 #key_button_12 {
     /* B upper */
     height:129;
-    width:55;
+    width:56;
     left:579;
     top:241;
-    background-color:#93f;
     border:none;
 }
 #key_button_13 {
@@ -274,7 +254,6 @@ text-transform: uppercase;
     width:56;
     left:635;
     top:241;
-    background-color:#39b;
     border:none;
 }
 #key_button_14 {
@@ -283,10 +262,61 @@ text-transform: uppercase;
     width:88;
     left:27;
     top:370;
-    background-color:#3f3;
     border:none;
 }
 #key_button_15 {
     /* D lower */
-    height:
+    height:74;
+    width:88;
+    left:115;
+    top:370;
+    border:none;
+}
+#key_button_16 {
+    /* E lower */
+    height:74;
+    width:86;
+    left:203;
+    top:370;
+    border:none;
+}
+#key_button_17 {
+    /* F lower */
+    height:74;
+    width:88;
+    left:289;
+    top:370;
+    border:none;
+}
+#key_button_18 {
+    /* G lower */
+    height:74;
+    width:86;
+    left:377;
+    top:370;
+    border:none;
+}
+#key_button_19 {
+    /* A lower */
+    height:74;
+    width:85;
+    left:463;
+    top:370;
+    border:none;
+}
+#key_button_20 {
+    /* B lower */
+    height:74;
+    width:87;
+    left:548;
+    top:370;
+    border:none;
+}
+#key_button_21 {
+    /* high C lower */
+    height:74;
+    width:87;
+    left:635;
+    top:370;
+    border:none;
 }

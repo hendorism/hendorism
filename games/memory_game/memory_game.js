@@ -54,7 +54,7 @@ console.log("line 2 hello this is aaron on line 2");
 
     cardArray.sort(() => 0.5 - Math.random())
 
-    console.log(cardArray)
+    
     const grid = document.querySelector('.grid')
     const resultDisplay = document.querySelector('#result')
     var cardsChosen = []
@@ -66,29 +66,32 @@ console.log("line 2 hello this is aaron on line 2");
             var card = document.createElement('img')
             card.setAttribute('src', 'images/blank.png')
             card.setAttribute('data-id', i)
-            //card.addEventListener('click', flipcard)
+            card.addEventListener('click', flipCard)
             grid.appendChild(card)
+            console.log(`function createBoard has been called. i = ${i}`)
         }
     }
 
-function chechForMatch() {
+function checkForMatch() {
     var cards = document.querySelectorAll('img')
     const optionOneId = cardsChosenId[0]
-    const optionTwoId = cardsChosen[1]
+    const optionTwoId = cardsChosenId[1]
+    console.log(cardsChosen)
     if (cardsChosen[0] === cardsChosen[1]) {
         alert('You found a match')
         cards[optionOneId].setAttribute('src', 'images/white.png')
         cards[optionTwoId].setAttribute('src', 'images/white.png')
         cardsWon.push(cardsChosen)
+        console.log("A match has been found.")
     } else {
-        cards[optionOneId].setAttribute('src', 'images/blanks.png')
+        cards[optionOneId].setAttribute('src', 'images/blank.png')
         cards[optionTwoId].setAttribute('src', 'images/blank.png')
         alert('Sorry, try again')
+        console.log("A match was not found.")
     }
-    cardsChosen = []
-    cardsChosenId = []
+
     resultDisplay.textContent = cardsWon.length
-    if (cardsWon.length === cardsArray.length/2) {
+    if (cardsWon.length === cardArray.length/2) {
         resultDisplay.textContent = 'Congratulations! You found them all!'
     }
 }
@@ -105,10 +108,10 @@ function flipCard() {
 
 
 
+createBoard()
 
 
 
-    createBoard()
 
 
 
