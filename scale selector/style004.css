@@ -18,23 +18,6 @@ padding-top:20px;
   font-size:22px;
   font-family:monospace;
 }
-#improve {
-    background-color:#b17;
-    color:bf9;
-    font-family:helvetica;
-    position:absolute;
-    top:003;
-    left:200;
-    padding:4px 20px;
-    width:300px;
-
-}
-#improve a {
-    color:#fff;
-}
-#improve a:hover {
-    color:#aae;
-}
 #scale_selector {
 background-color:#ccc;
 color:#339;
@@ -99,8 +82,7 @@ margin: 2px;
 background-color: #7b4;
 float: right;
 width: 47%;
-height: 
-40px;
+height: 40px;
 margin: 2px;
 }
 #goBackHome{
@@ -124,23 +106,26 @@ text-transform: uppercase;
 }
 .keyboard_div {
     background-color:#fff;
+    position:relative;
     height:288;
     width:720;
 }
-.piano_keyboard_img {
-    /* visibility:hidden; */
-}
+
 button.piano_keys{
-    background-color:transparent;
-    border: transparent; 
-    color:transparent;
-    position:absolute;
+    /* background-color: transparent; */
+    /* border: transparent;  */
+    /* color: transparent; */
+    border-width:0.8px;
+    position: absolute;
+    font-family:monospace;
+    font-size:large;
+    font-style:oblique;
 }
 button.piano_keys:active {
     outline:none;
 }
 .black_key {
-    color:transparent;
+    /* color:transparent; */
 }
 .white_key_upper {}
 .white_key_lower {}
@@ -151,6 +136,8 @@ button.piano_keys:active {
     left:85;
     top:241;
     border:none;
+    background-color:#333;
+    color:#3f9;
 }
 #key_button_01 {
     /* D# */
@@ -159,6 +146,8 @@ button.piano_keys:active {
     left:172;
     top:241;
     border:none;
+    background-color:#333;
+    color:#3f9;
 }
 #key_button_02 {
     /* F# */
@@ -167,6 +156,8 @@ button.piano_keys:active {
     left:344;
     top:241;
     border:none;
+    background-color:#333;
+    color:#3f9;
 }
 #key_button_03 {
     /* G# */
@@ -175,6 +166,8 @@ button.piano_keys:active {
     left:430;
     top:241;
     border:none;
+    background-color:#333;
+    color:#3f9;
 }
 #key_button_04 {
     /* A# */
@@ -183,14 +176,18 @@ button.piano_keys:active {
     left:517;
     top:241;
     border:none;
+    background-color:#333;
+    color:#3f9;
 }
 #key_button_05 {
     /* C# */
     height:129;
     width:30;
-    left:692;
+    left:691;
     top:241;
     border:none;
+    background-color:#333;
+    color:#3f9;
 }
 #key_button_06 {
     /* C upper */
@@ -211,18 +208,20 @@ button.piano_keys:active {
 #key_button_08 {
     /* E upper */
     height:129;
-    width:56;
+    width:55;
     left:234;
     top:241;
-    border:none;
+    border-right-color:#555;
+    border-bottom-width:0;
 }
 #key_button_09 {
     /* F upper */
     height:129;
-    width:54;
-    left:290;
+    width:55;
+    left:289;
     top:241;
-    border:none;
+    border-bottom-width:0;
+    border-left-color:#555;
 }
 #key_button_10 {
     /* G upper */
@@ -246,7 +245,8 @@ button.piano_keys:active {
     width:56;
     left:579;
     top:241;
-    border:none;
+    border-bottom-width:0;
+    border-right-color:#555;
 }
 #key_button_13 {
     /* high C upper */
@@ -254,7 +254,8 @@ button.piano_keys:active {
     width:56;
     left:635;
     top:241;
-    border:none;
+    border-bottom-width:0;
+    border-left-color:#555;
 }
 #key_button_14 {
     /* C lower */
@@ -262,7 +263,8 @@ button.piano_keys:active {
     width:88;
     left:27;
     top:370;
-    border:none;
+    border-bottom-width:0;
+    border-right-color:#555;
 }
 #key_button_15 {
     /* D lower */
@@ -270,7 +272,9 @@ button.piano_keys:active {
     width:88;
     left:115;
     top:370;
-    border:none;
+    border-bottom-width:0;
+    border-left-color:#555;
+    border-right-color:#555;
 }
 #key_button_16 {
     /* E lower */
@@ -278,7 +282,9 @@ button.piano_keys:active {
     width:86;
     left:203;
     top:370;
-    border:none;
+    border-bottom-width:0;
+    border-left-color:#555;
+    border-right-color:#555;
 }
 #key_button_17 {
     /* F lower */
@@ -286,7 +292,9 @@ button.piano_keys:active {
     width:88;
     left:289;
     top:370;
-    border:none;
+    border-bottom-width:0;
+    border-left-color:#555;
+    border-right-color:#555;
 }
 #key_button_18 {
     /* G lower */
@@ -294,7 +302,9 @@ button.piano_keys:active {
     width:86;
     left:377;
     top:370;
-    border:none;
+    border-bottom-width:0;
+    border-left-color:#555;
+    border-right-color:#555;
 }
 #key_button_19 {
     /* A lower */
@@ -302,7 +312,9 @@ button.piano_keys:active {
     width:85;
     left:463;
     top:370;
-    border:none;
+    border-bottom-width:0;
+    border-left-color:#555;
+    border-right-color:#555;
 }
 #key_button_20 {
     /* B lower */
@@ -310,7 +322,9 @@ button.piano_keys:active {
     width:87;
     left:548;
     top:370;
-    border:none;
+    border-bottom-width:0;
+    border-left-color:#555;
+    border-right-color:#555;
 }
 #key_button_21 {
     /* high C lower */
@@ -318,5 +332,7 @@ button.piano_keys:active {
     width:87;
     left:635;
     top:370;
-    border:none;
+    border-bottom-width:0;
+    border-left-color:#555;
+    border-right-width:0;
 }
