@@ -1,5 +1,11 @@
 /* social_media_buttons.css */
-
+.social_div {
+    position: absolute;
+    bottom: 0px;
+    width: 50%;
+    border: 3px solid #8AC007;
+  
+}
 .fa {
     padding: 20px;
     font-size: 30px;
