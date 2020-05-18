@@ -1,6 +1,6 @@
 /* social_media_buttons.css */
 .social_div {
-    position: absolute;
+    position: relative;
     bottom: 0px;
     width: 50%;
     border: 3px solid #8AC007;
