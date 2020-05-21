@@ -1,10 +1,109 @@
 /* scale_selector_v4.css */
 /* 5/17/2020 */
 /* by Aaron Dull */
-
+body{
+    background-color:#258;
+}
+#output{
+    background-color:#6f6;
+    position:absolute;
+    left:210;
+    height:200;
+    width:400;
+    word-wrap:break-word;
+}
+.fretboard{
+    border: 4px dotted #b39;
+    display:block;
+    position:absolute;
+}
 .white_key{
     background-color:white;
+    color:black;
 }
 .black_key {
     background-color:black;
+    color:white;
 }
+
+#PIANOKEY_C{
+    position:absolute;
+    height:50;
+    width:200;
+    left:0;
+    top:0;
+}
+#PIANOKEY_CS{
+    height:50;
+    width:200;
+    left:0;
+    top:50;
+}
+#PIANOKEY_D{
+    height:50;
+    width:200;
+    left:0;
+    top:100;
+}
+#PIANOKEY_DS{
+    height:50;
+    width:200;
+    left:0;
+    top:150;
+}
+#PIANOKEY_E{
+    height:50;
+    width:200;
+    left:0;
+    top:200;
+}
+#PIANOKEY_F{
+    height:50;
+    width:200;
+    left:0;
+    top:250;
+}
+#PIANOKEY_FS{
+    height:50;
+    width:200;
+    left:0;
+    top:300;
+}
+#PIANOKEY_G{
+    height:50;
+    width:200;
+    left:0;
+    top:350;
+}
+#PIANOKEY_GS{
+    height:50;
+    width:200;
+    left:0;
+    top:400;
+}
+#PIANOKEY_A{
+    height:50;
+    width:200;
+    left:0;
+    top:450;
+}
+#PIANOKEY_AS{
+    height:50;
+    width:200;
+    left:0;
+    top:500;
+}
+#PIANOKEY_B{
+    height:50;
+    width:200;
+    left:0;
+    top:550;
+}
+
+
+/* 
+height:129;
+width:25;
+left:147;
+top:241;
+border:none; */
