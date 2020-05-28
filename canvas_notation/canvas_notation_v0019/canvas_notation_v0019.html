@@ -5,20 +5,27 @@
 <link rel="stylesheet" type="text/css" href="canvas_notation_v0019.css">
 
     </head>
-<body>
-    <div class="wrapper">
+<body onload="create_interface()">
         <div class="header">
-            <a href="index.html">HOME</a>
+            <a href="../../index.html">HOME</a>
             <h1 class="mainh1">CANVAS_NOTATION_V0019</h1>
+            <p>by: Aaron Dull</p>
+            <p>5/27/2020</p>
         </div>
-        
-        <canvas id="mnCanvas" width="400" height="2000">
-     
-
-
-
+        <canvas id="mnCanvas" width="400" height="2000"></canvas>
+            <!-- duration buttons change from note to rest when you toggle the note/rest toggle -->
+            <button class="duration"><img src="img/2_thirtysecond_note.png" class="duration" id="2duration"></button>
+            <button class="duration"><img src="img/3_sixteenth_note.png" class="duration" id="3duration"></button>
+            <button class="duration"><img src="img/4_eighth_note.png" class="duration" id="4duration"></button>
+            <button class="duration"><img src="img/5_quarter_note.png" class="duration" id="5duration"></button>
+            <button class="duration"><img src="img/6_half_note.png" class="duration" id="6duration"></button>
+            <button class="duration"><img src="img/7_whole_note.png" class="duration" id="7duration"></button>
+            <button class="duration"><img src="img/note_rest_toggle_on.png" class="duration" id="note/rest_toggle"></button>
 
     <script src="canvas_notation_v0019.js"></script>
-    
+    <script src="controls_interface.js"></script>
 </body>
 </html>
+
+
+<!-- goal of this program to be light as shit -->
