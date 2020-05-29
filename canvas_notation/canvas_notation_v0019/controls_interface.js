@@ -1,7 +1,7 @@
 // canvas_notation_v0019
 // Aaron Dull
 // 5/27/2020
-
+console.log("controls_interface.js is working.")
 //create interface draws all the buttons and applies classes, id's, and onclick properties to them.
 //the onclick properties will call a function that is the function the user theoretically wants to have happen by clicking/tapping the button.
 
@@ -27,17 +27,18 @@ function noteRestToggle() {
 
     }
   }
-}
 
+  document.getElementById("myBtn").addEventListener("click", function(){
+    document.getElementById("demo").innerHTML = "Hello World";
+  });
 
 // document.getElementById("myImg").src = "hackanm.gif";
 
 
-console.log("you are a stinky motherfucker")
-console.log("a log with 32inch diameter and 32foot length is " + (5+4) + " mbf!")
+
 
 //   make it so duration buttons change from note to rest when user hits the "note/rest" button
 
-
+console.log("controls_interface.js is finished.")
 
 
