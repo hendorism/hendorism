@@ -1,0 +1,105 @@
+
+
+<!-- 
+
+I think that I am a programmer. Therefore I am typing.
+I am going to learn the use of computers all the time and make monay.
+yo soy voy a aprender como usar los computadoras todo tiempo y hacer dinero por mis pantalones. lo que quiero dice es: ganar dinero o gana dinero. yo no sabe lo que es.
+
+I am goin got make a lot of money programming computers for the rets of my life until I die.
+
+I am going to make many sophisticated programs that cover a wide range of uses.
+
+These will include but not be limited to :
+
+music notation software.
+
+story based adventuresgames in 2d and 3d
+
+a software composing game
+
+
+ -->
+
+<html>
+<head>
+    <title>a good idea</title>
+    <style>
+        button{background-color:#def;}
+    </style>
+
+</head>
+
+<body>
+<canvas id="mnCanvas"></canvas>
+    <button>hello</button>
+<script src="../canvas_notation_v0019.js"></script>
+<script>
+//this is the song.
+//the title of the song is "a good idea"
+//i am going to show you how it works
+//that is to say I am going to go ahead 
+//and type objects and then later write 
+//a function to iterate throough this 
+//array of objkects and use the values 
+//and keys within the objects to place 
+//them all on the canvas.
+
+drawStaves(10,100,100,0);
+drawLine(10,100,10,240);
+drawTrebleCleff(20,155);
+drawTrebleCleff(20,255);
+drawKeySignature(30,120,-4);
+drawKeySignature(30,220,-4);
+
+// 1st level represents the song (idea is an array of measures)
+// 2nd level represents measures (each measure is represented by an array of 8 notes)
+// 3rd level represents the two parts (each note array contains one pitch for each part of the duet)
+// 100 = line5, 110 = line4, etc...
+/*
+       
+100 ---|\----------
+110 ---|-|---------
+120 ---|/----------
+130 --/|/\---------
+140 --\|_/---------
+       |
+*/
+var idea = [
+    [100,100],[110,120],[120,140],[135,140],[105,100],[110,150],[115,160],[120,150],
+    [100,100],[110,120],[120,140],[135,140],[105,100],[110,150],[115,160],[120,150]
+]
+for(i=0;i<idea.length;i++) {
+    for(e=0;e<idea[i].length;e++) {
+        drawNoteHead(60+10*i,idea[i][e]+100*e);
+        drawLine(63+10*i,idea[i][e]+100*e,)
+        if (idea[i][e] > 140) {
+            // draw ledger lines if note is below staff
+        }
+        if (idea[i][e] < 100) {
+            // draw ledger lines if note is above staff
+        }
+    }
+}
+
+
+
+// The note stem should be drawn to a y 
+// value that is 20 less than the y value 
+// of the note with the lowest y value 
+// in that group of four.
+
+// ctx.lineWidth = 1.5;
+    // ctx.beginPath();
+    // ctx.moveTo( 10, 10 );
+    // ctx.lineTo( 100, 100 );
+    // ctx.stroke();
+    // console.log("hello");
+</script>
+<script>console.log("this is it")</script>
+</body>
+
+</html>
+
+
+
