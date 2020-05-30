@@ -6,19 +6,49 @@
 
     </head>
 <body>
-    <div class="wrapper">
         <div class="header">
-            <a href="index.html">HOME</a>
+            <a href="../../index.html">HOME</a>
             <h1 class="mainh1">CANVAS_NOTATION_V0019</h1>
+            <p>by: Aaron Dull</p>
+            <p>5/27/2020</p>
         </div>
-        
-        <canvas id="mnCanvas" width="400" height="2000">
-     
-
-
-
+        <canvas id="mnCanvas" width="400" height="2000"></canvas>
+            <!-- duration buttons change from note to rest when you toggle the note/rest toggle -->
+            <button class="duration" id="2duration"><img src="img/2_thirtysecond_note.png" class="duration" id="2duration_img"></button>
+            <button class="duration" id="3duration"><img src="img/3_sixteenth_note.png" class="duration" id="3duration_img"></button>
+            <button class="duration" id="4duration"><img src="img/4_eighth_note.png" class="duration" id="4duration_img"></button>
+            <button class="duration" id="5duration"><img src="img/5_quarter_note.png" class="duration" id="5duration_img"></button>
+            <button class="duration" id="6duration"><img src="img/6_half_note.png" class="duration" id="6duration_img"></button>
+            <button class="duration" id="7duration"><img src="img/7_whole_note.png" class="duration" id="7duration_img"></button>
+            <button class="duration" id="note/rest_toggle"><img src="img/note_rest_toggle_on.png" class="duration" id="note/rest_toggle_img"></button>
+            <button class="octave" id="0octave">0</button>
+            <button class="octave" id="1octave">1</button>
+            <button class="octave" id="2octave">2</button>
+            <button class="octave" id="3octave">3</button>
+            <button class="octave" id="4octave">4</button>
+            <button class="octave" id="5octave">5</button>
+            <button class="octave" id="6octave">6</button>
+            <button class="octave" id="7octave">7</button>
+            <button class="octave" id="8octave">8</button>
+            <div class="keyboard_container">
+                <button class="keyboard white_key" id="c_keyboard">C</button><br>
+                <button class="keyboard black_key" id="cs_keyboard">C#</button><br>
+                <button class="keyboard white_key" id="d_keyboard">D</button><br>
+                <button class="keyboard black_key" id="ds_keyboard">D#</button><br>
+                <button class="keyboard white_key" id="e_keyboard">E</button><br>
+                <button class="keyboard white_key" id="f_keyboard">F</button><br>
+                <button class="keyboard black_key" id="fs_keyboard">F#</button><br>
+                <button class="keyboard white_key" id="g_keyboard">G</button><br>
+                <button class="keyboard black_key" id="gs_keyboard">G#</button><br>
+                <button class="keyboard white_key" id="a_keyboard">A</button><br>
+                <button class="keyboard black_key" id="as_keyboard">A#</button><br>
+                <button class="keyboard white_key" id="b_keyboard">B</button><br>
+            </div>
 
     <script src="canvas_notation_v0019.js"></script>
-    <script src="songs/4-29-2020.js"></script>
+    <script src="controls_interface.js"></script>
 </body>
 </html>
+
+
+<!-- goal of this program to be light as shit -->
