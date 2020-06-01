@@ -77,6 +77,9 @@ for(i=0;i<idea.length;i++) {
         drawLine(63+10*i,idea[i][e]+100*e,)
         if (idea[i][e] > 140) {
             // draw ledger lines if note is below staff
+            let y1 = idea[i][e]+100*e;
+            let y2 = 
+            drawLine(63+10*i-50,y1,63+10*i+50,y2)
         }
         if (idea[i][e] < 100) {
             // draw ledger lines if note is above staff
