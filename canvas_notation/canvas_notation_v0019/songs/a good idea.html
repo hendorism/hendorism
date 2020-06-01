@@ -134,12 +134,40 @@ var idea = [
 generate_note_table_from_array(idea);
 const noteSpacing = 15;
 const llWidth = 40;
-for(i=0; i<idea.length; i++) {
-    for(e=0; e<idea[i].length; e++) {
+var clarinet1 = [];
+var clarinet2 = [];
+for (i=0; i<idea.length; i++) {
+    clarinet1.push(idea[i][0]);
+    clarinet2.push(idea[i][1]);
+}
+console.log(clarinet1);
+console.log(clarinet2);
+for (i=0; i<idea.length; i++) {
+    for (e=0; e<idea[i].length; e++) {
         drawNoteHead(60+noteSpacing*i, idea[i][e]+100*e);
         drawLine(63+noteSpacing*i, idea[i][e]+100*e, 63+noteSpacing*i, 80+100*e)
         if (i % 4 == 0){
-            drawThickLine(63+noteSpacing*i, 80+100*e, 63+noteSpacing*i+noteSpacing*3, 80+100*e)
+            //drawing the beam across the tops of the stems of every group of four eighth notes
+            let beam_elevation = 80;
+            let min_stem_height = 12;
+            for (p=0; p<idea.length; p++) {
+                for (q=0; q<idea[p].length; q++) {
+                    if (idea[p][q] < beam_elevation + min_stem_height) {
+                        var lowest_y_in_set = beam_elevation + min_stem_height;
+                        if (idea[p][q] < lowest_y_in_set) {
+                            lowest_y_in_set = idea[p][q];
+                        }
+                        beam_elevation = lowest_y_in_set - min_stem_height;
+                        drawThickLine(63+noteSpacing*i, beam_elevation+100*e, 63+noteSpacing*i+noteSpacing*3, beam_elevation+100*e)
+                    }
+                }
+            }
+            if (idea[i][e] < beam_elevation + min_stem_height) {
+                console.log("beam_elevation: " + beam_elevation);
+                beam_elevation -= (beam_elevation + min_stem_height) - idea[i][e];
+                console.log("i=" + i + ", e=" + e + "... beam_elevation -= (beam_elevation+min_stem_height)+idea[i][e];");
+            }
+            console.log("beam_elevation: "+beam_elevation)
         }
         if ((i + 1) % 8 == 0) {
             drawLine(60+noteSpacing*i+(noteSpacing/2), 100+100*e, 60+noteSpacing*i+(noteSpacing/2), 100+100*e+40)
@@ -186,6 +214,7 @@ for(i=0; i<idea.length; i++) {
 </script>
 <script>console.log("this is it")</script>
 <script src="controls_interface.js"></script>
+
 
 </body>
 
