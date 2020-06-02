@@ -2,6 +2,17 @@
 console.log("Play Doh's Notes.js is working");
 console.log("Play Doh's Notes.js is finished working");
 
+// make function for clearing the canvas every time a song is loaded.
+/* 
+
+function opensong(song) {
+//song is a string with the filename of the song's .js file
+    if (song.type != string) {
+           
+    }
+}
+*/
+
 ctx.font = "30px Arial";
 ctx.fillText("Play Doh's Notes",10,45);
 ctx.fillText("flute",20,80);
