@@ -36,7 +36,6 @@ function noteRestToggle() {
 
 
 
-
 //   make it so duration buttons change from note to rest when user hits the "note/rest" button
 
 console.log("controls_interface.js is finished.")
