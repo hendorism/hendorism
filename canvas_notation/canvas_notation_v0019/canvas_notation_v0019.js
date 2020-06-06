@@ -1,11 +1,13 @@
 console.log("music_notation_v0018.js is working.");
-
+document.querySelector("#2duration").addEventListener(click, setDuration(2){
+    
+})
 
 
 var c = document.getElementById("mnCanvas");
 var ctx = c.getContext("2d");
 c.width = 800;
-c.height = 1200;
+c.height = 800;
 ctx.strokeStyle = "#000000";
 ctx.strokeRect(0, 0, c.width, c.height);
 ctx.fillStyle = "#eeeecc";
@@ -20,7 +22,7 @@ function drawReticle(x,y){
     ctx.closePath();
     ctx.fill();
 }
-function drawStaves(stavesQuantity,stavesSpacing,topMargin,sideMargins,){
+function drawStaves(stavesQuantity,stavesSpacing,topMargin,sideMargins ){
     for(e=0;e<stavesQuantity;e++){
         for(i=0;i<5;i++){
             drawLine(sideMargins,topMargin+10*i+stavesSpacing*e, c.width-sideMargins,topMargin+10*i+stavesSpacing*e);
@@ -55,7 +57,6 @@ function drawTimeSignature(x,y,n,d){
     ctx.fillText(n,x-7,y-1);
     ctx.fillText(d,x-7,y+20);
 }
-
 function drawLine(x1,y1,x2,y2){
     ctx.lineWidth = lineWidth;
     ctx.beginPath();

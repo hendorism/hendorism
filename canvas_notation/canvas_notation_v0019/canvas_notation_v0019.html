@@ -8,17 +8,17 @@
 <body>
         <div class="header">
             <a href="../../index.html">HOME</a>
-            <h1 class="mainh1">CANVAS_NOTATION_V0019</h1>
-            <p>by: Aaron Dull</p>
+            <h2 class="mainh1">CANVAS_NOTATION_V0019</h2>
+            <p>by: Aaron Dull<br>Everett, Washington</p>
             <p>5/27/2020</p>
         </div>
-        <canvas id="mnCanvas" width="400" height="2000"></canvas>
+        <canvas id="mnCanvas" width="400" height="500"></canvas>
             <!-- duration buttons change from note to rest when you toggle the note/rest toggle -->
             <div class="duration_container">
                 <button class="duration" id="2duration"><img src="img/2_thirtysecond_note.png" class="duration" id="2duration_img"></button>
                 <button class="duration" id="3duration"><img src="img/3_sixteenth_note.png" class="duration" id="3duration_img"></button>
                 <button class="duration" id="4duration"><img src="img/4_eighth_note.png" class="duration" id="4duration_img"></button>
-                <button class="duration" id="5duration"><img src="img/5_quarter_note.png" class="duration" id="5duration_img"></button>
+                <button class="duration active" id="5duration"><img src="img/5_quarter_note.png" class="duration" id="5duration_img"></button>
                 <button class="duration" id="6duration"><img src="img/6_half_note.png" class="duration" id="6duration_img"></button>
                 <button class="duration" id="7duration"><img src="img/7_whole_note.png" class="duration" id="7duration_img"></button>
                 <button class="duration" id="note/rest_toggle"><img src="img/note_rest_toggle_on.png" class="duration" id="note/rest_toggle_img"></button>    
@@ -28,14 +28,14 @@
                 <button class="octave" id="1octave">1</button>
                 <button class="octave" id="2octave">2</button>
                 <button class="octave" id="3octave">3</button>
-                <button class="octave" id="4octave">4</button>
+                <button class="octave active" id="4octave">4</button>
                 <button class="octave" id="5octave">5</button>
                 <button class="octave" id="6octave">6</button>
                 <button class="octave" id="7octave">7</button>
                 <button class="octave" id="8octave">8</button>    
             </div>
             <div class="keyboard_container">
-                <button class="keyboard white_key" id="c_keyboard">C</button><br>
+                <button class="keyboard white_key active" id="c_keyboard">C</button><br>
                 <button class="keyboard black_key" id="cs_keyboard">C#</button><br>
                 <button class="keyboard white_key" id="d_keyboard">D</button><br>
                 <button class="keyboard black_key" id="ds_keyboard">D#</button><br>
