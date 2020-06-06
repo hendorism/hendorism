@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <style>
+            table {padding:0px;background-color:#def;border:1px solid #a24;}
+            tr {border:1px solid #ba3;}
+            td {border:1px solid #238;padding:8px;}
+        </style>
+    </head>
+    <body>
+        <input>
+        <input>
+        <input>
+        <input>
+<button onclick="run()">submit</button>
+
+        <script>
+            // var outstanding = 13000;
+            // var dpymnt = 5000;
+            // var pymnt = 300;
+            // var intr = 0.04;
+            // var month = 0;
+            // var amtpaid = 0;
+            // var sumintaccrued = 0;
+            // document.write("<table><tr><td>month</td><td>balance</td><td>interest</td><td>int accrued to date</td><td>paid to date</td><td>payment</td></tr>");
+            // function accrue() {
+            //     sumintaccrued += Math.round(100*outstanding*(intr/12))/100;
+            //     outstanding += Math.round(100*(outstanding*(1+intr/12)))/100;
+            // }
+            // function pay() {
+            //     outstanding -= pymnt;
+            //     amtpaid += pymnt;
+            // }
+            // function display() {
+            //     document.write("<tr><td>" + month + "</td><td>$" + (Math.round(100*outstanding)/100) + "</td><td>$" + (Math.round(100*(outstanding*(intr/12)))/100) + "</td><td>$" + sumintaccrued + "</td><td>$" + amtpaid + "</td><td>$" + pymnt + "</td></tr>")
+            // }
+            // display();
+            // outstanding -= dpymnt;
+            // month += 1;
+            // while (outstanding > 0) {
+            //     accrue();
+            //     if (outstanding < pymnt) {
+            //         pymnt = outstanding;
+            //         amtpaid += pymnt;
+            //         outstanding -= pymnt;
+            //         display();
+            //     } else {
+            //         pay();
+            //         accrue();
+            //         display();
+            //         month += 1;
+            //     }
+            // }
+            // document.write("</table>")
+            var outstanding = 13000;
+            var dpymnt = 5000;
+            var pymnt = 300;
+            var intr = 0.04;
+            var month = 0;
+            var amtpaid = 0;
+            var sumintaccrued = 0;
+            var interest = 0;
+            document.write("<table><tr><td>month</td><td>balance</td><td>interest</td><td>int accrued to date</td><td>paid to date</td><td>payment</td></tr>");
+            function accrue() {
+                interest = Math.round(100*outstanding*(intr/12))/100;
+                sumintaccrued += Math.round(100*outstanding*(intr/12))/100;
+                outstanding += Math.round(100*outstanding*(intr/12))/100;
+            }
+            function pay() {
+                outstanding -= pymnt;
+                amtpaid += pymnt;
+            }
+            function display() {
+                document.write("<tr><td>" + month + "</td><td>$" + outstanding + "</td><td>$" + interest + "</td><td>" + sumintaccrued + "</td><td>$" + amtpaid + "</td><td>$" + pymnt + "</td></tr>")
+            }
+            display();
+            outstanding -= dpymnt;
+            month += 1;
+            while (outstanding > 0) {
+                accrue();
+                if (outstanding < pymnt) {
+                    pymnt = outstanding;
+                    amtpaid += pymnt;
+                    outstanding -= pymnt;
+                    display();
+                } else {
+                    pay();
+                    accrue();
+                    display();
+                    month += 1;
+                }
+            }
+            document.write("</table>");
+        </script>
+    </body>
+</html>
