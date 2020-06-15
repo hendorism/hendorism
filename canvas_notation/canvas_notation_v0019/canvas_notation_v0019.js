@@ -1,7 +1,5 @@
 console.log("music_notation_v0018.js is working.");
-document.querySelector("#2duration").addEventListener(click, setDuration(2){
-    
-})
+
 
 
 var c = document.getElementById("mnCanvas");
