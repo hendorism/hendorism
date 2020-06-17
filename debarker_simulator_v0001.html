@@ -1,0 +1,195 @@
+<html>
+<head>
+<style>
+        /*    the pictures of the barker overhead view and the barker controls console    */
+img#barker_overhead_view{position:absolute;top:10;left:10;width:450;}
+img#barker_controls{position:absolute;top:190;left:10;width:450;}
+
+div.barker{position:absolute;top:85;left:155;height:100;width:85;opacity:0.4;background-color:#def;z-index:1;}
+  div.alligator1{position:absolute;height:10;width:20;}
+  div.alligator2{position:absolute;height:10;width:20;}
+  div.ring{position:absolute;height:10;width:10;}
+  div.pressRoll1{position:absolute;height:30;width:50;}
+  div.pressRoll2{position:absolute;height:30;width:50;}
+div.infeedTrough{position:absolute;top:125;left:50;height:20;width:105;opacity:0.4;background-color:#feb;z-index:1;}
+  div.infeedTroughChain{position:absolute;}
+div.infeedDeck{position:absolute;top:35;left:50;height:90;width:90;opacity:0.4;background-color:#fb5;z-index:1;}
+  div.infeedPin1{position:absolute;top:118;left:54;height:2;width:0;border:2px solid #f00;}
+  div.infeedPin2{position:absolute;top:118;left:78;height:2;width:0;border:2px solid #f00;}
+  div.infeedPin3{position:absolute;top:118;left:100;height:2;width:0;border:2px solid #f00;}
+  div.infeedPin4{position:absolute;top:118;left:127;height:2;width:0;border:2px solid #f00;}
+  div.infeedDeckChain1{position:absolute;top:36;left:50;height:80;width:2;border:2px dotted #fff;z-index:90;}
+  div.infeedDeckChain2{position:absolute;top:36;left:72;height:80;width:2;border:2px dotted #fff;z-index:90;}
+  div.infeedDeckChain3{position:absolute;top:36;left:94;height:80;width:2;border:2px dotted #fff;z-index:90;}
+  div.infeedDeckChain4{position:absolute;top:36;left:116;height:80;width:2;border:2px dotted #fff;z-index:90;}
+  div.infeedDeckChain5{position:absolute;top:36;left:138;height:80;width:2;border:2px dotted #fff;z-index:90;}
+div.coldDeck{position:absolute;top:45;left:265;height:80;width:80;opacity:0.4;background-color:#fbb;z-index:1;}
+  div.coldDeckPin1{position:absolute;top:122;left:270;height:2;width:0;z-index:90;border:2px solid #f00;}
+  div.coldDeckPin2{position:absolute;top:122;left:294;height:2;width:0;z-index:90;border:2px solid #f00;}
+  div.coldDeckPin3{position:absolute;top:122;left:316;height:2;width:0;z-index:90;border:2px solid #f00;}
+  div.coldDeckPin4{position:absolute;top:122;left:335;height:2;width:0;z-index:90;border:2px solid #f00;}
+  div.coldDeckChain1{position:absolute;top:44;left:262;height:80;width:2;z-index:90;border:2px dotted #fff;}
+  div.coldDeckChain2{position:absolute;top:44;left:288;height:80;width:2;z-index:90;border:2px dotted #fff;}
+  div.coldDeckChain3{position:absolute;top:44;left:310;height:80;width:2;z-index:90;border:2px dotted #fff;}
+  div.coldDeckChain4{position:absolute;top:44;left:338;height:80;width:2;z-index:90;border:2px dotted #fff;}
+div.first40{position:absolute;top:125;left:240;height:20;width:220;opacity:0.4;background-color:#55f;z-index:99;z-index:1;}
+  div.first40chain{position:absolute;height:10;width:20;z-index:90;}
+div.log{position:absolute;height:10;width:100;background-color:#223;border:1px solid #2d5;z-index:99;}
+
+/* div.test{position:absolute;top:200;left:150;height:100;width:100;background-color:#f00;z-index:99;} */
+
+button{position:absolute;opacity:0.3;/*visibility:hidden;*/}
+button.toolArmPressure{top:230;left:10;width:50;height:60;}
+button.pressRollPressure{top:290;left:10;width:50;height:70;}
+button.hydraulicsOn{top:230;left:145;height:25;width:25;}
+button.hydraulicsOff{top:255;left:145;height:25;width:25;}
+button.lubeOn{top:230;left:170;height:25;width:25;}
+button.lubeOff{top:255;left:170;height:25;width:25;}
+button.first40_reverse{top:230;left:225;height:25;width:25;}
+button.coldDeckFwdRvrs{top:255;left:225;height:25;width:25;}
+button.first40_forward{top:230;left:280;height:25;width:25;}
+button.first40_e-stop{top:255;left:280;height:25;width:25;}
+button.keyOnOff{top:255;left:305;height:25;width:25;}
+button.kickers{top:300;left:80;height:25;width:25;}
+button.infeedPin1{top:305;left:143;height:25;width:25;}
+button.infeedPin2{top:305;left:168;height:25;width:25;}
+button.infeedPin3{top:305;left:225;height:25;width:25;}
+button.infeedPin4{top:305;left:250;height:25;width:25;}
+button.autoCenterOn{top:335;left:75;height:25;width:25;}
+button.first40_off{top:335;left:137;height:25;width:25;}
+button.coldDeckPin1{top:335;left:168;height:25;width:25;}
+button.coldDeckPin2{top:335;left:195;height:25;width:25;}
+button.coldDeckPin3{top:335;left:225;height:25;width:25;}
+button.coldDeckPin4{top:335;left:253;height:25;width:25;}
+button.autoCenterOff{top:368;left:74;height:25;width:25;}
+button.ringUpDown{top:368;left:105;height:25;width:25;}
+button.pressRoll1{top:368;left:137;height:25;width:25;}
+button.pressRoll2{top:368;left:167;height:25;width:25;}
+button.knives{top:368;left:196;height:25;width:25;}
+button.ringSpeed{top:278;left:371;height:25;width:25;}
+button.ringReset{top:282;left:396;height:20;width:20;}
+button.ringOn{top:279;left:420;height:12;width:15;}
+button.ringOff{top:291;left:423;height:12;width:15;}
+button.cradleDriveSpeed{top:350;left:382;height:22;width:22;}
+button.cradleDriveReset{top:350;left:405;height:20;width:20;}
+button.cradleDriveOn{top:348;left:431;height:12;width:15;}
+button.cradleDriveOff{top:360;left:434;height:12;width:15;}
+
+</style>
+</head>
+<body>
+  <div class="test"></div>
+<button id="booton">feed log</button>
+<img src="barker_overhead_view.png" id="barker_overhead_view">
+<img src="barker_controls.png" id="barker_controls">
+<div class="barker"></div>
+  <div class="alligator1"></div>
+  <div class="alligator2"></div>
+  <div class="ring"></div>
+  <div class="pressRoll1"></div>
+  <div class="pressRoll2"></div>
+<div class="infeedTrough"></div>
+  <div class="infeedTroughChain"></div>
+<div class="infeedDeck"></div>
+  <div class="infeedPin1"></div>
+  <div class="infeedPin2"></div>
+  <div class="infeedPin3"></div>
+  <div class="infeedPin4"></div>
+  <div class="infeedDeckChain1"></div>
+  <div class="infeedDeckChain2"></div>
+  <div class="infeedDeckChain3"></div>
+  <div class="infeedDeckChain4"></div>
+  <div class="infeedDeckChain5"></div>
+<div class="coldDeck"></div>
+  <div class="coldDeckPin1"></div>
+  <div class="coldDeckPin2"></div>
+  <div class="coldDeckPin3"></div>
+  <div class="coldDeckPin4"></div>
+  <div class="coldDeckChain1"></div>
+  <div class="coldDeckChain2"></div>
+  <div class="coldDeckChain3"></div>
+  <div class="coldDeckChain4"></div>
+<div class="first40"></div>
+  <div class="first40chain"></div>
+
+
+<button class="toolArmPressure"></button>
+<button class="pressRollPressure"></button>
+<button class="hydraulicsOn"></button>
+<button class="hydraulicsOff"></button>
+<button class="lubeOn"></button>
+<button class="lubeOff"></button>
+<button class="first40_reverse"></button>
+<button class="coldDeckFwdRvrs"></button>
+<button class="first40_forward"></button>
+<button class="first40_e-stop"></button>
+<button class="keyOnOff"></button>
+<button class="kickers"></button>
+<button class="infeedPin1"></button>
+<button class="infeedPin2"></button>
+<button class="infeedPin3"></button>
+<button class="infeedPin4"></button>
+<button class="autoCenterOn"></button>
+<button class="first40_off"></button>
+<button class="coldDeckPin1"></button>
+<button class="coldDeckPin2"></button>
+<button class="coldDeckPin3"></button>
+<button class="coldDeckPin4"></button>
+<button class="autoCenterOff"></button>
+<button class="ringUpDown"></button>
+<button class="pressRoll1"></button>
+<button class="pressRoll2"></button>
+<button class="knives"></button>
+<button class="ringSpeed"></button>
+<button class="ringReset"></button>
+<button class="ringOn"></button>
+<button class="ringOff"></button>
+<button class="cradleDriveSpeed"></button>
+<button class="cradleDriveReset"></button>
+<button class="cradleDriveOn"></button>
+<button class="cradleDriveOff"></button>
+
+
+<script>
+var logs = [];
+var top = 0;
+document.getElementById("booton").addEventListener("click", feedLog());
+function feedLog() {
+  var log = document.createElement("div")
+  top += 13;
+  log.classList.add("log");
+  document.body.appendChild(log);
+  logs.push(log);
+  log.style.top = top;
+}
+function moveLog() {
+  
+} 
+</script>
+</body>
+</html>
+
+
+
+
+<!--     
+This is a sim of the barker at buse timber amd sales in everett.
+
+
+
+-->
+<!--
+
+var para = document.createElement("P");               // Create a <p> element
+para.innerText = "This is a paragraph";               // Insert text
+document.body.appendChild(para);                      // Append <p> to <body>
+
+
+-->
+
+
+
+
+
+
+
