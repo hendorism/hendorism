@@ -32,8 +32,8 @@ div.coldDeck{position:absolute;top:45;left:265;height:80;width:80;opacity:0.4;ba
   div.coldDeckChain2{position:absolute;top:44;left:288;height:80;width:2;z-index:90;border:2px dotted #fff;}
   div.coldDeckChain3{position:absolute;top:44;left:310;height:80;width:2;z-index:90;border:2px dotted #fff;}
   div.coldDeckChain4{position:absolute;top:44;left:338;height:80;width:2;z-index:90;border:2px dotted #fff;}
-div.first40{position:absolute;top:125;left:240;height:20;width:220;opacity:0.4;background-color:#55f;z-index:99;z-index:1;}
-  div.first40chain{position:absolute;height:10;width:20;z-index:90;}
+div.firstForty{position:absolute;top:125;left:240;height:20;width:220;opacity:0.4;background-color:#55f;z-index:99;z-index:1;}
+  div.firstFortychain{position:absolute;height:10;width:20;z-index:90;}
 div.log{position:absolute;height:10;width:100;background-color:#223;border:1px solid #2d5;z-index:99;}
 
 /* div.test{position:absolute;top:200;left:150;height:100;width:100;background-color:#f00;z-index:99;} */
@@ -45,10 +45,10 @@ button.hydraulicsOn{top:230;left:145;height:25;width:25;}
 button.hydraulicsOff{top:255;left:145;height:25;width:25;}
 button.lubeOn{top:230;left:170;height:25;width:25;}
 button.lubeOff{top:255;left:170;height:25;width:25;}
-button.first40_reverse{top:230;left:225;height:25;width:25;}
+button.firstForty_reverse{top:230;left:225;height:25;width:25;}
 button.coldDeckFwdRvrs{top:255;left:225;height:25;width:25;}
-button.first40_forward{top:230;left:280;height:25;width:25;}
-button.first40_e_stop{top:255;left:280;height:25;width:25;}
+button.firstForty_forward{top:230;left:280;height:25;width:25;}
+button.firstForty_e_stop{top:255;left:280;height:25;width:25;}
 button.keyOnOff{top:255;left:305;height:25;width:25;}
 button.kickers{top:300;left:80;height:25;width:25;}
 button.infeedPin1{top:305;left:143;height:25;width:25;}
@@ -56,7 +56,7 @@ button.infeedPin2{top:305;left:168;height:25;width:25;}
 button.infeedPin3{top:305;left:225;height:25;width:25;}
 button.infeedPin4{top:305;left:250;height:25;width:25;}
 button.autoCenterOn{top:335;left:75;height:25;width:25;}
-button.first40_off{top:335;left:137;height:25;width:25;}
+button.firstForty_off{top:335;left:137;height:25;width:25;}
 button.coldDeckPin1{top:335;left:168;height:25;width:25;}
 button.coldDeckPin2{top:335;left:195;height:25;width:25;}
 button.coldDeckPin3{top:335;left:225;height:25;width:25;}
@@ -109,8 +109,8 @@ button.cradleDriveOff{top:360;left:434;height:12;width:15;}
   <div class="coldDeckChain2"></div>
   <div class="coldDeckChain3"></div>
   <div class="coldDeckChain4"></div>
-<div class="first40"></div>
-  <div class="first40chain"></div>
+<div class="firstForty"></div>
+  <div class="firstFortychain"></div>
 
 
 <button class="toolArmPressure"></button>
@@ -119,10 +119,10 @@ button.cradleDriveOff{top:360;left:434;height:12;width:15;}
 <button class="hydraulicsOff"></button>
 <button class="lubeOn"></button>
 <button class="lubeOff"></button>
-<button class="first40_reverse"></button>
+<button class="firstForty_reverse"></button>
 <button class="coldDeckFwdRvrs"></button>
-<button class="first40_forward"></button>
-<button class="first40_e_stop"></button>
+<button class="firstForty_forward"></button>
+<button class="firstForty_e_stop"></button>
 <button class="keyOnOff"></button>
 <button class="kickers"></button>
 <button class="infeedPin1"></button>
@@ -130,7 +130,7 @@ button.cradleDriveOff{top:360;left:434;height:12;width:15;}
 <button class="infeedPin3"></button>
 <button class="infeedPin4"></button>
 <button class="autoCenterOn"></button>
-<button class="first40_off"></button>
+<button class="firstForty_off"></button>
 <button class="coldDeckPin1"></button>
 <button class="coldDeckPin2"></button>
 <button class="coldDeckPin3"></button>
@@ -172,10 +172,10 @@ var hydraulicsOn = document.querySelector("button.hydraulicsOn");
 var hydraulicsOff = document.querySelector("button.hydraulicsOff");
 var lubeOn = document.querySelector("button.lubeOn");
 var lubeOff = document.querySelector("button.lubeOff");
-var first40_reverse = document.querySelector("button.first40_reverse");
+var firstForty_reverse = document.querySelector("button.firstForty_reverse");
 var coldDeckFwdRvrs = document.querySelector("button.coldDeckFwdRvrs");
-var first40_forward = document.querySelector("button.first40_forward");
-var first40_e_stop = document.querySelector("button.first40_e_stop");
+var firstForty_forward = document.querySelector("button.firstForty_forward");
+var firstForty_e_stop = document.querySelector("button.firstForty_e_stop");
 var keyOnOff = document.querySelector("button.keyOnOff");
 var kickers = document.querySelector("button.kickers");
 var infeedPin1 = document.querySelector("button.infeedPin1");
@@ -183,7 +183,7 @@ var infeedPin2 = document.querySelector("button.infeedPin2");
 var infeedPin3 = document.querySelector("button.infeedPin3");
 var infeedPin4 = document.querySelector("button.infeedPin4");
 var autoCenterOn = document.querySelector("button.autoCenterOn");
-var first40_off = document.querySelector("button.first40_off");
+var firstForty_off = document.querySelector("button.firstForty_off");
 var coldDeckPin1 = document.querySelector("button.coldDeckPin1");
 var coldDeckPin2 = document.querySelector("button.coldDeckPin2");
 var coldDeckPin3 = document.querySelector("button.coldDeckPin3");
@@ -204,8 +204,40 @@ var cradleDriveOff = document.querySelector("button.cradleDriveOff");
 
 function setToolArmPressure() {}
 function setPressRollPressure() {}
-function hydraulicsOn() {}
-function 
+function turnHydraulicsOn() {}
+function turnHydraulicsOff() {}
+function turnLubeOn.addEventListener("click", "");
+function turnLubeOff.addEventListener("click", "");
+function reversefirstForty.addEventListener("click", "");
+function coldDeckFwdRvrs.addEventListener("click", "");
+function firstForty_forward.addEventListener("click", "");
+function firstForty_e_stop.addEventListener("click", "");
+function keyOnOff.addEventListener("click", "");
+function kickers.addEventListener("click", "");
+function infeedPin1.addEventListener("click", "");
+function infeedPin2.addEventListener("click", "");
+function infeedPin3.addEventListener("click", "");
+function infeedPin4.addEventListener("click", "");
+function autoCenterOn.addEventListener("click", "");
+function firstForty_off.addEventListener("click", "");
+function coldDeckPin1.addEventListener("click", "");
+function coldDeckPin2.addEventListener("click", "");
+function coldDeckPin3.addEventListener("click", "");
+function coldDeckPin4.addEventListener("click", "");
+function autoCenterOff.addEventListener("click", "");
+function ringUpDown.addEventListener("click", "");
+function pressRoll1.addEventListener("click", "");
+function pressRoll2.addEventListener("click", "");
+function knives.addEventListener("click", "");
+function ringSpeed.addEventListener("click", "");
+function ringReset.addEventListener("click", "");
+function ringOn.addEventListener("click", "");
+function ringOff.addEventListener("click", "");
+function cradleDriveSpeed.addEventListener("click", "");
+function cradleDriveReset.addEventListener("click", "");
+function cradleDriveOn.addEventListener("click", "");
+function cradleDriveOff.addEventListener("click", "");
+
 
 toolArmPressure.addEventListener("click", "");
 pressRollPressure.addEventListener("click", "");
@@ -213,10 +245,10 @@ hydraulicsOn.addEventListener("click", "");
 hydraulicsOff.addEventListener("click", "");
 lubeOn.addEventListener("click", "");
 lubeOff.addEventListener("click", "");
-first40_reverse.addEventListener("click", "");
+firstForty_reverse.addEventListener("click", "");
 coldDeckFwdRvrs.addEventListener("click", "");
-first40_forward.addEventListener("click", "");
-first40_e_stop.addEventListener("click", "");
+firstForty_forward.addEventListener("click", "");
+firstForty_e_stop.addEventListener("click", "");
 keyOnOff.addEventListener("click", "");
 kickers.addEventListener("click", "");
 infeedPin1.addEventListener("click", "");
@@ -224,7 +256,7 @@ infeedPin2.addEventListener("click", "");
 infeedPin3.addEventListener("click", "");
 infeedPin4.addEventListener("click", "");
 autoCenterOn.addEventListener("click", "");
-first40_off.addEventListener("click", "");
+firstForty_off.addEventListener("click", "");
 coldDeckPin1.addEventListener("click", "");
 coldDeckPin2.addEventListener("click", "");
 coldDeckPin3.addEventListener("click", "");
@@ -243,6 +275,26 @@ cradleDriveReset.addEventListener("click", "");
 cradleDriveOn.addEventListener("click", "");
 cradleDriveOff.addEventListener("click", "");
 
+// log functions
+  /* function logDropsInTrough() {}
+  function () {}
+  function getDeBarked() {} */
+//infeed log deck funcitons
+  function runInfeedLogDeck() {}
+
+// 1st 40 functions
+  function firstFortyreverse() {}
+  function forward() {}
+  function stop() {}
+
+// infeed drive functions
+  function runInfeedDriveForward() {}
+  function runInfeedDriveBackward() {}
+  function brokeLoghaulDrivechain() {}
+// ring functions
+  function startRingMotor() {}
+  var ringSpeed = 0;
+  var ring = {speed:"0",knives:[]}
 </script>
 </body>
 </html>
