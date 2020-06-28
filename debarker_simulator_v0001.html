@@ -84,7 +84,7 @@ button.cradleDriveOff    {top:360;left:434;height:12;width:15;}
   <p class="coldDeckLogsTaken"></p>
   <p class="millLogsTaken"></p>
   <p class="elapsedTime"></p>
-</div>                                                  */
+</div>                                                  *//*
 div.statsDisplay{}
 div.logsDebarked{}
 div.percentBarkRemoved{}
@@ -92,7 +92,7 @@ div.logsFed{}
 div.coldDeckLogsTaken{}
 div.millLogsTaken{}
 div.elapsedTime{}
-/*  time since last log
+*//*  time since last log
     average lap
     logs dropped in trough
     logs dropped in deck
@@ -105,7 +105,15 @@ div.elapsedTime{}
 </head>
 <body>
   <p style="position:absolute;top:0;left:200;z-index:1;font-size:12px;color:#fff;font-family:monospace;text-transform:uppercase;letter-spacing:-1px;">debarker sim works best in Chrome.</p>
-<button id="booton">feed log</button>
+<div class="loader controls"></div>
+<div class="loader">
+  <style> </style>
+  <div class="frontofloader"></div>
+  <div class="backofloader">
+    <div class="leftrearloadertire"></div>
+    <div class="rightrearloadertire"></div>
+  </div>
+</div>
 <img src="barker_overhead_view.png" id="barker_overhead_view">
 <img src="barker_controls.png" id="barker_controls">
 <div class="barker"></div>
@@ -251,7 +259,7 @@ var cradleDriveOff = document.querySelector("button.cradleDriveOff");
 // function kickers.addEventListener("click", "");
 // function infeedPin1.addEventListener("click", "");
 // function infeedPin2.addEventListener("click", "");
-// function infeedPin3.addEventListener("click", "");
+//  function infeedPin3.addEventListener("click", "");
 // function infeedPin4.addEventListener("click", "");
 // function autoCenterOn.addEventListener("click", "");
 // function firstForty_off.addEventListener("click", "");
