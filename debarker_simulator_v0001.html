@@ -6,9 +6,9 @@ img#barker_overhead_view{position:absolute;top:10;left:10;width:450;}
 img#barker_controls{position:absolute;top:190;left:10;width:450;}
 div                    {position:absolute;}
 div.barker             {position:absolute;top:85;left:155;height:100;width:85;opacity:0.4;background-color:#def;z-index:1;}
-  div.alligator1       {position:absolute;height:10;width:20;}
-  div.alligator2       {position:absolute;height:10;width:20;}
-  div.ring             {position:absolute;height:10;width:10;}
+  div.alligator1       {position:absolute;height:10;width:30;top:131;left:160;z-index:2;background-color:#2f7;}
+  div.alligator2       {position:absolute;height:10;width:30;top:131;left:209;z-index:2;background-color:#2f7;}
+  div.ring             {position:absolute;height:12;width:12;top:130;left:194;z-index:2;background-color:#666;}
   div.pressRoll1       {position:absolute;height:30;width:50;}
   div.pressRoll2       {position:absolute;height:30;width:50;}
 div.infeedTrough       {position:absolute;top:125;left:50;height:20;width:105;opacity:0.4;background-color:#feb;z-index:1;}
@@ -40,14 +40,14 @@ div.log                {position:absolute;height:10;width:100;background-color:#
 button                   {position:absolute;opacity:0.3;/*visibility:hidden;*/}
 button.active            {background-color:#f00;}
 input[type=range]        {position:absolute;z-index:1;opacity:0.6;}
-input.toolArmPressure    {top:230;left:10;width:50;height:60;transform:rotate(-90deg);}
-input.pressRollPressure  {top:290;left:10;width:50;height:70;transform:rotate(-90deg);}
+input.toolArmPressure    {top:230;left:40;width:50;height:60;transform:rotate(-90deg);}
+input.pressRollPressure  {top:290;left:40;width:50;height:70;transform:rotate(-90deg);}
 button.hydraulicsOn      {top:230;left:145;height:25;width:25;}
 button.hydraulicsOff     {top:255;left:145;height:25;width:25;}
 button.lubeOn            {top:230;left:170;height:25;width:25;}
 button.lubeOff           {top:255;left:170;height:25;width:25;}
 button.firstForty_reverse{top:230;left:225;height:25;width:25;}
-button.coldDeckFwdRvrs   {top:255;left:225;height:25;width:25;}
+input.coldDeckFwdRvrs   {top:255;left:230;height:25;width:55;transform:rotate(-90deg);}
 button.firstForty_forward{top:230;left:280;height:25;width:25;}
 button.firstForty_e_stop {top:255;left:280;height:25;width:25;}
 button.keyOnOff          {top:255;left:305;height:25;width:25;}
@@ -67,11 +67,11 @@ button.ringUpDown        {top:368;left:105;height:25;width:25;}
 button.pressRoll1        {top:368;left:137;height:25;width:25;}
 button.pressRoll2        {top:368;left:167;height:25;width:25;}
 button.knives            {top:368;left:196;height:25;width:25;}
-input.ringSpeed          {top:278;left:360;height:25;width:50;transform:rotate(-90deg);}
+input.ringSpeed          {top:278;left:340;height:25;width:50;transform:rotate(-90deg);}
 button.ringReset         {top:282;left:396;height:20;width:20;}
 button.ringOn            {top:279;left:420;height:12;width:15;}
 button.ringOff           {top:291;left:423;height:12;width:15;}
-input.cradleDriveSpeed   {top:350;left:382;height:22;width:50;transform:rotate(-90deg);}
+input.cradleDriveSpeed   {top:350;left:347;height:22;width:50;transform:rotate(-90deg);}
 button.cradleDriveReset  {top:350;left:405;height:20;width:20;}
 button.cradleDriveOn     {top:348;left:431;height:12;width:15;}
 button.cradleDriveOff    {top:360;left:434;height:12;width:15;}
@@ -91,8 +91,8 @@ div.percentBarkRemoved{}
 div.logsFed{}
 div.coldDeckLogsTaken{}
 div.millLogsTaken{}
-div.elapsedTime{}
-*//*  time since last log
+div.elapsedTime{}                                       *//*
+    time since last log
     average lap
     logs dropped in trough
     logs dropped in deck
@@ -100,11 +100,12 @@ div.elapsedTime{}
     infeed deck drive chains broken
     log haul drivechains broken
     current log haul drivechain HP
-    current infeed deck drivechain HP*/
+    current infeed deck drivechain HP                    */
 </style>
 </head>
 <body>
   <p style="position:absolute;top:0;left:200;z-index:1;font-size:12px;color:#fff;font-family:monospace;text-transform:uppercase;letter-spacing:-1px;">debarker sim works best in Chrome.</p>
+<!--
 <div class="loader controls"></div>
 <div class="loader">
   <style> </style>
@@ -114,8 +115,9 @@ div.elapsedTime{}
     <div class="rightrearloadertire"></div>
   </div>
 </div>
+-->
+<!-- barker overhead view -->
 <img src="barker_overhead_view.png" id="barker_overhead_view">
-<img src="barker_controls.png" id="barker_controls">
 <div class="barker"></div>
   <div class="alligator1"></div>
   <div class="alligator2"></div>
@@ -146,7 +148,8 @@ div.elapsedTime{}
 <div class="firstForty"></div>
   <div class="firstFortychain"></div>
 
-
+<!-- controls -->
+<img src="barker_controls.png" id="barker_controls">
 <input class="toolArmPressure" type="range" min="0" max="100">
 <input class="pressRollPressure" type="range" min="0" max="100">
 <button class="hydraulicsOn"></button>
@@ -154,7 +157,7 @@ div.elapsedTime{}
 <button class="lubeOn"></button>
 <button class="lubeOff"></button>
 <button class="firstForty_reverse"></button>
-<button class="coldDeckFwdRvrs"></button>
+<input class="coldDeckFwdRvrs" type="range" min="0" max="2"></button>
 <button class="firstForty_forward"></button>
 <button class="firstForty_e_stop"></button>
 <button class="keyOnOff"></button>
@@ -183,7 +186,8 @@ div.elapsedTime{}
 <button class="cradleDriveOn"></button>
 <button class="cradleDriveOff"></button>
 
-<div class="statsDisplay">
+<!-- stats display -->
+<!-- <div class="statsDisplay">
   <p class="logsDebarked"></p>
   <p class="yardsProduced"></p>
   <p class="percentBarkRemoved"></p>
@@ -191,7 +195,7 @@ div.elapsedTime{}
   <p class="coldDeckLogsTaken"></p>
   <p class="millLogsTaken"></p>
   <p class="elapsedTime"></p>
-</div>
+</div> -->
 
 <script>
 // var logs = [];
@@ -209,14 +213,15 @@ div.elapsedTime{}
   
 // } 
 
-var toolArmPressure = document.querySelector("button.toolArmPressure");
-var pressRollPressure = document.querySelector("button.pressRollPressure");
+
+var toolArmPressure = document.querySelector("input.toolArmPressure");
+var pressRollPressure = document.querySelector("input.pressRollPressure");
 var hydraulicsOn = document.querySelector("button.hydraulicsOn");
 var hydraulicsOff = document.querySelector("button.hydraulicsOff");
 var lubeOn = document.querySelector("button.lubeOn");
 var lubeOff = document.querySelector("button.lubeOff");
 var firstForty_reverse = document.querySelector("button.firstForty_reverse");
-var coldDeckFwdRvrs = document.querySelector("button.coldDeckFwdRvrs");
+var coldDeckFwdRvrs = document.querySelector("input.coldDeckFwdRvrs");
 var firstForty_forward = document.querySelector("button.firstForty_forward");
 var firstForty_e_stop = document.querySelector("button.firstForty_e_stop");
 var keyOnOff = document.querySelector("button.keyOnOff");
@@ -236,11 +241,11 @@ var ringUpDown = document.querySelector("button.ringUpDown");
 var pressRoll1 = document.querySelector("button.pressRoll1");
 var pressRoll2 = document.querySelector("button.pressRoll2");
 var knives = document.querySelector("button.knives");
-var ringSpeed = document.querySelector("button.ringSpeed");
+var ringSpeed = document.querySelector("input.ringSpeed");
 var ringReset = document.querySelector("button.ringReset");
 var ringOn = document.querySelector("button.ringOn");
 var ringOff = document.querySelector("button.ringOff");
-var cradleDriveSpeed = document.querySelector("button.cradleDriveSpeed");
+var cradleDriveSpeed = document.querySelector("input.cradleDriveSpeed");
 var cradleDriveReset = document.querySelector("button.cradleDriveReset");
 var cradleDriveOn = document.querySelector("button.cradleDriveOn");
 var cradleDriveOff = document.querySelector("button.cradleDriveOff");
@@ -249,10 +254,10 @@ var cradleDriveOff = document.querySelector("button.cradleDriveOff");
 // function setPressRollPressure() {}
 // function turnHydraulicsOn() {}
 // function turnHydraulicsOff() {}
-// function turnLubeOn.addEventListener("click", "");
-// function turnLubeOff.addEventListener("click", "");
-// function reversefirstForty.addEventListener("click", "");
-// function coldDeckFwdRvrs.addEventListener("click", "");
+// function turnLubeOn() {}
+// function turnLubeOff() {}
+// function reversefirstForty() {}
+// function coldDeckFwdRvrs() {}
 // function firstForty_forward.addEventListener("click", "");
 // function firstForty_e_stop.addEventListener("click", "");
 // function keyOnOff.addEventListener("click", "");
