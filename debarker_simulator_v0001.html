@@ -34,7 +34,7 @@ div.coldDeck           {position:absolute;top:45;left:265;height:80;width:80;opa
   div.coldDeckChain4   {position:absolute;top:44;left:338;height:80;width:2;z-index:90;border:2px dotted #fff;}
 div.firstForty         {position:absolute;top:125;left:240;height:20;width:220;opacity:0.4;background-color:#55f;z-index:99;z-index:1;}
   div.firstFortychain  {position:absolute;top:134;left:242;height:4;width:128;background-color:#333;z-index:90;border:1px dotted #fff;}
-div.log                {position:absolute;height:10;width:100;background-color:#223;border:1px solid #2d5;z-index:99;}
+div.log                {position:absolute;height:5;width:100;background-color:#223;border:1px solid #2d5;z-index:99;}
 
 
 button                   {position:absolute;opacity:0.3;/*visibility:hidden;*/}
@@ -47,7 +47,7 @@ button.hydraulicsOff     {top:255;left:145;height:25;width:25;}
 button.lubeOn            {top:230;left:170;height:25;width:25;}
 button.lubeOff           {top:255;left:170;height:25;width:25;}
 button.firstForty_reverse{top:230;left:225;height:25;width:25;}
-input.coldDeckFwdRvrs   {top:255;left:230;height:25;width:55;transform:rotate(-90deg);}
+input.coldDeckFwdRvrs    {top:255;left:230;height:25;width:55;transform:rotate(-90deg);}
 button.firstForty_forward{top:230;left:280;height:25;width:25;}
 button.firstForty_e_stop {top:255;left:280;height:25;width:25;}
 button.keyOnOff          {top:255;left:305;height:25;width:25;}
@@ -75,8 +75,13 @@ input.cradleDriveSpeed   {top:350;left:347;height:22;width:50;transform:rotate(-
 button.cradleDriveReset  {top:350;left:405;height:20;width:20;}
 button.cradleDriveOn     {top:348;left:431;height:12;width:15;}
 button.cradleDriveOff    {top:360;left:434;height:12;width:15;}
-/*                             stats display styling 
-<div class="statsDisplay">
+/* foot-switches styling */
+button.infeedDeckAndStopsFootSwitch {top:410;left:100;height:25;width:25;opacity:1;}
+button.infeedDeckFootSwitch         {top:410;left:130;height:25;width:25;opacity:1;}
+button.coldDeckFootSwitch           {top:410;left:250;height:25;width:25;opacity:1;}
+
+/*                             stats display styling */
+/*<div class="statsDisplay">
   <p class="logsDebarked"></p>
   <p class="yardsProduced"></p>
   <p class="percentBarkRemoved"></p>
@@ -186,6 +191,12 @@ div.elapsedTime{}                                       *//*
 <button class="cradleDriveOn"></button>
 <button class="cradleDriveOff"></button>
 
+<button class="infeedDeckAndStopsFootSwitch"></button>
+<button class="infeedDeckFootSwitch"></button>
+<button class="coldDeckFootSwitch"></button>
+
+
+
 <!-- stats display -->
 <!-- <div class="statsDisplay">
   <p class="logsDebarked"></p>
@@ -249,6 +260,30 @@ var cradleDriveSpeed = document.querySelector("input.cradleDriveSpeed");
 var cradleDriveReset = document.querySelector("button.cradleDriveReset");
 var cradleDriveOn = document.querySelector("button.cradleDriveOn");
 var cradleDriveOff = document.querySelector("button.cradleDriveOff");
+
+// function createLog() {
+//   var aNewLog = document.createElement("div");
+//   aNewLog.classList.add("log");
+//   aNewLog.style.top = 10;
+//   aNewLog.style.left = 10;
+//   aNewLog.style.z-index = 50;
+//   document.body.appendChild(aNewLog);
+// }
+// createLog();
+
+function createLog() {
+  var aNewLog = document.createElement("div");
+  aNewLog.classList.add("log");
+  aNewLog.style.cssText = "top:39;left:45;";
+  document.body.appendChild(aNewLog);
+}
+createLog();
+
+function barkerInfeedRun() {
+  while () {
+
+  }
+}
 
 // function setToolArmPressure() {}
 // function setPressRollPressure() {}
