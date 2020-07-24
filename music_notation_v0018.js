@@ -23,7 +23,7 @@ function drawReticle(x,y){
 function drawStaves(stavesQuantity,stavesSpacing,topMargin){
     for(e=0;e<stavesQuantity;e++){
         for(i=0;i<5;i++){
-            drawLine(20,topMargin+10*i+stavesSpacing*e, 390,topMargin+10*i+stavesSpacing*e);
+            drawLine(10,topMargin+10*i+stavesSpacing*e, 390,topMargin+10*i+stavesSpacing*e);
         }
     }
 }
