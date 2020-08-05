@@ -26,6 +26,29 @@
     drawThickLine(57,100,107,84);
     drawThickLine(57,95.5,107,79.5);
 
+    drawNoteHead(120,50);
+    drawNoteHead(130,60);
+    drawNoteHead(140,70);
+    drawNoteHead(150,80);
+    drawLine(117,50,117,94);
+    drawLine(127,60,127,95);
+    drawLine(137,70,137,96);
+    drawLine(147,80,147,98);
+for(i=0;i<2;i++){
+    drawThickLine(117,94-6*i,147,98-4*i);
+}
+
+const beat_0003 = [85,80,80,85];
+for (i=0; i<beat_0003.length; i++) {
+    drawNoteHead(160+10*i,beat_0003[i]);
+    drawLine(163+10*i,beat_0003[i],163+10*i,63-3*i);
+    if(i % 2 === 0) {
+        drawThickLine(163,63+5.5*i,203,63-3*(i+1))
+    }
+}
+console.log("hello123");
+console.log(beat_0003);
+console.log(beat_0003.length);
     
 
 
