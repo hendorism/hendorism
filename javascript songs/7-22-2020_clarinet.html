@@ -1,4 +1,10 @@
-console.log("music_notation_v0018.js is working.");
+<html>
+    <head>
+    <body>
+        
+        <canvas id="mnCanvas"></canvas>
+        <script>
+            console.log("music_notation_v0018.js is working.");
 
 
 
@@ -23,7 +29,7 @@ function drawReticle(x,y){
 function drawStaves(stavesQuantity,stavesSpacing,topMargin){
     for(e=0;e<stavesQuantity;e++){
         for(i=0;i<5;i++){
-            drawLine(10,topMargin+10*i+stavesSpacing*e, 390,topMargin+10*i+stavesSpacing*e);
+            drawLine(20,topMargin+10*i+stavesSpacing*e, 390,topMargin+10*i+stavesSpacing*e);
         }
     }
 }
@@ -224,3 +230,35 @@ function drawNote(a,x,y,sd,sl,sx){
 
 console.log("music_notation_v0018.js is finished working.");
 
+        </script>
+        <script>
+            ctx.fillStyle = '#77f';
+            ctx.beginPath();
+            ctx.arc(50,50,40,0,Math.PI*2,true);
+            ctx.closePath();
+            ctx.fill();
+            for(e=0;e<10;e++){
+                for(i=0;i<10;i++){
+                    drawNoteHead(20+1.2*i*i-4*e*e+200,30+30*i-2*e+0.5*e*e)
+                }
+            }
+            
+ctx.font = "20px Georgia";
+ctx.fillText("Hello World!", 10, 50);
+
+ctx.font = "30px Verdana";
+// Create gradient
+var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+gradient.addColorStop("0", "magenta");
+gradient.addColorStop("0.5", "blue");
+gradient.addColorStop("1.0", "red");
+// Fill with gradient
+ctx.fillStyle = gradient;
+ctx.fillText("Big smile!", 10, 90);
+            drawStaves(5,100,350);
+            drawTrebleCleff(20,375);
+            drawKeySignature(30,370,-4);
+            drawNoteHead()
+        </script>
+    </body>
+</html>

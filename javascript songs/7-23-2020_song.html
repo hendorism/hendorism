@@ -1,0 +1,65 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <canvas id="mnCanvas"></canvas>
+        <script src="https://hendorism.github.io/my-blog/music_notation_v0018.js"></script>
+        <script>
+            ctx.font = "16px Verdana";
+            var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+            gradient.addColorStop("0", "#f33");
+            gradient.addColorStop("0.5", "#000");
+            gradient.addColorStop("1.0", "#0f0");
+            ctx.fillStyle = gradient;
+            ctx.fillText("Bb clarinet", 20, 40);
+            drawStaves(6,100,50);
+            drawTrebleCleff(10,75);
+            drawKeySignature(25,70,-4);
+            drawNoteHead(50,50);
+            drawNoteHead(58,60);
+            drawNoteHead(66,70);
+            drawNoteHead(74,80);
+            drawLine(47,50,47,87);
+            drawLine(55,60,55,90);
+            drawLine(63,70,63,93);
+            drawLine(71,80,71,96);
+            drawThickLine(47,87,71,96);
+            drawThickLine(47,83,71,92);
+
+            drawNoteHead(82,85);
+            drawNoteHead(90,75);
+            drawNoteHead(98,50);
+            drawNoteHead(106,100);drawLine(96,100,116,100);
+            drawLine(79,85,79,103);
+            drawLine(87,75,87,98);
+            drawLine(95,50,95,93);
+            drawLine(103,100,103,84);
+            drawThickLine(79,103,103,88);
+            drawThickLine(79,99,103,84);
+
+            drawNoteHead();
+            drawNoteHead();
+            drawNoteHead();
+            drawNoteHead();
+            drawLine();
+            drawLine();
+            drawLine();
+            drawLine();
+            drawThickLine();
+            drawThickLine();
+            /*
+                50 = F5
+                55 = E5
+                60 = D5
+                65 = C5
+                70 = B4
+                75 = A4
+                80 = G4
+                85 = F4
+                90 = E4
+                95 = D4
+            */
+        </script>
+    </body>
+</html>
