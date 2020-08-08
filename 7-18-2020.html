@@ -1,11 +1,51 @@
 <!-- 7-18-2020.html -->
 <html>
 <head>
-    <style>
+<style>/* sunny mornings letter effect */
+body{background: rgb(2,0,36);background: -moz-linear-gradient(111deg, rgba(2,0,36,1) 0%, rgba(15,121,9,1) 35%, rgba(0,212,255,1) 100%);background: -webkit-linear-gradient(111deg, rgba(2,0,36,1) 0%, rgba(15,121,9,1) 35%, rgba(0,212,255,1) 100%);background: linear-gradient(111deg, rgba(2,0,36,1) 0%, rgba(15,121,9,1) 35%, rgba(0,212,255,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#00d4ff",GradientType=1);}
+.ml2 {
+  font-family:monospace;
+  color:#f34;
+  text-transform: lowercase;
+  font-weight: 900;
+  font-size: 18px;
+  position:absolute;
+  top:0;
+  left:220;
+  letter-spacing: 16px;
+}
 
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
     </style>
 </head>
 <body>
+    <h1 class="ml2">7/18/2020.html</h1>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script>// Wrap every letter in a span
+    var textWrapper = document.querySelector('.ml2');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    
+    anime.timeline({loop: true})
+      .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: (el, i) => 70*i
+      }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+      });</script>
+
 <canvas id="mnCanvas"></canvas>
 <script src="canvas_notation/canvas_notation_v0019/canvas_notation_v0019.js"></script>
 <script>
@@ -26,6 +66,76 @@
     drawThickLine(57,100,107,84);
     drawThickLine(57,95.5,107,79.5);
 
+    drawNoteHead(120,50);
+    drawNoteHead(130,60);
+    drawNoteHead(140,70);
+    drawNoteHead(150,80);
+    drawLine(117,50,117,94);
+    drawLine(127,60,127,95);
+    drawLine(137,70,137,96);
+    drawLine(147,80,147,98);
+for(i=0;i<2;i++){
+    drawThickLine(117,94-6*i,147,98-4*i);
+}
+
+const beat_0003 = [85,80,80,85];
+for (i=0; i<beat_0003.length; i++) {
+    drawNoteHead(160+10*i,beat_0003[i]);
+    drawLine(163+10*i,beat_0003[i],163+10*i,63-3*i);
+    if(i % 2 === 0) {
+        // (if i === 0 || if i === 2)
+        drawThickLine(163,63+3*i,193,54+3*i)
+    }
+}
+const beat_0004 = [80,70,70,70];//Gb4 Bbb4 Bb4 Bb4 
+let NOTESPACING = 10;
+for (i=0; i<beat_0004.length; i++) {
+    
+    if (i===1) {
+        NOTESPACING = 20;
+        drawNoteHead(200+NOTESPACING*i,beat_0004[i]);
+        drawLine(203+NOTESPACING*i,beat_0004[i],203+NOTESPACING*i,43);
+    } else {
+        NOTESPACING = 10;
+        drawNoteHead(200+NOTESPACING*i+10,beat_0004[i]);
+        drawLine(203+NOTESPACING*i+NOTESPACING,beat_0004[i],203+NOTESPACING*i+NOTESPACING,43+3*(i-1));
+    }
+    if (i%2 === 0) {
+        // if i is equal to 0 or 2 (even numbers)
+        drawThickLine(212,40+2*i,214+NOTESPACING*3,47+3*(i+1));
+    }
+}
+drawLine(250,50,250,90);
+const beat_0005 = [80,85,85,80];
+drawFlat(275,85);
+for (i=0; i<beat_0005.length; i++) {
+    let STARTINGX = 265;
+    if (i===1) {NOTESPACING = 20;} else {NOTESPACING = 18;}
+    drawNoteHead(STARTINGX+NOTESPACING*i, beat_0005[i]);
+    drawLine(STARTINGX+3+NOTESPACING*i, beat_0005[i], STARTINGX+3+NOTESPACING*i, 57-2.2*i);
+    if (i%2 === 0) {drawThickLine(STARTINGX+3, 57+3*i, STARTINGX+3+NOTESPACING*3, 57-2.2*3+3*i);}
+}
+const beat_0006 = [75,65,55,45];
+let x = 0;
+for (i=0; i<beat_0006.length; i++) {
+    x = 335+10*i;
+    if (i >= 1) {x+=8;}
+    if (i === 1) {drawFlat(x-9,beat_0006[i]);}
+    drawNoteHead(x,beat_0006[i]);
+    let STEMENDY = 99-0.4*(x-335);
+    drawLine(x-3,beat_0006[i],x-3,STEMENDY);
+    console.log("stem end y value: "+(92-0.4*(x-335)));
+    console.log("x="+x);
+    if (i%2 === 0) {drawThickLine(335-3,STEMENDY-2*i,335+38-3,STEMENDY-2*i);}
+}
+console.log(x);
+
+
+
+
+console.log("hello123");
+console.log(beat_0003);
+console.log(beat_0003.length);
     
 
 
