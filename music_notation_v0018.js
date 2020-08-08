@@ -164,6 +164,22 @@ function drawEighthRest(x,y){
   ctx.lineTo(x+4,y+17);
   ctx.stroke();
 }
+function drawQuarterRest(x,y) {
+  let m = 10;
+  ctx.strokeStyle = "#000000";
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(x, y+2);
+  ctx.bezierCurveTo(x-3, y, x-8, y-2, x-4, y+9);
+  ctx.bezierCurveTo(x-10, y-3, x-6, y-5, x, y+2);
+  ctx.fill();
+  ctx.lineTo(x-7,y-9);
+  ctx.bezierCurveTo(x-3, y-13, x-3, y-15, x-6, y-19);
+  ctx.lineTo(x+1,y-10);
+  ctx.bezierCurveTo(x-5, y-9, x-3, y-3, x, y);
+  ctx.fill();
+  ctx.stroke();
+}
 function drawKeySignature(x,y,a){
     let orderOfFlats  = [0,-15,5,-10,10,-5,15];
     let orderOfSharps = [-20,-5,-25,-10,5,-15,0];
