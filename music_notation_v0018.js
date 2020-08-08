@@ -149,6 +149,21 @@ function drawNoteDoubleSharp(x,y){
     drawNoteHead(x,y);
     drawDoubleSharp(x-10,y);
 }
+function drawEighthRest(x,y){
+  let m = 1;
+  let radians = (2/3)*Math.PI;
+  ctx.fillStyle = "#000";
+  ctx.strokeStyle = '#000';
+  ctx.beginPath();
+  ctx.arc(x,y-1,2.5*m,Math.PI*0.5,Math.PI*-2.5,true);
+  //ctx.closePath();
+  ctx.fill();
+  ctx.beginPath();
+  ctx.moveTo(x+2.5*Math.cos(radians),y+2.5*Math.sin(radians)-1);
+  ctx.bezierCurveTo(x+4, y+2.5, x+6, y, x+8, y-2);
+  ctx.lineTo(x+4,y+17);
+  ctx.stroke();
+}
 function drawKeySignature(x,y,a){
     let orderOfFlats  = [0,-15,5,-10,10,-5,15];
     let orderOfSharps = [-20,-5,-25,-10,5,-15,0];
