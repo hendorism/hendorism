@@ -6,6 +6,8 @@
         <canvas id="mnCanvas"></canvas>
         <script src="https://hendorism.github.io/my-blog/music_notation_v0018.js"></script>
         <script>
+            console.log(c.width);
+            console.log(ctx.width);
             ctx.font = "16px Verdana";
             var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
             gradient.addColorStop("0", "#f33");
