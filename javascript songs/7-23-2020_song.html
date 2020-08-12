@@ -86,9 +86,9 @@
             startx = x;
             const beat0005 = [85,75,50,80];
             for (i=0; i<beat0005.length; i++) {
-                y=beat0005[i];
+                y = beat0005[i];
                 if (y < 55) {
-                    drawLine(x-2+2, y, x-2+2, 60+0.2*(x-startx)+4);
+                    drawLine(x - 2 + 2, y, x - 2 + 2, 60 + 0.2 * (x - startx) + 4);
                     drawNoteHead(x+2, y);
                 } else if (y > 55) {
                     drawLine(x+2, y, x+2, 60+0.2*(x-startx));
