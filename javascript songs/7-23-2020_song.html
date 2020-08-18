@@ -1,9 +1,46 @@
 <html>
     <head>
-        
+        <style>
+            div#durationdiv {
+                position:fixed;
+                right:0;
+                top:0;
+                background-color:#F7b;
+                height:200px;
+                width:200px;
+            }
+            div#durationdiv button {
+                height:50px;
+                width:50px;
+                padding:0px;
+
+            }
+            div#durationdiv button#wnbutton {}
+            div#durationdiv button#hnbutton {}
+            div#durationdiv button#qnbutton {}
+            div#durationdiv button#enbutton {}
+            div#durationdiv button#snbutton {}
+            div#durationdiv button#tnbutton {}
+        </style>
     </head>
     <body>
-        <canvas id="mnCanvas"></canvas>
+        <script>
+            document.getElementById("wnbutton").src = "wholenote.gif";
+            document.getElementById("hnbutton").src = "halfnote.gif";
+            document.getElementById("qnbutton").src = "quarternote.gif";
+            document.getElementById("enbutton").src = "eighthnote.gif";
+            document.getElementById("snbutton").src = "sixteenthnote.gif";
+            document.getElementById("tnbutton").src = "thirtysecondnote.gif";
+        </script>
+        <canvas id="mnCanvas" style="z-index:99;"></canvas>
+        <div id="durationdiv">
+            <button id="wnbutton"><img></button>
+            <button id="hnbutton"><img></button>
+            <button id="qnbutton"><img></button>
+            <button id="enbutton"><img></button>
+            <button id="snbutton"><img></button>
+            <button id="tnbutton"><img></button>
+        </div>
         <script src="https://hendorism.github.io/my-blog/music_notation_v0018.js"></script>
         <script>
             console.log(c.width);
@@ -94,10 +131,11 @@
                     drawLine(x+2, y, x+2, 60+0.2*(x-startx));
                     drawNoteHead(x, y);
                 }
+
                 x+= deltax;
 
             }
-
+            
             /*
                 50 = F5
                 55 = E5
