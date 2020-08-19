@@ -27,6 +27,11 @@ function drawStaves(stavesQuantity,stavesSpacing,topMargin){
         }
     }
 }
+function crossBeams(q, x1, y1, x2, y2) {
+  for (i=0; i<q; i++) {
+    drawThickLine(x1, y1+5*i, x2, y2+5*i);
+  }
+}
 function drawTrebleCleff(x,y){
     //drawReticle(x,y);
     ctx.fillStyle = '#000';
