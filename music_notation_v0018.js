@@ -27,6 +27,11 @@ function drawStaves(stavesQuantity,stavesSpacing,topMargin){
         }
     }
 }
+function crossBeams(q, x1, y1, x2, y2) {
+  for (i=0; i<q; i++) {
+    drawThickLine(x1, y1+5*i, x2, y2+5*i);
+  }
+}
 function drawTrebleCleff(x,y){
     //drawReticle(x,y);
     ctx.fillStyle = '#000';
@@ -148,6 +153,37 @@ function drawNoteSharp(x,y){
 function drawNoteDoubleSharp(x,y){
     drawNoteHead(x,y);
     drawDoubleSharp(x-10,y);
+}
+function drawEighthRest(x,y){
+  let m = 1;
+  let radians = (2/3)*Math.PI;
+  ctx.fillStyle = "#000";
+  ctx.strokeStyle = '#000';
+  ctx.beginPath();
+  ctx.arc(x,y-1,2.5*m,Math.PI*0.5,Math.PI*-2.5,true);
+  //ctx.closePath();
+  ctx.fill();
+  ctx.beginPath();
+  ctx.moveTo(x+2.5*Math.cos(radians),y+2.5*Math.sin(radians)-1);
+  ctx.bezierCurveTo(x+4, y+2.5, x+6, y, x+8, y-2);
+  ctx.lineTo(x+4,y+17);
+  ctx.stroke();
+}
+function drawQuarterRest(x,y) {
+  let m = 10;
+  ctx.strokeStyle = "#000000";
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(x, y+2);
+  ctx.bezierCurveTo(x-3, y, x-8, y-2, x-4, y+9);
+  ctx.bezierCurveTo(x-10, y-3, x-6, y-5, x, y+2);
+  ctx.fill();
+  ctx.lineTo(x-7,y-9);
+  ctx.bezierCurveTo(x-3, y-13, x-3, y-15, x-6, y-19);
+  ctx.lineTo(x+1,y-10);
+  ctx.bezierCurveTo(x-5, y-9, x-3, y-3, x, y);
+  ctx.fill();
+  ctx.stroke();
 }
 function drawKeySignature(x,y,a){
     let orderOfFlats  = [0,-15,5,-10,10,-5,15];
