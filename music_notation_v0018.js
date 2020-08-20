@@ -185,6 +185,25 @@ function drawQuarterRest(x,y) {
   ctx.fill();
   ctx.stroke();
 }
+/*
+function drawRest(d, x, y) {
+  if (d === 1) {
+    drawSixtyFourthRest(x, y);
+  } else if (d === 2) {
+    drawThirtySecondRest(x, y);
+  } else if (d === 3) {
+    drawSixteenthRest(x, y);
+  } else if (d === 4) {
+    drawEighthRest(x, y);
+  } else if (d === 5) {
+    drawQuarterRest(x, y);
+  } else if (d === 6) {
+    drawHalfRest(x, y);
+  } else if (d === 7) {
+    drawWholeRest(x, y);
+  }
+}
+*/
 function drawKeySignature(x,y,a){
     let orderOfFlats  = [0,-15,5,-10,10,-5,15];
     let orderOfSharps = [-20,-5,-25,-10,5,-15,0];
