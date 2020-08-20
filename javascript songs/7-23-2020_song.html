@@ -6,8 +6,8 @@
                 right:0;
                 top:0;
                 background-color:#F7b;
-                height:200px;
-                width:200px;
+                height:50px;
+                width:300px;
             }
             div#durationdiv button {
                 height:50px;
@@ -15,12 +15,15 @@
                 padding:0px;
 
             }
-            div#durationdiv button#wnbutton {}
-            div#durationdiv button#hnbutton {}
-            div#durationdiv button#qnbutton {}
-            div#durationdiv button#enbutton {}
-            div#durationdiv button#snbutton {}
-            div#durationdiv button#tnbutton {}
+            button {background-color:#f7b;position:absolute}
+            div#durationdiv button#wnbutton {top: 0; left: 0;}
+            div#durationdiv button#hnbutton {top: 0; left: 50;}
+            div#durationdiv button#qnbutton {top: 0; left: 100;}
+            div#durationdiv button#enbutton {top: 0; left: 150;}
+            div#durationdiv button#snbutton {top: 0; left: 200;}
+            div#durationdiv button#tnbutton {top: 0; left: 250;}
+
+            /* div#piano button.cupper {} */
         </style>
     </head>
     <body>
@@ -34,12 +37,12 @@
         </script>
         <canvas id="mnCanvas" style="z-index:99;"></canvas>
         <div id="durationdiv">
-            <button id="wnbutton"><img></button>
-            <button id="hnbutton"><img></button>
-            <button id="qnbutton"><img></button>
-            <button id="enbutton"><img></button>
-            <button id="snbutton"><img></button>
-            <button id="tnbutton"><img></button>
+            <button id="wnbutton"><img src="wholenote.jpg"></button>
+            <button id="hnbutton"><img src="halfnote.jpg"></button>
+            <button id="qnbutton"><img src="quarternote.jpg"></button>
+            <button id="enbutton"><img src="eighthnote.jpg"></button>
+            <button id="snbutton"><img src="sixteenthnote.jpg"></button>
+            <button id="tnbutton"><img src="thirtysecondnote.jpg"></button>
         </div>
         <script src="https://hendorism.github.io/my-blog/music_notation_v0018.js"></script>
         <script>
@@ -132,10 +135,56 @@
                     drawNoteHead(x, y);
                 }
 
-                x+= deltax;
+                x += deltax;
 
             }
-            
+            drawThickLine(190,60,215,65);
+            drawThickLine(190,65,215,70);
+            console.log("hello? are you listening?");
+    x = 220;
+    startx = x;
+    deltax = 8;
+    let beamlength = 28;
+    const beat0006 = [85,120,75,85,75,120,75,85,110,85,65,85,60,60,62,64,66];
+    for (i=0; i<3; i++) {
+        drawLine(200, 100+10*i, 350, 100.5+10*i)
+    }
+    for (i=0; i<beat0006.length; i++) {
+        y = beat0006[i];
+        if (i === 12) {
+            x += 10;
+            isnewmeasure = "true";
+            beamlength += 10;
+        }
+        drawNoteHead(x, y);
+        drawLine(x+3,y,x+3,40);
+        if ((i + 4) % 4 === 0) {
+            for (e=0; e<2; e++) {
+                drawThickLine(x+3,40+5*e,x+beamlength,40+5*e);
+            }
+        }
+        x += deltax;
+    }
+    drawLine(320,50,320,90);
+
+drawLine(330,20,390,100);
+drawLine(330,100,390,20);
+drawTrebleCleff(8,180);
+drawKeySignature(17,170,-4);
+x = 64;
+beamlength = 28;
+let stemlength = 28;
+let upstem = 5;
+const linetwonotes = [150,185,140,165,150,185,140,165,150,185,140,165];
+for (i=0; i<2; i++) {
+    drawLine(60, 140-10*i, 200, 140-10*i);
+}
+for (i=0; i<linetwonotes.length; i++) {
+    y = linetwonotes[i];
+    drawNoteHead(x, y);
+    drawLine(x+3, y, x+3, 120+0.1*x-upstem);
+    x += deltax;
+}
             /*
                 50 = F5
                 55 = E5
