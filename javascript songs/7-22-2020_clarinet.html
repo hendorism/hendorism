@@ -27,32 +27,34 @@ function drawReticle(x,y){
     ctx.fill();
 }
 function drawStaves(stavesQuantity,stavesSpacing,topMargin){
-    for(e=0;e<stavesQuantity;e++){
-        for(i=0;i<5;i++){
-            drawLine(20,topMargin+10*i+stavesSpacing*e, 390,topMargin+10*i+stavesSpacing*e);
+    for(e=0; e<stavesQuantity; e++){
+        for(i=0; i<5; i++){
+            drawLine(20, topMargin+10*i+stavesSpacing*e, 390, topMargin+10*i+stavesSpacing*e);
         }
     }
 }
-function drawTrebleCleff(x,y){
+drawNoteHead(50, 370);
+const beat001 = [365, 360,345, 360, 380, 395, 415, 390, 380, 375, 355, 375, 340, 375, 375+35, 375+35-20, 375+35-20-35, 375+35-20-35-35];
+let x = 58;
+let deltax = 8;
+for (i=0; i<beat001.length; i++) {
+    let y = beat001[i];
+    drawNoteHead(x, y);
+    x += deltax;
+    if (y > 390) {for (e=0; e<2; e++) {drawLine(x-30, 390+10*(e+1), x+30, 390+10*(e+1));}}
+    if (y < 350) {for (e=0; e<30; e++) {drawLine(x-30, 350-10*(e+1), x+30, 350-10*(e+1));}}
+}
+drawTrebleCleff(15,480);
+drawKeySignature(22,470,-4)
+function drawTrebleCleff(x, y){
     //drawReticle(x,y);
     ctx.fillStyle = '#000';
-    ctx.strokeStyle = '#000';
+    ctx.strokeStyle = '#060';
     ctx.beginPath ();
-    ctx.moveTo (x-5,y+20);
-    ctx.bezierCurveTo (
-    x+3,y+40,
-    x+4,y+15,
-    x-4,y-40);
-    
-    ctx.bezierCurveTo ( 
-    x+16,y-35,
-    x-20,y-4,
-    x-4,y+14);
-    
-    ctx.bezierCurveTo (
-    x+16,y+35,
-    x+10,y-45,
-    x-4,y+5);
+    ctx.moveTo (x-5, y+20);
+    ctx.bezierCurveTo (x+3,y+40,x+4,y+15,x-4,y-40);
+    ctx.bezierCurveTo (x+16,y-35,x-20,y-4,x-4,y+14);
+    ctx.bezierCurveTo (x+16,y+35,x+10,y-45,x-4,y+5);
     ctx.stroke ();
 }
 function drawTimeSignature(x,y,n,d){
