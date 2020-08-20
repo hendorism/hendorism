@@ -124,19 +124,17 @@ for (i=0; i<beat_0006.length; i++) {
     drawNoteHead(x,beat_0006[i]);
     let STEMENDY = 99-0.4*(x-335);
     drawLine(x-3,beat_0006[i],x-3,STEMENDY);
-    console.log("stem end y value: "+(92-0.4*(x-335)));
-    console.log("x="+x);
-    if (i%2 === 0) {drawThickLine(335-3,STEMENDY-2*i,335+38-3,STEMENDY-2*i);}
+    console.log("x = " + x + ", stem end y = " + STEMENDY);
+    if (i%2 === 0) {drawThickLine(335-3,99-3*i,335+38-3,83.8-3*i);}
 }
 console.log(x);
+const beat_0007 = [45,60,70,80];
+for (i=0; i<beat_0007.length; i++) {
+    x += 10*(i+1);
+    if (i === 0) {let STARTINGX = x-3 ;}
+    drawNoteHead(x,beat_0007[i]);
 
-
-
-
-console.log("hello123");
-console.log(beat_0003);
-console.log(beat_0003.length);
-    
+}
 
 
 
