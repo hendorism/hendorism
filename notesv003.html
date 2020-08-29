@@ -1,13 +1,8 @@
 <html>
   <head>  <title>notesv002.html</title>
-<style>
-  div.controls {
-    background-color:#d9f;
-    width:100%;
-  }
-  button {
-    width:50px;
-  }
+<style>*{padding:0;margin:0;}
+  div.controls {background-color:#d9f;width:400px;}
+  button {width:50px;}
 </style>
 </head>
 <body>
@@ -52,24 +47,11 @@
   </table>
   <table>
     <tr>
-      <td><button onclick="drawNoteHead(x,y);x+=10;">draw note head</button>
+      <td><button onclick="drawNoteHead(x,y);x+=10;drawLedgerLines();">draw note head</button>
       <td><button onclick="drawStaves(quan,spac,tmar);">draw staves</button>
+        <td><button onclick="drawTrebleCleff(x,y);">treble clef</button></td>
     </tr>
   </table>
-  
-<input type="range" onclick="updateTextInput();" min="0" max="100" id="rangeinput"><input type="text" id="textinput" style="background-color:#def;padding:3px;" oninput="updateRangeInput();"></span>
-<script>
-  function updateTextInput() {
-    let textinput = document.getElementById("textinput");
-    let rangeinput = document.getElementById("rangeinput");
-    span.value = input.value;
-  }
-  function updateRangeInput() {
-    let textinput = document.getElementById("textinput");
-    let rangeinput = document.getElementById("rangeinput");
-    input.innerHTML = span.value;
-  }
-</script>
 </div>
 <canvas id="mnCanvas"></canvas>
 
@@ -79,6 +61,26 @@
   let quan = 12;
   let spac = 100;
   let tmar = 50;
+
+  function drawLedgerLines() {
+    if (y<50 && y%2===0) {
+        for (i=0; i<(50-y)/10; i++) {
+            drawLine(x=10, y+10*i, x+10, y+10*i);
+        }
+    } else if (y<50 && y%2===1) {
+        for (i=0; i<50-(y-10); i++) {
+            drawLine(x-10, y+10*i, x-10, y+10*i);
+        }
+    } else if (y>90 && y%2===0) {
+        for (i=0; i<y-90; i++) {
+            drawLine(x-10, y-10*i, x+10, y-10*i);
+        }
+    } else if (y>90 && y%2===1) {
+        for (i=0; i<(y-10)-90; i++) {
+            drawLine(x-10, y-10*i, x+10, y-10*i);
+        }
+    }
+  }
 </script>
 
 
