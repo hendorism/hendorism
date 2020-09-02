@@ -1,5 +1,5 @@
 console.log("music_notation_v0018.js is working.");
-
+console.log("music_notation_v0018.js was made by Aaron Dull in 2019.");
 
 
 var c = document.getElementById("mnCanvas");
