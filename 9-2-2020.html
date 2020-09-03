@@ -75,49 +75,83 @@ div.controls table button {
 <canvas id="mnCanvas"></canvas>
 <script src="https://hendorism.github.io/my-blog/music_notation_v0018.js"></script>
 
-<script>
-    var y = 50;
-    var x = 10;
-    let quan = 12;
-    let spac = 100;
-    let tmar = 50;
-  </script>
+
 
 <script>
+    let noteNumber;
+    let staffNumber = 1;
     function c6button() {
-      y=30;drawNoteHead(x,y+100*i);
-      x+=10;
-      if(x>390){
-        x=15;i+=1;
-      }
+        noteNumber = 14;
     }
-    function d6button() {y=25;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function e6button() {y=20;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function f6button() {y=15;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function g6button() {y=10;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function a6button() {y=05;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function b6button() {y=00;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function c5button() {y=65;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function d5button() {y=60;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function e5button() {y=55;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function f5button() {y=50;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function g5button() {y=45;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function a5button() {y=40;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function b5button() {y=35;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function c4button() {y=100;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function d4button() {y=95;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function e4button() {y=90;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function f4button() {y=85;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function g4button() {y=80;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function a4button() {y=75;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function b4button() {y=70;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function c3button() {y=135;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function d3button() {y=130;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function e3button() {y=125;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function f3button() {y=120;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function g3button() {y=115;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function a3button() {y=110;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-    function b3button() {y=105;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+    function d6button() {}
+    function e6button() 
+    function f6button() 
+    function g6button() 
+    function a6button() 
+    function b6button() 
+    function c5button() {
+        noteNumber = 7;
+    }
+    function d5button() {
+        noteNumber = 8;
+    } 
+    function e5button() {
+        noteNumber = 9;
+    } 
+    function f5button() {
+        noteNumber = 10;
+    } 
+    function g5button() {
+        noteNumber = 11;
+    }
+    function a5button() {
+        noteNumber = 12;
+    }
+    function b5button() {
+        noteNumber = 13;
+    }
+    function c4button() {
+        noteNumber = 0;
+    }
+    function d4button() {
+        noteNumber = 1;
+    }
+    function e4button() {
+        noteNumber = 2;
+    }
+    function f4button() {
+        noteNumber = 3;
+    }
+    function g4button() {
+        noteNumber = 4;
+    }
+    function a4button() {
+        noteNumber = 5;
+    }
+    function b4button() {
+        noteNumber = 6;
+    }
+    function c3button() {
+        noteNumber = -7;
+    }
+    function d3button() {
+        noteNumber = -6;
+    }
+    function e3button() {
+        noteNumber = -5;
+    }
+    function f3button() {
+        noteNumber = -4;
+    }
+    function g3button() {
+        noteNumber = -3;
+    }
+    function a3button() {
+        noteNumber = -2;
+    }
+    function b3button() {
+        noteNumber = -1;
+    }
 </script>
 <div class="controls">
     <table class="keyboard">

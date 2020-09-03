@@ -106,11 +106,32 @@ div.elapsedTime{}                                       *//*
     log haul drivechains broken
     current log haul drivechain HP
     current infeed deck drivechain HP                    */
+  div.text-1 {
+    position:absolute;
+    top:0;
+    left:460;
+    width:200;
+    background-color:#125;
+    padding:3px;
+    border-radius:8px;
+    z-index:1;
+    font-size:12px;
+    color:#fff;
+    font-family:monospace;
+    text-transform:uppercase;
+    letter-spacing:-1px;"
+  }
 </style>
 </head>
 <body>
-  <p style="position:absolute;top:0;left:200;z-index:1;font-size:12px;color:#fff;font-family:monospace;text-transform:uppercase;letter-spacing:-1px;">debarker sim works best in Chrome.</p>
-<!--
+<div class="text-1">
+  <p>debarker-sim works best in Chrome.</p>
+  <p>zoom in with your browser till it fills the window. you can even full screen your browser to eliminate distractions.</p>
+  <p>This is the debarker simulator to teach you to run the barker. The barker is easy to run, but it requires sustained concentration and focus.</p>
+  <p>To begin, press the left foot switch pedal to run the infeed deck. This will cause the logs on the deck to move toward the infeed trough on the north side of the infeed deck.</p>
+
+</div>
+  <!--
 <div class="loader controls"></div>
 <div class="loader">
   <style> </style>
@@ -155,45 +176,96 @@ div.elapsedTime{}                                       *//*
 
 <!-- controls -->
 <img src="barker_controls.png" id="barker_controls">
-<input class="toolArmPressure" type="range" min="0" max="100">
-<input class="pressRollPressure" type="range" min="0" max="100">
-<button class="hydraulicsOn"></button>
-<button class="hydraulicsOff"></button>
-<button class="lubeOn"></button>
-<button class="lubeOff"></button>
-<button class="firstForty_reverse"></button>
-<input class="coldDeckFwdRvrs" type="range" min="0" max="2"></button>
-<button class="firstForty_forward"></button>
-<button class="firstForty_e_stop"></button>
-<button class="keyOnOff"></button>
-<button class="kickers"></button>
-<button class="infeedPin1"></button>
-<button class="infeedPin2"></button>
-<button class="infeedPin3"></button>
-<button class="infeedPin4"></button>
-<button class="autoCenterOn"></button>
-<button class="firstForty_off"></button>
-<button class="coldDeckPin1"></button>
-<button class="coldDeckPin2"></button>
-<button class="coldDeckPin3"></button>
-<button class="coldDeckPin4"></button>
-<button class="autoCenterOff"></button>
-<button class="ringUpDown"></button>
-<button class="pressRoll1"></button>
-<button class="pressRoll2"></button>
-<button class="knives"></button>
-<input class="ringSpeed" type="range" min="0" max="100">
-<button class="ringReset"></button>
-<button class="ringOn"></button>
-<button class="ringOff"></button>
-<input class="cradleDriveSpeed" type="range" min="0" max="100">
-<button class="cradleDriveReset"></button>
-<button class="cradleDriveOn"></button>
-<button class="cradleDriveOff"></button>
+<input class="toolArmPressure" type="range" min="0" max="100" oninput="adjustToolArmPressure();">
+<input class="pressRollPressure" type="range" min="0" max="100" oninput="adjustPressRollPressure();">
+<button class="hydraulicsOn" onclick="hydraulicsOn();"></button>
+<button class="hydraulicsOff" onclick="hydraulicsOff();"></button>
+<button class="lubeOn" onclick="lubeOn();"></button>
+<button class="lubeOff" onclick="lubeOff();"></button>
+<button class="firstForty_reverse" onclick="firstForty_reverse();"></button>
+<input class="coldDeckFwdRvrs" type="range" min="0" max="2" oninput="setColdDeckDriveDirection();"></button>
+<button class="firstForty_forward" onclick="firstForty_forward();"></button>
+<button class="firstForty_e_stop" onclick="firstForty_e_stop();"></button>
+<button class="keyOnOff" onclick="toggleKeyOnOff();"></button>
+<button class="kickers" onclick="kickers();"></button>
+<button class="infeedPin1" onclick="infeedPin1();"></button>
+<button class="infeedPin2" onclick="infeedPin2();"></button>
+<button class="infeedPin3" onclick="infeedPin3();"></button>
+<button class="infeedPin4" onclick="ifneedPin4();"></button>
+<button class="autoCenterOn" onclick="autoCenterOn();"></button>
+<button class="firstForty_off" onclick="firstForty_off();"></button>
+<button class="coldDeckPin1" onclick="coldDeckPin1();"></button>
+<button class="coldDeckPin2" onclick="coldDeckPin2();"></button>
+<button class="coldDeckPin3" onclick="coldDeckPin3();"></button>
+<button class="coldDeckPin4" onclick="coldDeckPin4();"></button>
+<button class="autoCenterOff" onclick="autoCenterOff();"></button>
+<button class="ringUp" onclick="ringUp();"></button>
+<button class="ringDown" onclick="ringDown();"></button>
+<button class="pressRoll1" onclick="pressRoll1();"></button>
+<button class="pressRoll2" onclick="pressRoll2();"></button>
+<button class="knives" onclick="knives();"></button>
+<input class="ringSpeed" type="range" min="0" max="100" oninput="setRingSpeed();">
+<button class="ringReset" onclick="resetRing();"></button>
+<button class="ringOn" onclick="ringOn();"></button>
+<button class="ringOff" onclick="ringOff();"></button>
+<input class="cradleDriveSpeed" type="range" min="0" max="100" oninput="setCradleDriveSpeed();">
+<button class="cradleDriveReset" onclick="resetCradleDrive();"></button>
+<button class="cradleDriveOn" onclick="cradleDriveOn();"></button>
+<button class="cradleDriveOff" onclick="cradleDriveOff();"></button>
 
-<button class="infeedDeckAndStopsFootSwitch"></button>
-<button class="infeedDeckFootSwitch"></button>
-<button class="coldDeckFootSwitch"></button>
+<button class="infeedDeckAndStopsFootSwitch" onclick="runInfeedDeckAndLowerStops();"></button>
+<button class="infeedDeckFootSwitch" onclick="runInfeedDeck();"></button>
+<button class="coldDeckFootSwitch" onclick="RunColdDeck();"></button>
+
+<button class="spawnLogAtEndOfBarkerInfeed" onclick="spawnLogAtEndOfBarkerInfeed();"></button>
+<script>
+  var knivesPressure = 0
+function adjustToolArmPressure(){
+  let 
+  knifePressure = 
+}
+function adjustPressRollPressure() {}
+function hydraulicsOn() {}
+function hydraulicsOff() {}
+function lubeOff() {}
+function lubeOn() {}
+function firstForty_reverse() {}
+function setColdDeckDriveDirection() {}
+function firstForty_forward() {}
+function firstForty_e_stop() {}
+function toggleKeyOnOff() {}
+function kickers() {}
+function infeedPin1() {}
+function infeedPin2() {}
+function infeedPin3() {}
+function ifneedPin4() {}
+function autoCenterOn() {}
+function firstForty_off() {}
+function coldDeckPin1() {}
+function coldDeckPin2() {}
+function coldDeckPin3() {}
+function coldDeckPin4() {}
+function autoCenterOff() {}
+function ringUp() {}
+function ringDown() {}
+function pressRoll1() {}
+function pressRoll2() {}
+function knives() {}
+function setRingSpeed() {}
+function resetRing() {}
+function ringOn() {}
+function ringOff() {}
+function setCradleDriveSpeed() {}
+function resetCradleDrive() {}
+function cradleDriveOn() {}
+function cradleDriveOff() {}
+
+function runInfeedDeckAndLowerStops() {}
+function runInfeedDeck() {}
+function RunColdDeck() {}
+
+function spawnLogAtEndOfBarkerInfeed() {}
+</script>
 
 
 
@@ -225,41 +297,41 @@ div.elapsedTime{}                                       *//*
 // } 
 
 
-var toolArmPressure = document.querySelector("input.toolArmPressure");
-var pressRollPressure = document.querySelector("input.pressRollPressure");
-var hydraulicsOn = document.querySelector("button.hydraulicsOn");
-var hydraulicsOff = document.querySelector("button.hydraulicsOff");
-var lubeOn = document.querySelector("button.lubeOn");
-var lubeOff = document.querySelector("button.lubeOff");
-var firstForty_reverse = document.querySelector("button.firstForty_reverse");
-var coldDeckFwdRvrs = document.querySelector("input.coldDeckFwdRvrs");
-var firstForty_forward = document.querySelector("button.firstForty_forward");
-var firstForty_e_stop = document.querySelector("button.firstForty_e_stop");
-var keyOnOff = document.querySelector("button.keyOnOff");
-var kickers = document.querySelector("button.kickers");
-var infeedPin1 = document.querySelector("button.infeedPin1");
-var infeedPin2 = document.querySelector("button.infeedPin2");
-var infeedPin3 = document.querySelector("button.infeedPin3");
-var infeedPin4 = document.querySelector("button.infeedPin4");
-var autoCenterOn = document.querySelector("button.autoCenterOn");
-var firstForty_off = document.querySelector("button.firstForty_off");
-var coldDeckPin1 = document.querySelector("button.coldDeckPin1");
-var coldDeckPin2 = document.querySelector("button.coldDeckPin2");
-var coldDeckPin3 = document.querySelector("button.coldDeckPin3");
-var coldDeckPin4 = document.querySelector("button.coldDeckPin4");
-var autoCenterOff = document.querySelector("button.autoCenterOff");
-var ringUpDown = document.querySelector("button.ringUpDown");
-var pressRoll1 = document.querySelector("button.pressRoll1");
-var pressRoll2 = document.querySelector("button.pressRoll2");
-var knives = document.querySelector("button.knives");
-var ringSpeed = document.querySelector("input.ringSpeed");
-var ringReset = document.querySelector("button.ringReset");
-var ringOn = document.querySelector("button.ringOn");
-var ringOff = document.querySelector("button.ringOff");
-var cradleDriveSpeed = document.querySelector("input.cradleDriveSpeed");
-var cradleDriveReset = document.querySelector("button.cradleDriveReset");
-var cradleDriveOn = document.querySelector("button.cradleDriveOn");
-var cradleDriveOff = document.querySelector("button.cradleDriveOff");
+// var toolArmPressure = document.querySelector("input.toolArmPressure");
+// var pressRollPressure = document.querySelector("input.pressRollPressure");
+// var hydraulicsOn = document.querySelector("button.hydraulicsOn");
+// var hydraulicsOff = document.querySelector("button.hydraulicsOff");
+// var lubeOn = document.querySelector("button.lubeOn");
+// var lubeOff = document.querySelector("button.lubeOff");
+// var firstForty_reverse = document.querySelector("button.firstForty_reverse");
+// var coldDeckFwdRvrs = document.querySelector("input.coldDeckFwdRvrs");
+// var firstForty_forward = document.querySelector("button.firstForty_forward");
+// var firstForty_e_stop = document.querySelector("button.firstForty_e_stop");
+// var keyOnOff = document.querySelector("button.keyOnOff");
+// var kickers = document.querySelector("button.kickers");
+// var infeedPin1 = document.querySelector("button.infeedPin1");
+// var infeedPin2 = document.querySelector("button.infeedPin2");
+// var infeedPin3 = document.querySelector("button.infeedPin3");
+// var infeedPin4 = document.querySelector("button.infeedPin4");
+// var autoCenterOn = document.querySelector("button.autoCenterOn");
+// var firstForty_off = document.querySelector("button.firstForty_off");
+// var coldDeckPin1 = document.querySelector("button.coldDeckPin1");
+// var coldDeckPin2 = document.querySelector("button.coldDeckPin2");
+// var coldDeckPin3 = document.querySelector("button.coldDeckPin3");
+// var coldDeckPin4 = document.querySelector("button.coldDeckPin4");
+// var autoCenterOff = document.querySelector("button.autoCenterOff");
+// var ringUpDown = document.querySelector("button.ringUpDown");
+// var pressRoll1 = document.querySelector("button.pressRoll1");
+// var pressRoll2 = document.querySelector("button.pressRoll2");
+// var knives = document.querySelector("button.knives");
+// var ringSpeed = document.querySelector("input.ringSpeed");
+// var ringReset = document.querySelector("button.ringReset");
+// var ringOn = document.querySelector("button.ringOn");
+// var ringOff = document.querySelector("button.ringOff");
+// var cradleDriveSpeed = document.querySelector("input.cradleDriveSpeed");
+// var cradleDriveReset = document.querySelector("button.cradleDriveReset");
+// var cradleDriveOn = document.querySelector("button.cradleDriveOn");
+// var cradleDriveOff = document.querySelector("button.cradleDriveOff");
 
 // function createLog() {
 //   var aNewLog = document.createElement("div");
@@ -272,7 +344,7 @@ var cradleDriveOff = document.querySelector("button.cradleDriveOff");
 // createLog();
 
 function createLog() {
-  setInterval(function(){ alert("Hello"); }, 3000);
+  //setInterval(function(){ alert("Hello"); }, 3000);
 
   var aNewLog = document.createElement("div");
   aNewLog.classList.add("log");
@@ -286,6 +358,12 @@ function barkerInfeedRun() {
 
   }
 }
+// var person = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   age: 50,
+//   eyeColor: "blue"
+// };
 
 // function setToolArmPressure() {}
 // function setPressRollPressure() {}
