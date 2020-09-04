@@ -1,0 +1,51 @@
+<html>
+    <head></head>
+    <body>
+        <table>
+            <tr>
+                <td><button onclick="drawTriangle();">draw triangle</button></td>
+                <td><button onclick="clearScreen();">clear screen</button></td>
+                <td><button onclick="drawNoteHead(50+10*i,50+10*i);">draw note head</button></td>
+           </tr>
+        </table>
+        <canvas id="myCanvas" width="600" height="600"
+        style="border:1px solid #c3c3c3;">
+        Your browser does not support the canvas element.
+        </canvas>
+
+        <script src="https://hendorism.github.io/my-blog/music_notation_v0018.js"></script>
+
+        <script>
+var canvasElement = document.querySelector("#myCanvas");
+var ctx = canvasElement.getContext("2d");
+function drawTriangle() {
+    // the triangle
+    ctx.beginPath();
+    ctx.moveTo(100, 100);
+    ctx.lineTo(100, 300);
+    ctx.lineTo(300, 300);
+    ctx.closePath();
+
+    // the outline
+    ctx.lineWidth = 10;
+    ctx.strokeStyle = '#666666';
+    ctx.stroke();
+
+    // the fill color
+    ctx.fillStyle = "#FFCC00";
+    ctx.fill();
+}
+let i = 0;
+function clearScreen() {
+    i += 1;
+    console.log("clear screen, " + i + ", " + ctx.fillStyle);
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, canvasElement.width, canvasElement.height);
+}
+function dazzleMe() {
+    drawTriangle();
+}
+setTimeout(dazzleMe(), 3000);
+        </script>
+    </body>
+</html>
