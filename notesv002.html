@@ -1,22 +1,36 @@
 <html>
   <head>  <title>notesv002.html</title>
 <style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  table tr td{
+    padding: 0;
+  }
   div.controls {
-    background-color:#d9f;
-    width:100%;
+    position: fixed;
+    top: 0;
+    background-color: #d9f;
+    width: 100%;
   }
   button {
     width:50px;
     height:50px;
-
+    border-radius: 3px;
+    border: 0px solid black;
+    background-color: #6688bb;
+  }
+  canvas#mnCanvas {
+    position: relative;
+    top: 270px;
+    border:1px solid black;
+    z-index: -1;
   }
 </style>
 </head>
 <body>
 <div class="controls">
-  <script>
-    var i = 0;
-  </script>
   <table>
     <tr>
     <td><button onclick="c6button()">C6</button></td>
@@ -57,110 +71,66 @@
   </table>
   <table>
     <tr>
-      <td><button onclick="drawNoteHead(x,y);x+=10;">draw note head</button>
-      <td><button onclick="drawStaves(quan,spac,tmar);saydrawstaves()">draw staves</button>
+      <td><button onclick="drawNoteHead(x,y);x+=10;console.log(i);">draw note head</button></td>
+      <td><button onclick="drawStaves(quan,spac,tmar);console.log(i);i=0;console.log(i);">draw staves</button></td>
+      <td><button onclick="clearCanvas()">clear</button></td>
+      <td><button onclick="drawTrebleCleff(x,y+30);console.log(i);">treble clef</button></td>
+      <td><button onclick="drawSharp(x,y);console.log(i);x+=10;">sharp</button></td>
     </tr>
   </table>
-  <table><tr><td>
-    <input type="range" onclick="updateTextInput();updateY();drawNoteHead(x,y)" min="0" max="100" step="5" id="rangeinput">
-  </td><td>
-    <input type="text" id="textinput" style="background-color:#def;padding:3px;" oninput="updateRangeInput();updateY();drawNoteHead();">
-  </td></tr></table>
-
-
-<script src="https://hendorism.github.io/my-blog/music_notation_v0018.js"></script>
-<script>
-  var y = 50;
-  var x = 10;
-  let quan = 12;
-  let spac = 100;
-  let tmar = 50;
-</script>
-<script>
-  function saydrawstaves() {
-    console.log("Drawing staves.");
-  }
-  drawStaves(quan,spac,tmar);
-  var i = 0;
-  function updateY() {
-    y = this.value;
-  }
-  function updateTextInput() {
-    console.log("updateTextInput() has been called.");
-    let textinput = document.getElementById("textinput");
-    let rangeinput = document.getElementById("rangeinput");
-    textinput.value = rangeinput.value;
-    y = rangeinput.value;
-    drawNoteHead(x, y+100*i);
-    x += 10;
-    if (x>390) {
-      x = 15;
-      i += 1;
-    }
-  }
-  function updateRangeInput() {
-    console.log("updateRangeInput() has been called.")
-    let textinput = document.getElementById("textinput");
-    let rangeinput = document.getElementById("rangeinput");
-    rangeinput.value = textinput.value;
-    y = textinput.value;
-    drawNoteHead(x, y+100*i);
-    x += 10;
-    if (x>390) {
-      x = 15;
-      i += 1;
-    }
-  }
-</script>
 </div>
+
+
+
+
 <canvas id="mnCanvas"></canvas>
+<script src="https://hendorism.github.io/my-blog/music_notation_v0018.js"></script>
+
 
 <script>
+  var i = 0;
   var y = 50;
   var x = 10;
   let quan = 12;
   let spac = 100;
   let tmar = 50;
+  function clearCanvas() {
+    ctx.fillStyle = "#eeeeee";
+    ctx.fillRect(0, 0, this.width, this.height);
+  }
 </script>
 
 
 
-
 <script>
-      function c6button() {
-        y=30;drawNoteHead(x,y+100*i);
-        x+=10;
-        if(x>390){
-          x=15;i+=1;
-        }
-      }
-      function d6button() {y=25;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function e6button() {y=20;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function f6button() {y=15;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function g6button() {y=10;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function a6button() {y=05;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function b6button() {y=00;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function c5button() {y=65;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function d5button() {y=60;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function e5button() {y=55;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function f5button() {y=50;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function g5button() {y=45;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function a5button() {y=40;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function b5button() {y=35;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function c4button() {y=100;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function d4button() {y=95;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function e4button() {y=90;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function f4button() {y=85;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function g4button() {y=80;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function a4button() {y=75;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function b4button() {y=70;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function c3button() {y=135;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function d3button() {y=130;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function e3button() {y=125;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function f3button() {y=120;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function g3button() {y=115;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function a3button() {y=110;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
-      function b3button() {y=105;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function c6button() {console.log(i);y=30;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function d6button() {console.log(i);y=25;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function e6button() {console.log(i);y=20;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function f6button() {console.log(i);y=15;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function g6button() {console.log(i);y=10;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function a6button() {console.log(i);y=05;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function b6button() {console.log(i);y=00;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function c5button() {console.log(i);y=65;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function d5button() {console.log(i);y=60;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function e5button() {console.log(i);y=55;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function f5button() {console.log(i);y=50;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function g5button() {console.log(i);y=45;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function a5button() {console.log(i);y=40;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function b5button() {console.log(i);y=35;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function c4button() {console.log(i);y=100;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function d4button() {console.log(i);y=95;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function e4button() {console.log(i);y=90;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function f4button() {console.log(i);y=85;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function g4button() {console.log(i);y=80;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function a4button() {console.log(i);y=75;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function b4button() {console.log(i);y=70;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function c3button() {console.log(i);y=135;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function d3button() {console.log(i);y=130;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function e3button() {console.log(i);y=125;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function f3button() {console.log(i);y=120;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function g3button() {console.log(i);y=115;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function a3button() {console.log(i);y=110;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
+      function b3button() {console.log(i);y=105;drawNoteHead(x,y+100*i);x+=10;if(x>390){x=15;i+=1;}}
 </script>
 
 
