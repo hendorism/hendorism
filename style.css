@@ -4,7 +4,8 @@ body {
   background-color:#bbee77;
   font-family:monospace;
   font-size: 20px;
-  background-image:url('20200119_173408-background.jpg');
+  /* background-image:url('20200119_173408-background.jpg'); */
+  background-image: linear-gradient(#ddffee, #660033);
 }
 
 .silverprice {
@@ -29,7 +30,29 @@ body {
 .social_div{
   margin-top:5px;
 }
-
+div#time2 {
+  background-color:#22ff88;
+  padding:30px;
+  padding-top:0px;
+  width:190px;
+  height: 65px;
+  position:fixed;
+  top:0px;
+  left:350px;
+  color:#ffff77;
+  z-index:1;
+  opacity: 0.7;
+  border-radius:8px;
+  text-shadow: 2px 2px 4px #000000;
+  letter-spacing:8px;
+  font-family:helvetica;
+  font-size:27px;
+}
+div#time{
+  position:fixed;
+  top:10px;
+  left:360px;
+}
 
 /* css for main slideshow */
 /* css for main slideshow */
