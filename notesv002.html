@@ -27,46 +27,70 @@
     border:1px solid black;
     z-index: -1;
   }
+  div#xDisplay {
+    position: fixed;
+    top:10;
+    left:400;
+    background-color:#000000;
+    color:#33ffee;
+    border-radius:13px;
+    height:130px;
+    width:130px;
+    font-family:helvetica;
+    font-size:27px;
+  }
+    div#yDisplay {
+    position: fixed;
+    top:10;
+    left:530;
+    background-color:#000000;
+    color:#33ffee;
+    border-radius:13px;
+    height:130px;
+    width:130px;
+    font-family:helvetica;
+    font-size:27px;
+  }
 </style>
 </head>
-<body>
+<body onclick="updateRender()">
 <div class="controls">
   <table>
     <tr>
-    <td><button onclick="c6button()">C6</button></td>
-      <td><button onclick="d6button()">D6</button></td>
-      <td><button onclick="e6button()">E6</button></td>
-      <td><button onclick="f6button()">F6</button></td>
-      <td><button onclick="g6button()">G6</button></td>
-      <td><button onclick="a6button()">A6</button></td>
-      <td><button onclick="b6button()">B6</button></td>
+    <td><button onclick="c6button();drawLedgerLines();">C6</button></td>
+      <td><button onclick="d6button();drawLedgerLines();">D6</button></td>
+      <td><button onclick="e6button();drawLedgerLines();">E6</button></td>
+      <td><button onclick="f6button();drawLedgerLines();">F6</button></td>
+      <td><button onclick="g6button();drawLedgerLines();">G6</button></td>
+      <td><button onclick="a6button();drawLedgerLines();">A6</button></td>
+      <td><button onclick="b6button();drawLedgerLines();">B6</button></td>
     </tr>
     <tr>
-      <td><button onclick="c5button()">C5</button></td>
-      <td><button onclick="d5button()">D5</button></td>
-      <td><button onclick="e5button()">E5</button></td>
-      <td><button onclick="f5button()">F5</button></td>
-      <td><button onclick="g5button()">G5</button></td>
-      <td><button onclick="a5button()">A5</button></td>
-      <td><button onclick="b5button()">B5</button></td>
+      <td><button onclick="c5button();drawLedgerLines();">C5</button></td>
+      <td><button onclick="d5button();drawLedgerLines();">D5</button></td>
+      <td><button onclick="e5button();drawLedgerLines();">E5</button></td>
+      <td><button onclick="f5button();drawLedgerLines();">F5</button></td>
+      <td><button onclick="g5button();drawLedgerLines();">G5</button></td>
+      <td><button onclick="a5button();drawLedgerLines();">A5</button></td>
+      <td><button onclick="b5button();drawLedgerLines();">B5</button></td>
     </tr>
     <tr>
-      <td><button onclick="c4button()">C4</button></td>
-      <td><button onclick="d4button()">D4</button></td>
-      <td><button onclick="e4button()">E4</button></td>
-      <td><button onclick="f4button()">F4</button></td>
-      <td><button onclick="g4button()">G4</button></td>
-      <td><button onclick="a4button()">A4</button></td>
-      <td><button onclick="b4button()">B4</button></td>
+      <td><button onclick="c4button();drawLedgerLines();">C4</button></td>
+      <td><button onclick="d4button();drawLedgerLines();">D4</button></td>
+      <td><button onclick="e4button();drawLedgerLines();">E4</button></td>
+      <td><button onclick="f4button();drawLedgerLines();">F4</button></td>
+      <td><button onclick="g4button();drawLedgerLines();">G4</button></td>
+      <td><button onclick="a4button();drawLedgerLines();">A4</button></td>
+      <td><button onclick="b4button();drawLedgerLines();">B4</button></td>
     </tr>
     <tr>
-      <td><button onclick="c3button()">C3</button></td>
-      <td><button onclick="d3button()">D3</button></td>
-      <td><button onclick="e3button()">E3</button></td>
-      <td><button onclick="f3button()">F3</button></td>
-      <td><button onclick="g3button()">G3</button></td>
-      <td><button onclick="a3button()">A3</button></td>
-      <td><button onclick="b3button()">B3</button></td>
+      <td><button onclick="c3button();drawLedgerLines();">C3</button></td>
+      <td><button onclick="d3button();drawLedgerLines();">D3</button></td>
+      <td><button onclick="e3button();drawLedgerLines();">E3</button></td>
+      <td><button onclick="f3button();drawLedgerLines();">F3</button></td>
+      <td><button onclick="g3button();drawLedgerLines();">G3</button></td>
+      <td><button onclick="a3button();drawLedgerLines();">A3</button></td>
+      <td><button onclick="b3button();drawLedgerLines();">B3</button></td>
     </tr>
   </table>
   <table>
@@ -76,6 +100,8 @@
       <td><button onclick="clearCanvas()">clear</button></td>
       <td><button onclick="drawTrebleCleff(10,50+100*i);console.log(i);">treble clef</button></td>
       <td><button onclick="drawSharp(x,y);console.log(i);x+=10;">sharp</button></td>
+      <td><button onclick="increaseXten()">x+=10</button></td>
+      <td><button onclick="decreaseXten()">x-=10</button></td>
     </tr>
     <tr>
       <td><button onclick="increaseX_5()">x+=5</button></td>
@@ -96,11 +122,13 @@
 
 
 <canvas id="mnCanvas"></canvas>
+<div id="xDisplay"></div>
+<div id="yDisplay"></div>
 <script src="https://hendorism.github.io/my-blog/music_notation_v0018.js"></script>
 
 
 <script>
-  var i = 0;
+  var ii = 0;
   var y = 50;
   var x = 10;
   let quan = 12;
@@ -109,6 +137,29 @@
   function clearCanvas() {
     ctx.fillStyle = "#eeeeee";
     ctx.fillRect(0, 0, this.width, this.height);
+  }
+  function increaseXten() {
+    x+=10;
+  }
+  function decreaseXten() {
+    x-=10;
+  }
+  var xDisplay = document.getElementById("xDisplay");
+  var yDisplay = document.getElementById("yDisplay");
+  function updateRender() {
+    xDisplay.innerHTML = "      x=" + x;
+    yDisplay.innerHTML = "      y=" + y;
+  }
+  function drawLedgerLines() {
+    if (y>90 && y%2===0) {
+      for (ll=0; ll<(y-90)/5; ll++) {
+        drawLine(x-20, y-10*ll, x+10, y-10*ll);
+      }
+    } else if (y>90 && y%2===1) {
+      for (ll=0; ll<(y-90)/5; ll++) {
+        drawLine(x-20, y-10*ll-5, x+10, y-10*ll-5)
+      }
+    }
   }
 </script>
 
@@ -170,6 +221,7 @@
         }
     }
   }
+
 </script>
 
 
