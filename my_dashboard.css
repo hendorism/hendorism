@@ -40,3 +40,13 @@ iframe.my2020receipts {
     top:0px;
     left:500px;
       }
+
+      iframe.silverprice {
+        border: 0;
+        overflow: hidden;
+        position:fixed;
+        top:0px;
+        left:430px;
+        background-color:#fff;
+        width:200px;
+      }
