@@ -88,8 +88,8 @@
         <td><button onclick="decreaseXten()">x-=10</button></td>
         <td><button onclick="drawNoteHead(x,y);x+=10;console.log(i);">draw note head</button></td>
         <td><button onclick="increaseXten()">x+=10</button></td>
-        <td style="background-color:#9b9;"><span id="xDisplay"></span></td>
-        <td style="background-color:#9b9;"><span id="yDisplay"></span></td>
+        <td style="background-color:#99bb99;"><span id="xDisplay"></span></td>
+        <td style="background-color:#99bb99;"><span id="yDisplay"></span></td>
         <td></td>
       </tr>
       <tr>
@@ -130,6 +130,8 @@
   function clearCanvas() {
     ctx.fillStyle = "#eeeeee";
     ctx.fillRect(0, 0, this.width, this.height);
+    console.log("clearCanvas() has been called!!!")
+    console.log(ctx.fillStyle);
   }
   function increaseXten() {
     x+=10;
