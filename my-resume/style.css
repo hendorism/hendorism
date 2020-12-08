@@ -1,0 +1,97 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+:root {
+    --teal-ish: #00343e;
+    --white-ish: #ddefc3;
+    --teal-bright: #39d6b9;
+    --neat-green: #33ff33;
+}
+html {
+    background: url("Montes_Apenninus_(LRO).png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+body, html {
+    margin: 0;
+}
+
+body {
+    background-color: var(--teal-ish);
+    color: var(--white-ish);
+    font-family: monospace;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#selfie {
+    border-radius: 50%;
+    border: 3px solid var(--teal-bright);
+    position: absolute;
+    width: 150px;
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+}
+
+header {
+    margin: auto;
+    text-align: center;
+}
+
+header a {
+    color:var(--neat-green);
+}
+
+table {
+    background-color:#333333;
+    color: #669fbf;
+    font-family: arial;
+    max-width: 80%;
+    margin: auto;
+    letter-spacing: 0.5px;
+    line-height: 1em;
+    text-align: justify;
+}
+
+tr:nth-child(odd) {
+    background-color: #333f46;
+}
+
+td {
+    border: 1px solid #03496f;
+    padding: 8px;
+    margin: 0px;
+}
+
+ul {
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: justify;
+}
+
+.sheets-iframe {
+    width: 80%;
+    height: 800px;
+    margin: 50px;
+}
+
+#testing {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: #000000;
+    display: none;
+}
+
+.social_div{
+    margin-top:5px;
+  }
