@@ -56,6 +56,10 @@ header a:hover {
     color: #ed0025;
 }
 
+.social_div{
+    margin-top:5px;
+  }
+
 ul {
     margin-left: 100px;
     margin-right: 100px;
@@ -100,7 +104,3 @@ td {
     background-color: #000000;
     display: none;
 }
-
-.social_div{
-    margin-top:5px;
-  }

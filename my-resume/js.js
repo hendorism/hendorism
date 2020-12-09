@@ -24,10 +24,9 @@ function coolSphere(domElement) {
     var vy = Math.sin(b)*v;
     var domElement = domElement;
     var checkBoundary = false;
-    var frictionX;
-    var frictionY;
+    // var frictionX;
+    // var frictionY;
     var gLog = [];
-    var dLog = [];
     x = Math.random()*window.innerWidth;
     y = Math.random()*window.innerHeight;
     domElement.style.left = x + "px";
@@ -42,7 +41,10 @@ function coolSphere(domElement) {
             let selfieCenterY = (selfie.style.top).slice(0,-2) - (selfie.style.height).slice(0,-2)/2;
             let windowCenterX = window.innerWidth/2;
             let windowCenterY = window.innerHeight/2;
-            let distanceFromCenter = Math.sqrt((selfieCenterX - windowCenterX)**2 + (selfieCenterY - windowCenterY)**2);
+            // portraitX-windowCenterX
+            let dx = selfieCenterX - windowCenterX;
+            let dy = selfieCenterY - windowCenterY;
+            let distanceFromCenter = Math.sqrt((dx)**2 + (dy)**2);
             let gravity = 1/(Math.sqrt(distanceFromCenter)+0.9)+distanceFromCenter/1000;
             console.log('sx='+selfieCenterX);
             console.log('sy='+selfieCenterY);
@@ -52,10 +54,8 @@ function coolSphere(domElement) {
             console.log('vy='+vy);
             console.log('g='+gravity);
             console.log(checkBoundary);
-            dLog.push(distanceFromCenter);
-            gLog.push(gravity);
-            console.log(dLog);
-            drawGraph(dLog);
+            gLog.push(Math.sqrt(vx**2+vy**2));
+            drawGraph(gLog);
             //only check boundry every other frame so it doesn't get stuck.
             if (checkBoundary == false) {
                 checkBoundary = true;
@@ -74,22 +74,75 @@ function coolSphere(domElement) {
             // frictionY = 1+0.01*(window.innerHeight/window.innerWidth);
             // vx /= frictionX;
             // vy /= frictionY;
-/*
+/*      [[[[[[[[[[[[[[]]]]]]]]]]]]]]
+
+                     f
+                    /
+                   /|
+                  / |
+                 /  |
+                /   |
+               /    |
+              /     |
+          c  /      |
+            /       |b
+           /        |
+          /         |
+         /          |
+        /           |
+       /           _|
+      /___________|_|
+    d       a        e
+
+If d is the point where the gravity is being exerted from...
+And f is the location of the portrait...
+Then the amount by which vx will be changed every frame is...
+    let gx = Math.sqrt(gravity**2-dy**2);
+Then the amount by which vy will be changed every frame is...
+    let gy = Math.sqrt(gravity**2-dx**2);
++++++++++.+++++++++.+++++++++.+++++++++.+++++++++.+++++++++.+++++++++.+++++++++.
+                (I think...) but it is making the portrait freeze...
+                ...saying v, vx, vy = NaN;;;;
+                ...but why would v be affected?
++++++++++.+++++++++.+++++++++.+++++++++.+++++++++.+++++++++.+++++++++.+++++++++.
     a**2+b**2 = c**2;
     a**2 = c**2-b**2;
     b**2 = c**2-a**2;
     a = Math.sqrt(c**2-b**2);
     b = Math.sqrt(c**2-a**2);
-*/
+
+I am sort of guessing how gravity works...
+    My gravity variable can go where c is...
+        Then it should behave somewhat realistically...
+            
+
+        [[[[[[[[[[[[[[]]]]]]]]]]]]]]
+        [[[[[[[[[[[[[[]]]]]]]]]]]]]]
+        [[[[[[[[[[[[[[]]]]]]]]]]]]]]
+        [Make America read books again]
+        [[[[[[[[[[[[[[]]]]]]]]]]]]]]
+        [[[[[[[[[[[[[[]]]]]]]]]]]]]]
+        [[[[[[[[[[[[[[]]]]]]]]]]]]]]
+        [[[[[[[[[[[[[[]]]]]]]]]]]]]]         */
+
+            // Exert gravity on portrait to make it orbit.
+            let gx = Math.sqrt(gravity**2-dy**2);
+            let gy = Math.sqrt(gravity**2-dx**2);
+            console.log('gx='+gx);
+            console.log('gy='+gy);
+            console.log('dy='+dx);
+            console.log('dx='+dy);
+            // let gx = 1; // lateral gravity component
+            // let gy = 1; // vertical gravity component
             if (selfieCenterX>windowCenterX) {
-                vx -= gravity;
+                vx -= gx
             } else {
-                vx += gravity;
+                vx += gx;
             }
             if (selfieCenterY>windowCenterY) {
-                vy -= gravity;
+                vy -= gy;
             } else {
-                vy += gravity;
+                vy += gy;
             }
             x += vx;
             y += vy;

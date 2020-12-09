@@ -1,6 +1,6 @@
 var c = document.getElementById("line-graph");
 var ctx = c.getContext("2d");
-c.width = window.innerWidth*0.8;
+c.width = window.innerWidth;
 c.height = 400;
 ctx.strokeStyle = "#000000";
 ctx.strokeRect(0, 0, c.width, c.height);
@@ -12,8 +12,13 @@ function drawGraph(array) {
     clearCanvas();
     // drawMessage('gravity graph', 24, 10, 20);
     drawSomeGridLines();
+    let outputX;
     for (i=0;i<array.length;i++) {
-        drawLine(i, c.height-array[i], i+1, c.height-array[i+1])
+        outputX = i;
+        if (array.length>c.width) {
+            outputX = i-(array.length-c.width);
+        }
+        drawLine(outputX, c.height-array[i], outputX+1, c.height-array[i+1]);
     }
 }
 
