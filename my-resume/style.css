@@ -5,6 +5,7 @@
 :root {
     --teal-ish: #00343e;
     --white-ish: #ddefc3;
+    --less-white-ish: #99ef6b;
     --teal-bright: #39d6b9;
     --neat-green: #33ff33;
 }
@@ -51,6 +52,20 @@ header a {
     color:var(--neat-green);
 }
 
+header a:hover {
+    color: #ed0025;
+}
+
+ul {
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: justify;
+}
+
+ul strong {
+    color: var(--less-white-ish);
+}
+
 table {
     background-color:#333333;
     color: #669fbf;
@@ -70,12 +85,6 @@ td {
     border: 1px solid #03496f;
     padding: 8px;
     margin: 0px;
-}
-
-ul {
-    margin-left: 100px;
-    margin-right: 100px;
-    text-align: justify;
 }
 
 .sheets-iframe {

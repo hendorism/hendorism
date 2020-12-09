@@ -40,12 +40,10 @@ function coolSphere(domElement) {
             console.log('moving');
             let selfieCenterX = (selfie.style.left).slice(0,-2) + (selfie.style.width).slice(0,-2)/2;
             let selfieCenterY = (selfie.style.top).slice(0,-2) - (selfie.style.height).slice(0,-2)/2;
-            let windowCenterX = window.innerWidth/(1/0.75);
-            let windowCenterY = window.innerHeight/4;
+            let windowCenterX = window.innerWidth/2;
+            let windowCenterY = window.innerHeight/2;
             let distanceFromCenter = Math.sqrt((selfieCenterX - windowCenterX)**2 + (selfieCenterY - windowCenterY)**2);
             let gravity = 1/(Math.sqrt(distanceFromCenter)+0.9)+distanceFromCenter/1000;
-            frictionX = 1+0.01*(window.innerHeight/window.innerWidth);
-            frictionY = 1+0.01*(window.innerHeight/window.innerWidth);
             console.log('sx='+selfieCenterX);
             console.log('sy='+selfieCenterY);
             console.log('dc='+distanceFromCenter);
@@ -58,6 +56,7 @@ function coolSphere(domElement) {
             gLog.push(gravity);
             console.log(dLog);
             drawGraph(dLog);
+            //only check boundry every other frame so it doesn't get stuck.
             if (checkBoundary == false) {
                 checkBoundary = true;
             } else {
@@ -69,8 +68,19 @@ function coolSphere(domElement) {
                 }
                 checkBoundary = false;
             }
-            vx /= frictionX;
-            vy /= frictionY;
+            // Whichever axis is bigger will have proportionally more friction
+            // so the portrait roams the whole area equally.            
+            // frictionX = 1+0.01*(window.innerHeight/window.innerWidth);
+            // frictionY = 1+0.01*(window.innerHeight/window.innerWidth);
+            // vx /= frictionX;
+            // vy /= frictionY;
+/*
+    a**2+b**2 = c**2;
+    a**2 = c**2-b**2;
+    b**2 = c**2-a**2;
+    a = Math.sqrt(c**2-b**2);
+    b = Math.sqrt(c**2-a**2);
+*/
             if (selfieCenterX>windowCenterX) {
                 vx -= gravity;
             } else {
