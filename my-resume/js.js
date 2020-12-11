@@ -15,59 +15,92 @@ testing.style.top = window.innerHeight/2+'px';
 let selfie = document.getElementById('selfie');
 let movingSelfie = new coolSphere(selfie);
 window.onload = movingSelfie.move;
+let frameCounter = 0;
+let framesSinceLast_vx_reversal = 0;
+let framesSinceLast_vy_reversal = 0;
 function coolSphere(domElement) {
     var x = Math.random()*window.innerWidth;
     var y = Math.random()*window.innerHeight;
     var b = 2*Math.PI*Math.random();
     var v = 2;
-    var vx = Math.cos(b)*v;
-    var vy = Math.sin(b)*v;
+    var vx;
+    var vy;
+    var gx;
+    var gy;
+    console.log('b='+b);
+    console.log('v='+v);
+    console.log('vx='+vx);
+    console.log('vy='+vy);
+    // debugger;
     var domElement = domElement;
-    var checkBoundary = false;
+    // var shouldCheckBoundary = false;
     // var frictionX;
     // var frictionY;
-    var gLog = [];
+    // var gLog = [];
     x = Math.random()*window.innerWidth;
     y = Math.random()*window.innerHeight;
     domElement.style.left = x + "px";
     domElement.style.top = y + "px";
     this.move = function() {
         b = 2*Math.PI*Math.random();
-        setInterval(moving, 1000/30);
-        function moving() {
+        const moving = setInterval(frame, 1000/30);
+        moving;
+        function frame() {
             // break;
-            console.log('moving');
-            let selfieCenterX = (selfie.style.left).slice(0,-2) + (selfie.style.width).slice(0,-2)/2;
-            let selfieCenterY = (selfie.style.top).slice(0,-2) - (selfie.style.height).slice(0,-2)/2;
+            frameCounter += 1;
+            console.log('//============INITIATE_MOVING_FRAME====YOUR_MOTHER_IS_'+frameCounter+'_kg_OVERWEIGHT==============//');
+            let selfieCenterX = selfie.style.left.slice(0,-2) + selfie.style.width.slice(0,-2)/2;
+            let selfieCenterY = selfie.style.top.slice(0,-2) + selfie.style.height.slice(0,-2)/2;
             let windowCenterX = window.innerWidth/2;
             let windowCenterY = window.innerHeight/2;
-            // portraitX-windowCenterX
             let dx = selfieCenterX - windowCenterX;
             let dy = selfieCenterY - windowCenterY;
-            let distanceFromCenter = Math.sqrt((dx)**2 + (dy)**2);
-            let gravity = 1/(Math.sqrt(distanceFromCenter)+0.9)+distanceFromCenter/1000;
-            console.log('sx='+selfieCenterX);
-            console.log('sy='+selfieCenterY);
-            console.log('dc='+distanceFromCenter);
-            console.log('v='+(Math.sqrt(vx**2+vy**2)));
+            let distanceFromCenter = Math.sqrt(dx**2+dy**2);
+            let gravity = 5+1/(distanceFromCenter+0.5);
+            vx = Math.cos(b)*v;
+            vy = Math.sin(b)*v;
+            v = Math.sqrt(vx**2+vy**2);
+            console.log('selfieCenterX='+selfieCenterX);
+            console.log('selfieCenterY='+selfieCenterY);
+            console.log('distanceFromCenter='+distanceFromCenter);
+            console.log('v='+v);
+            console.log('v=(Math.sqrt(vx**2+vy**2))='+(Math.sqrt(vx**2+vy**2)));
             console.log('vx='+vx);
             console.log('vy='+vy);
-            console.log('g='+gravity);
-            console.log(checkBoundary);
-            gLog.push(Math.sqrt(vx**2+vy**2));
-            drawGraph(gLog);
-            //only check boundry every other frame so it doesn't get stuck.
-            if (checkBoundary == false) {
-                checkBoundary = true;
-            } else {
+            console.log('gravity='+gravity);
+            console.log('framesSinceLast_vx_reversal='+framesSinceLast_vx_reversal);
+            console.log('framesSinceLast_vy_reversal='+framesSinceLast_vy_reversal);
+            // console.log('shouldCheckBoundary='+shouldCheckBoundary);
+            // debugger;
+            // graphing to canvas:
+            // gLog.push(Math.sqrt(vx**2+vy**2));
+            // drawGraph(gLog);
+                // Ten or more frames must elapse before code will execute another
+                // vx or vy reversal. This should prevent vibrating edge-of-page paralysis.
                 if (x>window.innerWidth-150 || x<0) {
-                    vx = -vx;
+                    if (framesSinceLast_vx_reversal>=10) {
+                        if (x>window.innerWidth) {
+                            domElement.style.left = (window.innerWidth-151) + "px";
+                        }
+                        if (x<0) {
+                            domElement.style.left = 1 + "px";
+                        }
+                        vx = -vx;
+                        framesSinceLast_vx_reversal = 0;
+                    }
                 }
                 if (y>window.innerHeight-150 || y<0) {
-                    vy = -vy;
+                    if (framesSinceLast_vy_reversal>=10) {
+                        if (y>window.innerHeight-150) {
+                            domElement.style.top = window.innerHeight-151 + "px";
+                        }
+                        if (y<0) {
+                            domElement.style.top = 1 + "px";
+                        }
+                        vy = -vy;
+                        framesSinceLast_vy_reversal = 0;
+                    }
                 }
-                checkBoundary = false;
-            }
             // Whichever axis is bigger will have proportionally more friction
             // so the portrait roams the whole area equally.            
             // frictionX = 1+0.01*(window.innerHeight/window.innerWidth);
@@ -115,48 +148,60 @@ I am sort of guessing how gravity works...
     My gravity variable can go where c is...
         Then it should behave somewhat realistically...
             
+        [[[[[[[[[[[[[[]]]]]]]]]]]]]]
+        [[[[[[[[[[[[[[]]]]]]]]]]]]]]
+        [[[[[                  ]]]]]
+        [[[[  a**2+b**2 = c**2  ]]]]
+        [[[[[                  ]]]]]
+        [[[[[[[[[[[[[[]]]]]]]]]]]]]]
+        [[[[[[[[[[[[[[]]]]]]]]]]]]]]                                          */
 
-        [[[[[[[[[[[[[[]]]]]]]]]]]]]]
-        [[[[[[[[[[[[[[]]]]]]]]]]]]]]
-        [[[[[[[[[[[[[[]]]]]]]]]]]]]]
-        [Make America read books again]
-        [[[[[[[[[[[[[[]]]]]]]]]]]]]]
-        [[[[[[[[[[[[[[]]]]]]]]]]]]]]
-        [[[[[[[[[[[[[[]]]]]]]]]]]]]]
-        [[[[[[[[[[[[[[]]]]]]]]]]]]]]         */
-
-            // Exert gravity on portrait to make it orbit.
-            let gx = Math.sqrt(gravity**2-dy**2);
-            let gy = Math.sqrt(gravity**2-dx**2);
+          // Exert gravity on portrait to make it orbit.
+            console.log(`gx=${gx}`);
+            console.log(`gy=${gy}`);
+            if (gravity**2-dy**2 > 0) {
+                gx = Math.sqrt(Math.abs(gravity**2-1/dy));
+            } else {
+                gx = -Math.sqrt(Math.abs(gravity**2-1/dy));
+            }
+            if (gravity**2-dx**2 > 0) {
+                gy = Math.sqrt(Math.abs(gravity**2-1/dx));
+            } else {
+                gy = -Math.sqrt(Math.abs(gravity**2-1/dx));
+            }
+            console.log('gravity='+gravity);
             console.log('gx='+gx);
             console.log('gy='+gy);
             console.log('dy='+dx);
             console.log('dx='+dy);
-            // let gx = 1; // lateral gravity component
-            // let gy = 1; // vertical gravity component
-            if (selfieCenterX>windowCenterX) {
-                vx -= gx
-            } else {
-                vx += gx;
-            }
-            if (selfieCenterY>windowCenterY) {
-                vy -= gy;
-            } else {
-                vy += gy;
-            }
+          // let gx = 1; // lateral gravity component
+          // let gy = 1; // vertical gravity component
+            if (selfieCenterX>windowCenterX) {vx -= gx;} else {vx += gx;}
+            if (selfieCenterY>windowCenterY) {vy -= gy;} else {vy += gy;}
             x += vx;
             y += vy;
             domElement.style.top = y + "px";
             domElement.style.left = x + "px";
+            framesSinceLast_vx_reversal += 1;
+            framesSinceLast_vy_reversal += 1;
+            debugger;
         }
     }
 }
 
+// Event listener for button#stop-selfie to stop the loop
+/* ==========================================================================...
+const buttonStopSelfie = document.getElementById('stop-selfie');
+buttonStopSelfie.addEventListener('click', function() {
+    console.log('Trying to stop the selfie...')
+    clearInterval(movingSelfie.moving);
+});
+...========================================================================== */
 
-
-// the following code is from this code challenge:
-  // https://codepen.io/Hendorism/pen/dyporQg?editors=1010
-
+//////////////////////////////////////////////////////////////////////////////\\
+// the following code is from this code challenge:                            \\
+//   https://codepen.io/Hendorism/pen/dyporQg?editors=1010                    \\
+//////////////////////////////////////////////////////////////////////////////\\
 // function trace( msg, shouldReplace = false ) : void {
 //   var echo = window.document.getElementById( 'echo' );
 //   if( shouldReplace ) {
