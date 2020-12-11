@@ -9,8 +9,8 @@
 
 console.log('This is the resume of Aaron 20201206212151');
 let testing = document.getElementById('testing');
-testing.style.left = window.innerWidth/2+'px';
-testing.style.top = window.innerHeight/2+'px';
+testing.style.left = `${window.innerWidth/2-50}px`;
+testing.style.top = `${window.innerHeight/2-50}px`;
 // selfie movement
 let selfie = document.getElementById('selfie');
 let movingSelfie = new coolSphere(selfie);
@@ -56,49 +56,50 @@ function coolSphere(domElement) {
             let dx = selfieCenterX - windowCenterX;
             let dy = selfieCenterY - windowCenterY;
             let distanceFromCenter = Math.sqrt(dx**2+dy**2);
-            let gravity = 5+1/(distanceFromCenter+0.5);
+            let gravity = 5+1/(distanceFromCenter+0.1);
             vx = Math.cos(b)*v;
             vy = Math.sin(b)*v;
-            v = Math.sqrt(vx**2+vy**2);
+            console.log('x='+x);
+            console.log('y='+y);
             console.log('selfieCenterX='+selfieCenterX);
             console.log('selfieCenterY='+selfieCenterY);
             console.log('distanceFromCenter='+distanceFromCenter);
-            console.log('v='+v);
-            console.log('v=(Math.sqrt(vx**2+vy**2))='+(Math.sqrt(vx**2+vy**2)));
             console.log('vx='+vx);
             console.log('vy='+vy);
             console.log('gravity='+gravity);
             console.log('framesSinceLast_vx_reversal='+framesSinceLast_vx_reversal);
             console.log('framesSinceLast_vy_reversal='+framesSinceLast_vy_reversal);
-            // console.log('shouldCheckBoundary='+shouldCheckBoundary);
             // debugger;
-            // graphing to canvas:
-            // gLog.push(Math.sqrt(vx**2+vy**2));
-            // drawGraph(gLog);
-                // Ten or more frames must elapse before code will execute another
-                // vx or vy reversal. This should prevent vibrating edge-of-page paralysis.
-                if (x>window.innerWidth-150 || x<0) {
-                    if (framesSinceLast_vx_reversal>=10) {
-                        if (x>window.innerWidth) {
-                            domElement.style.left = (window.innerWidth-151) + "px";
+                if (framesSinceLast_vx_reversal>=2) {
+                    if (x>window.innerWidth-150) {
+                        x = window.innerWidth-151;
+                        if (vx>0) {
+                            vx = -vx*0.9;
+                            framesSinceLast_vx_reversal = 0;
                         }
-                        if (x<0) {
-                            domElement.style.left = 1 + "px";
+                    }
+                    if (x<0) {
+                        x = 1;
+                        if (vx<0) {
+                            vx = -vx*0.9
+                            framesSinceLast_vx_reversal = 0;
                         }
-                        vx = -vx;
-                        framesSinceLast_vx_reversal = 0;
                     }
                 }
-                if (y>window.innerHeight-150 || y<0) {
-                    if (framesSinceLast_vy_reversal>=10) {
-                        if (y>window.innerHeight-150) {
-                            domElement.style.top = window.innerHeight-151 + "px";
+                if (framesSinceLast_vy_reversal>=2) {
+                    if (y>window.innerHeight-150) {
+                        y = window.innerHeight-151;
+                        if (vy>0) {
+                            vy = -vy*0.9;
+                            framesSinceLast_vy_reversal = 0;
                         }
-                        if (y<0) {
-                            domElement.style.top = 1 + "px";
+                    }
+                    if (y<0) {
+                        y = 1;
+                        if (vy<0) {
+                            vy = -vy*0.9;
+                            framesSinceLast_vy_reversal = 0;
                         }
-                        vy = -vy;
-                        framesSinceLast_vy_reversal = 0;
                     }
                 }
             // Whichever axis is bigger will have proportionally more friction
@@ -159,12 +160,12 @@ I am sort of guessing how gravity works...
           // Exert gravity on portrait to make it orbit.
             console.log(`gx=${gx}`);
             console.log(`gy=${gy}`);
-            if (gravity**2-dy**2 > 0) {
+            if (dx > 0) {
                 gx = Math.sqrt(Math.abs(gravity**2-1/dy));
             } else {
                 gx = -Math.sqrt(Math.abs(gravity**2-1/dy));
             }
-            if (gravity**2-dx**2 > 0) {
+            if (dy > 0) {
                 gy = Math.sqrt(Math.abs(gravity**2-1/dx));
             } else {
                 gy = -Math.sqrt(Math.abs(gravity**2-1/dx));
@@ -184,7 +185,7 @@ I am sort of guessing how gravity works...
             domElement.style.left = x + "px";
             framesSinceLast_vx_reversal += 1;
             framesSinceLast_vy_reversal += 1;
-            debugger;
+            // debugger;
         }
     }
 }
