@@ -33,11 +33,17 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 25px;
 }
 
+#sun {
+    position: absolute;
+    background-color: #00ff00;
+    border-radius: 50%;
+    /* display: none; */
+}
+
 #selfie {
     border-radius: 50%;
     border: 3px solid var(--teal-bright);
     position: absolute;
-    width: 150px;
     top: 0px;
     left: 0px;
     opacity: 1;
@@ -95,12 +101,4 @@ td {
     width: 80%;
     height: 800px;
     margin: 50px;
-}
-
-#testing {
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    background-color: #00ff00;
-    /* display: none; */
 }
