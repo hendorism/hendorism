@@ -1,4 +1,5 @@
-# my-blog
+# hendorism
+
 This is my general website repository for web design experiments as I learn the craft.
 
 Please explore the page and check out my projects.
