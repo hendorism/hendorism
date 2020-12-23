@@ -11,6 +11,16 @@ Core Competencies
   Mechanic/Mathematical aptitude- prior work has often required working with mechanical equipment safely; maintaining, repairing   and installing parts; electrical knowledge
   Background in food service, sales, music and theater.
 
+Software Tools
+  Davinci Resolve: Basic video editing proficiency
+  Audacity: Editing music audio and producing audiobooks for youtube
+  VS Code: Maintaining personal projects on GitHub
+  Google Sheets: Logging every penny of income and spending since 2014
+  MuseScore: Preparing sheet music parts for musicians in church music
+
+Languages
+  Beginning level Spanish/German
+
 Work Experience
   2018-2020; 2015; 2010-2012	Machine Operator,                    Everett, WA
                                 Buse Timber & Sales
@@ -54,3 +64,4 @@ Professional Accomplishments
   2015-2020
     Filled 20+ 96sheet spiral-bound manuscript books with notes, sketches,
     compositons and transpositions, solos, duets, choral and chamber pieces.
+  2018-2020
