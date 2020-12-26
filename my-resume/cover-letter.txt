@@ -1,0 +1,10 @@
+Dear Hiring Manager,
+
+For two years now I have been studying HTML, CSS, Javascript, Python, Ruby on Rails, React, jQuery, Firebase, Bootstrap with the help of two friends and a cousin who are employed in the field. I have been using computers since the 2nd grade, watched my parents write essays, use music notation software professionally and use graphics programs like Adobe Illustrator professionally. My First computer was a Mac IIVX running OS 7.6 on a 72mb HD. I had fun playing with spreadsheets in Claris Works and building silent animated movies frame by frame with Quick Time.
+
+I have a two websites, a social media presence of sorts, code projects stored in codepen and github and AWS; a music notation app, a simulator app for the log-debarker machine I ran in the sawmill for two years, and other code projects. I have been following curriculums on various websites as well as participation in Zoom classes run by a friend who works with Ruby on Rails.
+
+Thank you for reading, and I hope you will consider me for the position!
+
+Sincerely,
+Aaron Dull
