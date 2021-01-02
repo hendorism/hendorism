@@ -1,9 +1,10 @@
 # hendorism
 
-This is my general website repository for web design experiments as I learn the craft.
+This is my main repo for sharing my code jounrey as I pursue a career transition into tech.
 
 Please explore the page and check out my projects.
 
-If you see things broken or you have things you want me to add, email me at...
+And visit my website everettmusicdojo.com
 
-hendorism@gmail.com
+Thanks!
+-Aaron Dull
