@@ -1,13 +1,15 @@
 Dear Hiring Manager,
 
 For two years now I have been studying HTML, CSS, Javascript, Python, Ruby on
-Rails, React, jQuery, Firebase, Bootstrap with the help of two friends and a
-cousin who are employed in the field. I have been using computers since the 2nd
-grade, watched my parents write essays, use music notation software
-professionally and use graphics programs like Adobe Illustrator professionally.
-My First computer was a Mac IIVX running OS 7.6 on a 72mb HD. I had fun playing
-with spreadsheets in Claris Works and building silent animated movies frame by
-frame with Quick Time.
+Rails, React, jQuery, Firebase, Bootstrap. Prior to that I've worked in a
+fishing ship in Alaska, and at a debarker mill in Everett. I've loved my
+career - the people, the feeling of satisfaction. But I don't think there's a
+future in it. My coworkers struggle with health issues and based on my own
+background in teaching and composing music, I would prefer a job that was more
+intellectually stimulating.
+
+Thanks to the encouragement of my friends who are developers and have built
+great careers, I'm ready to take a chance and build a better future for myself.
 
 I have a two websites, a social media presence of sorts, code projects stored in
 codepen, github and AWS; a music notation app, a simulator app for the
