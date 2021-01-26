@@ -1,173 +1,127 @@
 <html>
   <head>
-    <title>!! - - SCALE_SELECTOR - - !!</title>
+    <title>!! - - scale-selector - - !!</title>
     <link rel="stylesheet" type="text/css" href="style3.css">
     </head>
   <body>
-      <!--  div just for TITLE and explanation -->
-      <div id="title_div">
-        <p>Welcome to the scale selector 
+      <a id="home-link" href="../index.html">home</a>
+
+      <div id="title-div">
+        <p>Welcome to the scale selector
           app! This thing will tell you all the names of the notes in a given scale.
         </p>
         <h1>Click on the piano keys to see a scale!</h1>
       </div>
-    <div class="keyboard_div">
-      <button class="piano_keys Cs_KEY" id="key_button_00" onclick="scale_key_1()">C#</button>
-      <button class="piano_keys Ds_KEY" id="key_button_01" onclick="scale_key_3()">D#</button>
-      <button class="piano_keys Fs_KEY" id="key_button_02" onclick="scale_key_6()">F#</button>
-      <button class="piano_keys Gs_KEY" id="key_button_03" onclick="scale_key_8()">G#</button>
-      <button class="piano_keys As_KEY" id="key_button_04" onclick="scale_key_10()">A#</button>
-      <button class="piano_keys Cs_KEY" id="key_button_05" onclick="scale_key_1()">C#</button>
-      <button class="piano_keys C_KEY" id="key_button_06" onclick="scale_key_0()">C</button>
-      <button class="piano_keys D_KEY" id="key_button_07" onclick="scale_key_2()">D</button>
-      <button class="piano_keys E_KEY" id="key_button_08" onclick="scale_key_4()">E</button>
-      <button class="piano_keys F_KEY" id="key_button_09" onclick="scale_key_5()">F</button>
-      <button class="piano_keys G_KEY" id="key_button_10" onclick="scale_key_7()">G</button>
-      <button class="piano_keys A_KEY" id="key_button_11" onclick="scale_key_9()">A</button>
-      <button class="piano_keys B_KEY" id="key_button_12" onclick="scale_key_11()">B</button>
-      <button class="piano_keys C_KEY" id="key_button_13" onclick="scale_key_0()">C</button>
-      <button class="piano_keys C_KEY" id="key_button_14" onclick="scale_key_0()">C</button>
-      <button class="piano_keys D_KEY" id="key_button_15" onclick="scale_key_2()">D</button>
-      <button class="piano_keys E_KEY" id="key_button_16" onclick="scale_key_4()">E</button>
-      <button class="piano_keys F_KEY" id="key_button_17" onclick="scale_key_5()">F</button>
-      <button class="piano_keys G_KEY" id="key_button_18" onclick="scale_key_7()">G</button>
-      <button class="piano_keys A_KEY" id="key_button_19" onclick="scale_key_9()">A</button>
-      <button class="piano_keys B_KEY" id="key_button_20" onclick="scale_key_11()">B</button>
-      <button class="piano_keys C_KEY" id="key_button_21" onclick="scale_key_0()">C</button>
-      <img src="piano_keyboard_1octave.jpg" class="piano_keyboard_img">
-    </div>    <!-- end div.keyboard_div -->
-<!-- WRAPPER DIV BEGIN  --><div id="wrapper">
-         <!--  	PITCHES DIV  --><div id="pitches_div">
-        
-    <div id="pitches_header">PITCHES</div>
+      <!-- div.title-div -->
+    <div class="keyboard-div">
+      <button class="piano-keys Cs-KEY" id="key-button-00" onclick="scale-key-1()">C#</button>
+      <button class="piano-keys Ds-KEY" id="key-button-01" onclick="scale-key-3()">D#</button>
+      <button class="piano-keys Fs-KEY" id="key-button-02" onclick="scale-key-6()">F#</button>
+      <button class="piano-keys Gs-KEY" id="key-button-03" onclick="scale-key-8()">G#</button>
+      <button class="piano-keys As-KEY" id="key-button-04" onclick="scale-key-10()">A#</button>
+      <button class="piano-keys Cs-KEY" id="key-button-05" onclick="scale-key-1()">C#</button>
+      <button class="piano-keys C-KEY" id="key-button-06" onclick="scale-key-0()">C</button>
+      <button class="piano-keys D-KEY" id="key-button-07" onclick="scale-key-2()">D</button>
+      <button class="piano-keys E-KEY" id="key-button-08" onclick="scale-key-4()">E</button>
+      <button class="piano-keys F-KEY" id="key-button-09" onclick="scale-key-5()">F</button>
+      <button class="piano-keys G-KEY" id="key-button-10" onclick="scale-key-7()">G</button>
+      <button class="piano-keys A-KEY" id="key-button-11" onclick="scale-key-9()">A</button>
+      <button class="piano-keys B-KEY" id="key-button-12" onclick="scale-key-11()">B</button>
+      <button class="piano-keys C-KEY" id="key-button-13" onclick="scale-key-0()">C</button>
+      <button class="piano-keys C-KEY" id="key-button-14" onclick="scale-key-0()">C</button>
+      <button class="piano-keys D-KEY" id="key-button-15" onclick="scale-key-2()">D</button>
+      <button class="piano-keys E-KEY" id="key-button-16" onclick="scale-key-4()">E</button>
+      <button class="piano-keys F-KEY" id="key-button-17" onclick="scale-key-5()">F</button>
+      <button class="piano-keys G-KEY" id="key-button-18" onclick="scale-key-7()">G</button>
+      <button class="piano-keys A-KEY" id="key-button-19" onclick="scale-key-9()">A</button>
+      <button class="piano-keys B-KEY" id="key-button-20" onclick="scale-key-11()">B</button>
+      <button class="piano-keys C-KEY" id="key-button-21" onclick="scale-key-0()">C</button>
+      <img src="piano_keyboard_1octave.jpg" class="piano-keyboard-img">
+    </div>
+    <!-- div.keyboard-div -->
+    <div id="wrapper">
+      <div id="pitches-div">
 
+    <div id="pitches-header">PITCHES</div>
         <div class="pitches">
-          <div class="pitch_name_div">
-            0 - (tonic)
-          </div>
+          <div class="pitch-name-div">0 - (tonic)</div>
           <div class="output">
-            <p class="pitch_display_output" id="pitch_display_output0"></p>
+            <p class="pitch-display-output" id="pitch-display-output0"></p>
           </div>
         </div>
-
         <div class="pitches">
-          <div class="pitch_name_div">
-            1 - (flat 2)
-          </div>
+          <div class="pitch-name-div">1 - (flat 2)</div>
           <div class="output">
-            <p class="pitch_display_output" id="pitch_display_output1"></p>
+            <p class="pitch-display-output" id="pitch-display-output1"></p>
           </div>
         </div>
-
         <div class="pitches">
-          <div class="pitch_name_div">
-            2 - (supertonic)
-          </div>
+          <div class="pitch-name-div">2 - (supertonic)</div>
           <div class="output">
-            <p class="pitch_display_output" id="pitch_display_output2"></p>
+            <p class="pitch-display-output" id="pitch-display-output2"></p>
           </div>
         </div>
-
         <div class="pitches">
-          <div class="pitch_name_div">
-            3 - (flat 3)
-          </div>
+          <div class="pitch-name-div">3 - (flat 3)</div>
           <div class="output">
-            <p class="pitch_display_output" id="pitch_display_output3"></p>
+            <p class="pitch-display-output" id="pitch-display-output3"></p>
           </div>
         </div>
-
         <div class="pitches">
-          <div class="pitch_name_div">
-            4 - (mediant)
-          </div>
+          <div class="pitch-name-div">4 - (mediant)</div>
           <div class="output">
-            <p class="pitch_display_output" id="pitch_display_output4"></p>
+            <p class="pitch-display-output" id="pitch-display-output4"></p>
           </div>
         </div>
-
         <div class="pitches">
-          <div class="pitch_name_div">
-            5 - (subdominant)
-          </div>
+          <div class="pitch-name-div">5 - (subdominant)</div>
           <div class="output">
-            <p class="pitch_display_output" id="pitch_display_output5"></p>
+            <p class="pitch-display-output" id="pitch-display-output5"></p>
           </div>
         </div>
-
         <div class="pitches">
-          <div class="pitch_name_div">
-            6 - (flat 5)
-          </div>
+          <div class="pitch-name-div">6 - (flat 5)</div>
           <div class="output">
-            <p class="pitch_display_output" id="pitch_display_output6"></p>
+            <p class="pitch-display-output" id="pitch-display-output6"></p>
           </div>
         </div>
-
         <div class="pitches">
-          <div class="pitch_name_div">
-            7 - (dominant)
-          </div>
+          <div class="pitch-name-div">7 - (dominant)</div>
           <div class="output">
-            <p class="pitch_display_output" id="pitch_display_output7"></p>
+            <p class="pitch-display-output" id="pitch-display-output7"></p>
           </div>
         </div>
-
         <div class="pitches">
-          <div class="pitch_name_div">
-            8 - (minor 6)
-          </div>
+          <div class="pitch-name-div">8 - (minor 6)</div>
           <div class="output">
-            <p class="pitch_display_output" id="pitch_display_output8"></p>
+            <p class="pitch-display-output" id="pitch-display-output8"></p>
           </div>
         </div>
-
         <div class="pitches">
-          <div class="pitch_name_div">
-            9 - (major 6)
-          </div>
+          <div class="pitch-name-div">9 - (major 6)</div>
           <div class="output">
-            <p class="pitch_display_output" id="pitch_display_output9"></p>
+            <p class="pitch-display-output" id="pitch-display-output9"></p>
           </div>
         </div>
-
         <div class="pitches">
-          <div class="pitch_name_div">
-            10 - (flat 7)
-          </div>
+          <div class="pitch-name-div">10 - (flat 7)</div>
           <div class="output">
-            <p class="pitch_display_output" id="pitch_display_output10"></p>
+            <p class="pitch-display-output" id="pitch-display-output10"></p>
           </div>
         </div>
-
         <div class="pitches">
-          <div class="pitch_name_div">
-            11 - (leading tone)
-          </div>
+          <div class="pitch-name-div">11 - (leading tone)</div>
           <div class="output">
-            <p class="pitch_display_output" id="pitch_display_output11"></p>
+            <p class="pitch-display-output" id="pitch-display-output11"></p>
           </div>
         </div>
-
       </div>
+      <!-- div#pitches-div  -->
+    </div>
+    <!-- div#wrapper -->
 
 
-
-
-
-
-
-
-
-        <!-- now ending div#wrapper  -->
-      </div>
-      <!-- div#wrapper just ended -->
-
-<p id="goBackHome"><a id="homeLink" href="../index.html">home</a></p>
-<p id="improve">If you have an idea of how I can improve the scale selector please <a id="contactMe" href="../contact.html">contact me</a>.</p>
-
-
-<script src="scale_selector002.js"></script>  
+<script src="scale_selector003.js"></script>
 <script src="keyboard.js"></script>
   </body>
 </html>
