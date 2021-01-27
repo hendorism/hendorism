@@ -1,23 +1,48 @@
 <html>
     <!-- this is a clone of macOS 9.2
-    
+
 Ok, well... not exactly.
 I may slip in aspects of other operating systems
 but it will be generally like a mac os
 maybe if there are some features of versions
 OSX and beyond to the one I am using and the
 current/most recent one.  -->
-<head><style>
-    div.icon{position:absolute;height:100;width:200;right:200;background-color:#925;border-radius:13px;color:#6bf;font-family:monospace;}
-    div.icon>iconspan{}
-    div.macHDicon{top:100;}
-    div.myStuffFolder{top:210;}
-</style></head>
+<head>
+  <style>
+    div.icon {
+      position: absolute;
+      height: 100;
+      width: 200;
+      right: 200;
+      background-color: #925;
+      border-radius: 13px;
+      color: #6bf;
+      font-family: monospace;
+    }
+    div.icon>iconspan{
+      background-color: #abcdef;
+      font-size: 12px;
+    }
+    div.macHDicon{
+      top: 100;
+    }
+    div.myStuffFolder{
+      top: 210;
+    }
+</style>
+</head>
 <body>
     <div id="topbar"></div>
     <div class="icon macHDicon"><span class="iconspan">macHD</span></div>
     <div class="icon myStuffFolder"><span class="iconspan">myStuffFolder</span></div>
     <script>
+    //listen for right mouse button up and cancel default context menu.
+    
+    window.oncontextmenu = function ()
+{
+    showCustomMenu();
+    return false;     // cancel default menu
+}
         //var defaultIcon = document.createElement("img");
         //defaultIcon.src = "defaultIcon.png";
         //document.getElementsByClassName("icon").appendChild(defaultIcon);
