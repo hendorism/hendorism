@@ -51,3 +51,11 @@ div#time{
   top:10px;
   left:360px;
 }
+table#projects-table {
+  background-color:#ddeeff;
+  border-collapse: collapse;
+}
+table#projects-table td {
+  border: 1px solid #332266;
+  padding: 7px;
+}

@@ -2,11 +2,11 @@
   <head>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
     </script>
-    <script>      $(document).ready(function() {
-
+    <script>
+      $(document).ready(function() {
         var canvas = document.getElementById("myCanvas");
         var ctx = canvas.getContext("2d");
-///////////////////////==================    prevent arrowkey and spacebar default behavior///////////////////
+//======= prevent arrowkey and spacebar default behavior ====//
         window.addEventListener("keydown", function(e) {
         // 37   39   38   40   32
         // <    >    ^    D    SP
@@ -15,55 +15,117 @@
           e.preventDefault();
         }
       }, false);
-/////////////////////////////////////== player ==//////////////////////////////////////////
-        let player = {
-          x: 10,
-          y: 10,
-          width: 10,
-          height: 10,
-          color: "#33bb99"
-        }
-function drawPlayer() {
-        ctx.fillStyle = player.color;
-        ctx.fillRect(player.x,player.y,player.width,player.height);
+//== player ==//////////////////////////////////////////
+let player = {
+  x: 10,
+  y: 10,
+  width: 10,
+  height: 10,
+  color: "#33bb99"
 }
-  function eraseGameScreen() {
-    ctx.fillStyle = "#333333";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-  }
+function drawLine(x1, y1, x2, y2){
+    ctx.strokeStyle = "#eeeecc";
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo( x1, y1 );
+    ctx.lineTo( x2, y2 );
+    ctx.stroke();
+}
+function funnyWallSegment(x1, y1, x2, y2) {
+  this.x1 = x1;
+  this.y1 = y1;
+  this.x2 = x2;
+  this.y2 = y2;
+  drawLine(this.x1, this.y1, this.x2, this.y2);
+}
+drawLine(10, 40, 100, 60);
+let wall1 = new funnyWallSegment(10, 10, 50, 50);
+function drawPlayer() {
+  ctx.fillStyle = player.color;
+  ctx.fillRect(player.x,player.y,player.width,player.height);
+}
+function eraseGameScreen() {
+  ctx.fillStyle = "#333333";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
 eraseGameScreen();
 drawPlayer();
-/////=================================== arrow key behavior ==============//////////
-setTimeout(function(){ //============ add delay so as to not take input from ctrl+r when refreshing page
-  $(document).keyup(function(e) {
+/////========== arrow key behavior ==============//////////
+setTimeout(function(){
+// add delay so as to not take input from ctrl+r when refreshing page
+document.onkeydown = function(e) {
     eraseGameScreen();
-    if (e.which == 38) { // up
-      player.y -= 5;
-    } else if (e.which == 39) { // right
-      player.x += 5;
-    } else if (e.which == 40) { // down
-      player.y += 5;
-    } else if (e.which == 37) { // left
-      player.x -= 5;
+    switch (e.keyCode) {
+        case 37:
+          if (player.x >= 5) {
+            player.x -= 5;
+          } else {
+            player.x = 0;
+          }
+          break;
+        case 38:
+          if (player.y >= 5) {
+            player.y -= 5;
+          } else {
+            player.y = 0;
+          }
+          break;
+        case 39:
+          if (player.x < canvas.width - player.width) {
+            player.x += 5;
+          } else {
+            player.x = canvas.width - player.width;
+          }
+          break;
+        case 40:
+          if (player.y < canvas.height - player.height - 5) {
+            player.y += 5;
+          } else {
+            player.y = canvas.height - player.height;
+          }
+          break;
     }
     drawPlayer();
-}); //================================ end arrow key listener
+};
+
+//   $(document).keyup(function(e) {
+//     eraseGameScreen();
+//     if (e.which == 38) { // up
+//       if (player.y >= 5) {
+//         player.y -= 5;
+//       } else {
+//         player.y = 0;
+//       }
+//     } else if (e.which == 39) { // right
+//       if (player.x < canvas.width - player.width) {
+//         player.x += 5;
+//       } else {
+//         player.x = canvas.width - player.width;
+//       }
+//     } else if (e.which == 40) { // down
+//       if (player.y < canvas.height - player.height - 5) {
+//         player.y += 5;
+//       } else {
+//         player.y = canvas.height - player.height;
+//       }
+//     } else if (e.which == 37) { // left
+//       if (player.x >= 5) {
+//         player.x -= 5;
+//       } else {
+//         player.x = 0;
+//       }
+//     }
+//     drawPlayer();
+// }); //================================ end arrow key listener
 }, 500); //================= end setTimeout block for arrow key listener
       }); //======= end jquery listener
     </script>
   </head>
-  <!-- ========================== begin body ==================================== -->
-  <!-- ////////////////////////// begin body //////////////////////////////////// -->
+  <!-- ========= begin body ==================================== -->
   <body>
     <canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
       Your browser does not support the canvas element.
     </canvas>
-    <a href="chro.html">chrome</a>
-    <a href="css-grid-demo.html">css grid demo</a>
-<script>
-for(i=0;i<100;i++){
-document.write("<br>hello")
-}
-</script>
+
   </body>
 </html>
