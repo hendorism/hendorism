@@ -1,10 +1,9 @@
 # hendorism
+*<https://everettmusicdojo.com/>*\
+*<https://innovationsstudio.wordpress.com>*\
+*<https://hendorism.github.io/hendorism/index.html>*
 
-This is my main repo for sharing my code jounrey as I pursue a career transition into tech.
+I have been studying web development for 3 years. I have learned some Python, HTML/CSS/Javascript, Ruby on Rails. I have a Ruby on Rails app deployed to Heroku at:
+>https://morning-cliffs-62856.herokuapp.com/books
 
-Please explore the page and check out my projects.
 
-And visit my website everettmusicdojo.com
-
-Thanks!
--Aaron Dull
