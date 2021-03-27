@@ -95,12 +95,7 @@
 </div>
 <iframe src="https://www.goldbroker.com/widget/live-price/XAG?currency=USD" width="100%" height="130" class="silverprice"></iframe>
 <iframe src="https://www.goldbroker.com/widget/live-price/XAU?currency=USD" width="100%" height="130" class="goldprice"></iframe>
-<canvas id="mnCanvas"></canvas>
-<script src="https://hendorism.github.io/musicnotes/draw_music_symbols.js"></script>
-<script>
 
-
-</script>
 <script>
   function checkTime(i) {
     if (i < 10) {
@@ -108,7 +103,8 @@
     }
     return i;
   }
-  function startTime() {
+
+function startTime() {
     var today = new Date();
     var h = today.getHours();
     var m = today.getMinutes();
@@ -120,9 +116,10 @@
     t = setTimeout(function() {
       startTime()
     }, 500);
-  }
+}
   startTime();
-</script> 
+</script>
+
 </body>
 </html> 
 
