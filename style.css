@@ -6,50 +6,22 @@ body {
   background-image: linear-gradient(#ddffee, #660033);
 }
 
-.silverprice {
-  position:fixed;
-  top:0px;
-}
-
 .header_div {
   padding-left:12%;
 }
 
 .biodiv {
-  width:100%;
+  width: 100%;
   max-width: 1000px;
-  font-size:15px;
-  background-color:#ddd;
-  text-align:justify;
-  padding:15px;
-  margin-top:22px;
+  font-size: 15px;
+  background-color: #ddd;
+  text-align: justify;
+  padding: 15px;
+  margin-top: 22px;
 }
 
 .social_div{
   margin-top:5px;
-}
-div#time2 {
-  background-color:#22ff88;
-  padding:30px;
-  padding-top:0px;
-  width:190px;
-  height: 65px;
-  position:fixed;
-  top:0px;
-  left:350px;
-  color:#ffff77;
-  z-index:1;
-  opacity: 0.7;
-  border-radius:8px;
-  text-shadow: 2px 2px 4px #000000;
-  letter-spacing:8px;
-  font-family:helvetica;
-  font-size:27px;
-}
-div#time{
-  position:fixed;
-  top:10px;
-  left:360px;
 }
 table#projects-table {
   background-color:#ddeeff;

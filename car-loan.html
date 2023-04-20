@@ -1,96 +1,134 @@
 
 <html>
-    <head>
-        <style>
-            table {padding:0px;background-color:#def;border:1px solid #a24;}
-            tr {border:1px solid #ba3;}
-            td {border:1px solid #238;padding:8px;}
-        </style>
-    </head>
-    <body>
-        <input>
-        <input>
-        <input>
-        <input>
-<button onclick="run()">submit</button>
-hello world
-        <script>
-            // var outstanding = 13000;
-            // var dpymnt = 5000;
-            // var pymnt = 300;
-            // var intr = 0.04;
-            // var month = 0;
-            // var amtpaid = 0;
-            // var sumintaccrued = 0;
-            // document.write("<table><tr><td>month</td><td>balance</td><td>interest</td><td>int accrued to date</td><td>paid to date</td><td>payment</td></tr>");
-            // function accrue() {
-            //     sumintaccrued += Math.round(100*outstanding*(intr/12))/100;
-            //     outstanding += Math.round(100*(outstanding*(1+intr/12)))/100;
-            // }
-            // function pay() {
-            //     outstanding -= pymnt;
-            //     amtpaid += pymnt;
-            // }
-            // function display() {
-            //     document.write("<tr><td>" + month + "</td><td>$" + (Math.round(100*outstanding)/100) + "</td><td>$" + (Math.round(100*(outstanding*(intr/12)))/100) + "</td><td>$" + sumintaccrued + "</td><td>$" + amtpaid + "</td><td>$" + pymnt + "</td></tr>")
-            // }
-            // display();
-            // outstanding -= dpymnt;
-            // month += 1;
-            // while (outstanding > 0) {
-            //     accrue();
-            //     if (outstanding < pymnt) {
-            //         pymnt = outstanding;
-            //         amtpaid += pymnt;
-            //         outstanding -= pymnt;
-            //         display();
-            //     } else {
-            //         pay();
-            //         accrue();
-            //         display();
-            //         month += 1;
-            //     }
-            // }
-            // document.write("</table>")
-            var outstanding = 13000;
-            var dpymnt = 5000;
-            var pymnt = 300;
-            var intr = 0.04;
-            var month = 0;
-            var amtpaid = 0;
-            var sumintaccrued = 0;
-            var interest = 0;
-            document.write("<table><tr><td>month</td><td>balance</td><td>interest</td><td>int accrued to date</td><td>paid to date</td><td>payment</td></tr>");
-            function accrue() {
-                interest = Math.round(100*outstanding*(intr/12))/100;
-                sumintaccrued += Math.round(100*outstanding*(intr/12))/100;
-                outstanding += Math.round(100*outstanding*(intr/12))/100;
-            }
-            function pay() {
-                outstanding -= pymnt;
-                amtpaid += pymnt;
-            }
-            function display() {
-                document.write("<tr><td>" + month + "</td><td>$" + outstanding + "</td><td>$" + interest + "</td><td>" + sumintaccrued + "</td><td>$" + amtpaid + "</td><td>$" + pymnt + "</td></tr>")
-            }
-            display();
-            outstanding -= dpymnt;
-            month += 1;
-            while (outstanding > 0) {
-                accrue();
-                if (outstanding < pymnt) {
-                    pymnt = outstanding;
-                    amtpaid += pymnt;
-                    outstanding -= pymnt;
-                    display();
-                } else {
-                    pay();
-                    accrue();
-                    display();
-                    month += 1;
-                }
-            }
-            document.write("</table>");
-        </script>
-    </body>
+<head>
+<style>
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: monospace;
+    font-size: 16px;
+}
+body {
+    padding: 6px;
+    background-color:#333333;
+}
+table {
+    padding: 0px;
+    background-color: #def;
+    border: 1px solid #a24;
+}
+tr {
+    border: 1px solid #ba3;
+}
+td {
+    border: 1px solid #238;
+    padding: 8px;
+}
+div#form {
+    border-radius: 16px;
+    background-color: rgb(71, 171, 201);
+    padding: 1em;
+    color:rgb(255, 255, 255)
+}
+</style>
+</head>
+<body>
+<div id="form">
+    <label for="price">Price:</label><br>
+    <input type="number" id="price" name="price" value="20000"><br>
+    <label for="down-payment">Down payment:</label><br>
+    <input type="number" id="down-payment" name="down-payment" value="2000"><br>
+    <label for="payment">Payment:</label><br>
+    <input type="number" id="payment" name="payment" value="800"><br>
+    <label for="interest-rate-percent">Interest rate (percentage):</label><br>
+    <input type="number" id="interest-rate-percent" name="interest-rate-percent" value="13.5">
+    <p>Payment frequency:</p>
+    <form>
+        <input type="radio" id="payment-weekly" name="payment-frequency" value="payment-weekly">
+        <label for="payment-weekly">weekly</label><br>
+        <input type="radio" id="payment-monthly" name="payment-frequency" value="payment-monthly" checked>
+        <label for="payment-monthly">monthly</label><br>
+        <input type="radio" id="payment-quarterly" name="payment-frequency" value="payment-quarterly">
+        <label for="payment-quarterly">quarterly</label><br>
+        <input type="radio" id="payment-annually" name="payment-frequency" value="payment-annually">
+        <label for="payment-annually">annually</label>
+    </form>
+    <p>Interest accrual frequency:</p>
+    <form>
+        <input type="radio" id="interest-accrual-weekly" name="interest-accrual-frequency" value="interest-accrual-weekly">
+        <label for="interest-accrual-weekly">weekly</label><br>
+        <input type="radio" id="interest-accrual-monthly" name="interest-accrual-frequency" value="interest-accrual-monthly">
+        <label for="interest-accrual-monthly">monthly</label><br>
+        <input type="radio" id="interest-accrual-quarterly" name="interest-accrual-frequency" value="interest-accrual-quarterly">
+        <label for="interest-accrual-quarterly">quarterly</label><br>
+        <input type="radio" id="interest-accrual-annually" name="interest-accrual-frequency" value="interest-accrual-annually">
+        <label for="interest-accrual-annually">annually</label><br>
+    </form>
+    <input type="button" onclick="tabulateResults()" value="TABULATE RESULTS">
+    <table id="results"></table>
+</div>
+
+
+<script>
+/*
+    Outstanding balance = sale price.
+    Down payment is deducted from outstanding balance.
+    {
+        Interest accrues on outstanding balance.
+        Statement reads:
+            balance : ( sale price - down payment ) * ( 1 + interest rate )
+            amount due : payment
+            interest accrued this period : ( sale price - down payment ) * ( interest rate )
+            total interest accrued : p1 interest
+            total paid to date : down payment
+            (so p1 total interest accrued includes p1 interest, but total paid to date does not include p1 payment)
+    }
+    Payment is deducted from outstanding balance
+*/
+
+
+function tabulateResults() {
+    let price = document.getElementById("price").value;
+    let downPayment = document.getElementById("down-payment").value;
+    let payment = document.getElementById("payment").value;
+    let interestRatePercent = document.getElementById("interest-rate-percent").value;
+    for (i=0; i<document.getElementsByName("payment-frequency"); i++) {
+        if (document.getElementsByName[i].checked == true) {
+            let paymentFrequency = document.getElementById("payment-frequency").value;
+            break;
+        }
+    }
+    let interestAccrualFrequency = document.getElementById("interest-accrual-frequency").value;
+    let period = 0;
+    let outstandingBalance = price;
+    let interest;
+    let paidToDate = 0;
+    let interestToDate = 0;
+
+    let form = document.getElementById("form");
+    let table = document.getElementById("results")
+    let tr = document.createElement("tr");
+    let td = document.createElement("td");
+    let inputs = [price, downPayment, payment, interestRatePercent, paymentFrequency, interestAccrualFrequency];
+    let text = document.getElementById()
+    
+    let row1 = ["Statement #", "Oustanding Balance", "Payment Due", "Interest This Period", "Interest to Date", "Paid to Date"];
+    for (i=0; i<row1.length; i++) {
+        let node = document.createTextNode(row1[i]);
+        td.appendChild(node);
+        tr.appendChild(td);
+    }
+    table.appendChild(tr);
+    form.appendChild(table);
+    while (outstandingBalance > 0) {
+        interest = outstandingBalance * (interestRatePercent/100);
+        let outputs = [period, outstandingBalance, payment, interest, interestToDate, paidToDate];
+    }
+}
+
+
+
+
+</script>
+</body>
 </html>
