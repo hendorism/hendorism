@@ -1,0 +1,55 @@
+<!-- data visualization with d3 -->
+<!-- FreeCodeCamp tutorial -->
+<html>
+    <head>
+        <title>data visualization with d3</title>
+        <style>
+
+        </style>
+        <script src="//d3js.org/d3.v3.min.js"></script>
+    </head>
+    <body>
+        <ul>
+            <li>Example</li>
+            <li>Example</li>
+            <li>Example</li>
+          </ul>
+        <script>
+            // 1
+            d3.select("body").append("h1").text("Learning D3")
+            // 2
+            d3.selectAll("li").text("list item")
+            // 3
+            const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+            d3.select("body").selectAll("h2")
+                .data(dataset)
+                .enter()
+                .append("h2")
+                .text((d) => d + " USD")
+                .style("font-family","verdana")
+                .style("color", (d) => {
+                    if (d<20) {
+                        return "red";
+                    } else {
+                        return "green";
+                    }
+                });
+
+        </script>
+        <script>
+            //time sheet
+            let timeSheet = [
+                {date: "8/10/2023",
+                start: 1830,
+                end: 1930,
+        }
+    ];
+        </script>
+
+<script src="script.js"></script>
+
+
+
+</body>
+</html>
